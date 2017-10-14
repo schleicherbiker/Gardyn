@@ -17,10 +17,11 @@ module.exports = {
 };
 */
 
-// This schema defines the structure for data stored in the plant collection. 
-// The plant collection stores data for both plant detail pages as well as plant category pages. 
-// This model therefore includes definitions for all categories for both types but does not require them. 
-// Simply pass in the relevant values for what you're defining.
+// This schema defines the structure for the collection to store possible plants. 
+// That is, this collection stores plants that have been proposed but not yet approved. 
+// From a formatting standpoint, it should be basically the same as the actual plants model, since data will be passed from this to that.  
+// Our current outline does not allow users to propose new categories and therefore the childPlants field is not required. 
+// I left it in, however, in case we want to add that feature in the future. 
 
 // Require mongoose
 const mongoose = require("mongoose");
@@ -28,7 +29,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // Create schema
-var PlantSchema = new Schema({
+var PlantPosSchema = new Schema({
   // The only required value is the title. 
   // It should be used both for plant detail information and category information. 
   title: {
@@ -61,7 +62,7 @@ var PlantSchema = new Schema({
 });
 
 // Create the model with the schema
-var Plant = mongoose.model("Plant", PlantSchema);
+var PlantPos = mongoose.model("PlantPos", PlantPosSchema);
 
 // Export the model
-module.exports = Plant;
+module.exports = PlantPos;

@@ -17,7 +17,7 @@
  */
 
 
-module.exports.policies = {
+//module.exports.policies = {
 
   /***************************************************************************
   *                                                                          *
@@ -48,4 +48,21 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
-};
+//};
+
+// Following authentication code is based on the below tutorial. 
+// https://scotch.io/tutorials/build-a-sailsjs-app-from-api-to-authentication 
+
+/**
+ * isAuthenticated
+ *
+ */
+ 
+var jwt = require('express-jwt');
+
+var authCheck = jwt({
+  secret: new Buffer('AUTH0_CLIENT_SECRET', 'base64'),
+  audience: 'AUTH0_CLIENT_ID'
+});
+
+module.exports = authCheck;

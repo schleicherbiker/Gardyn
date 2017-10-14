@@ -22,6 +22,8 @@ module.exports = {
 // This model therefore includes definitions for all categories for both types but does not require them. 
 // Simply pass in the relevant values for what you're defining.
 
+// I'm being liberal on leaving categories in this model for now, but when we get further along we should refactor it based on what we're actually using. 
+
 // Require mongoose
 const mongoose = require("mongoose");
 // Create Schema class
@@ -35,6 +37,24 @@ var PlantSchema = new Schema({
     type: String,
     required: true, 
     unique: true
+  },
+  Climate:{
+    type: 'string'
+  },
+  Sunlight:{
+    type: 'string'
+  },
+  Support:{
+    type: 'string'
+  },
+  Spacing:{
+    type: 'string'
+  },
+  Water:{
+    type: 'string'
+  },
+  Special:{
+    type: 'string'
   },
   // Again, it is my understanding that MongoDB stores longer text as still just strings as opposed to text blobs. 
   // I'm not completly confident about that, however, so if we have problems I'll do more research. 

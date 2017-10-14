@@ -5,6 +5,9 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
+// This code has been absorbed into the Plant and PlantPos models. 
+
+/*
 module.exports = {
 
   attributes: {
@@ -39,4 +42,4 @@ module.exports = {
   },
   connection: "mongodb"
 };
-
+*/

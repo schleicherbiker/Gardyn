@@ -23,6 +23,9 @@ module.exports = {
 // Our current outline does not allow users to propose new categories and therefore the childPlants field is not required. 
 // I left it in, however, in case we want to add that feature in the future. 
 
+// I'm being liberal on leaving categories in this model for now, but when we get further along we should refactor it based on what we're actually using. 
+
+
 // Require mongoose
 const mongoose = require("mongoose");
 // Create Schema class
@@ -36,6 +39,24 @@ var PlantPosSchema = new Schema({
     type: String,
     required: true, 
     unique: true
+  },
+    Climate:{
+    type: 'string'
+  },
+  Sunlight:{
+    type: 'string'
+  },
+  Support:{
+    type: 'string'
+  },
+  Spacing:{
+    type: 'string'
+  },
+  Water:{
+    type: 'string'
+  },
+  Special:{
+    type: 'string'
   },
   // Again, it is my understanding that MongoDB stores longer text as still just strings as opposed to text blobs. 
   // I'm not completly confident about that, however, so if we have problems I'll do more research. 

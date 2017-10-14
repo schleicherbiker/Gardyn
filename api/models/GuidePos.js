@@ -17,9 +17,9 @@ module.exports = {
 };
 */
 
-// This schema defines the structure for guides. 
-// For now it is simply a title, body and photo. 
-// We can add more as time allows as we feel so inclined. 
+// This schema defines the structure for the collection to store possible guides. 
+// That is, this collection stores guides that have been proposed but not yet approved. 
+// From a formatting standpoint, it should be basically the same as the actual guides model, since data will be passed from this to that.  
 
 // Require mongoose
 const mongoose = require("mongoose");
@@ -47,7 +47,7 @@ var GuidePosSchema = new Schema({
 });
 
 // Create the model with the schema
-var Plant = mongoose.model("Plant", PlantSchema);
+var GuidePos = mongoose.model("GuidePos", GuidePosSchema);
 
 // Export the model
-module.exports = Plant;
+module.exports = GuidePos;

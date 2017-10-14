@@ -27,7 +27,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // Create schema
-var GuideSchema = new Schema({
+var GuidePosSchema = new Schema({
   title: {
     type: String,
     required: true, 
@@ -47,7 +47,7 @@ var GuideSchema = new Schema({
 });
 
 // Create the model with the schema
-var Guide = mongoose.model("Guide", GuideSchema);
+var Plant = mongoose.model("Plant", PlantSchema);
 
 // Export the model
-module.exports = Guide;
+module.exports = Plant;

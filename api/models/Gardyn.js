@@ -13,27 +13,27 @@ module.exports = {
   attributes: {
   	Name:{
   		type: 'string'
-	}
+	},
 	Climate:{
 		type: 'string'
 
-	}
+	},
 	Sunlight:{
 		type: 'string'
 
-	}
+	},
 	Support:{
 		type: 'string'
 
-	}
+	},
 	Spacing:{
 		type: 'string'
 
-	}
+	},
 	Water:{
 		type: 'string'
 
-	}
+	},
 	Special:{
 		type: 'string'
 

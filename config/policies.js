@@ -57,7 +57,7 @@
  * isAuthenticated
  *
  */
- 
+ /*
 var jwt = require('express-jwt');
 
 var authCheck = jwt({
@@ -66,3 +66,4 @@ var authCheck = jwt({
 });
 
 module.exports = authCheck;
+*/

@@ -51,11 +51,17 @@ var PlantSchema = new Schema({
     enum: ["Easy", "Intermediate", "Difficult"]
   },
 
-  // Fields below this point are related to category objects rather than plane detail pages
+  // Fields below this point are related to category objects rather than plant detail pages
+
+  // Child plants should recieve an array. 
+  // The array should store MongoDB IDs (from this table) of each child plant in the given category.
+  childPlants: {
+    type: Array
+  } 
 });
 
 // Create the model with the schema
-var Article = mongoose.model("Article", ArticleSchema);
+var Plant = mongoose.model("Plant", PlantSchema);
 
 // Export the model
-module.exports = Article;
+module.exports = Plant;

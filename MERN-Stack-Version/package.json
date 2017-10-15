@@ -1,0 +1,19 @@
+{
+  "name": "gardyn",
+  "version": "1.0.0",
+  "description": "Support app for beginner gardners",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schleicherbiker/Gardyn.git"
+  },
+  "author": "Owen Essen, Curtis Atkins, Alec Schleicher, Jeremy He",
+  "license": "SEE LICENSE IN license.txt",
+  "bugs": {
+    "url": "https://github.com/schleicherbiker/Gardyn/issues"
+  },
+  "homepage": "https://github.com/schleicherbiker/Gardyn#readme"
+}

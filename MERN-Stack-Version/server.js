@@ -2,14 +2,14 @@
 
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3001;
+const PORT = /*process.env.PORT ||*/ 3001;
 const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("nyt-react-search/build"));
+  app.use(express.static("client/build"));
 }
 
 // Use body parser
@@ -19,7 +19,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/react-scraper-db");
+mongoose.connect("mongodb://localhost/gardynbase");
 const db = mongoose.connection;
 
 // Show any mongoose errors
@@ -39,7 +39,7 @@ app.use("/api", routes);
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
-	const index = path.join(__dirname, 'nyt-react-search', 'build', 'index.html');
+	const index = path.join(__dirname, 'client', 'build', 'index.html');
   	res.sendFile(index);
 });
 

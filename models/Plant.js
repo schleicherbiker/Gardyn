@@ -1,13 +1,3 @@
-/**
- * Gardyn.js
- *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
- * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
- */
-
- // I'm assuming since we're using Mongoose rather than Sails' default database system this model should be replaced by a Mongoose model. 
- // I'm leaving the original Sails model commented out in case I'm wrong about that. 
-
 /*
 module.exports = {
 
@@ -69,6 +59,12 @@ var PlantSchema = new Schema({
   skillLevel: {
     type: String,
     enum: ["Easy", "Intermediate", "Difficult"]
+  },
+  parentLevel: {
+    type: Boolean,
+  },
+  parentCat: {
+    type: String,
   },
 
   // Fields below this point are related to category objects rather than plant detail pages

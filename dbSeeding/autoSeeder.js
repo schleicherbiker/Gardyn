@@ -1,4 +1,7 @@
-[
+const Plant = require("../models/Plant.js");
+
+// Plant seed data
+var plantData = [
   {
     "title": "Tomatoes",
     "Climate": "Tomatoes need warmth; plant in late spring and early summer for most breeds",
@@ -9,9 +12,9 @@
     "Special": "Recommend burying two-thirds of the stem when planting (note method of deep planting only works with tomatoes)",
     "description": null,
     "bullets": null,
-    "skillLevel": "TBD",
+    "skillLevel": "Intermediate",
     "parentLevel": true,
-    "parentCat": null,
+    "parentCat": null
   },
   {
     "title": "Bell Peppers",
@@ -23,9 +26,9 @@
     "Special": "Start pepper seeds three to a pot, and thin out the weakest seedling. Let the remaining two pepper plants spend their entire lives together as one plant. The leaves of two plants help protect peppers against sunscald and the yield is often twice as good as two segregated plants.",
     "description": null,
     "bullets": null,
-    "skillLevel": "TBD",
+    "skillLevel": "Intermediate",
     "parentLevel": true,
-    "parentCat": null,
+    "parentCat": null
   },
   {
     "title": "Broccoli",
@@ -37,8 +40,25 @@
     "Special": "Do not get developing heads wet when watering. Roots are very shallow, do not cultivate. Use mulch to keep soil temperature low.",
     "description": null,
     "bullets": null,
-    "skillLevel": "TBD",
+    "skillLevel": "Intermediate",
     "parentLevel": true,
-    "parentCat": null,
+    "parentCat": null
   }
-]
+];
+
+// Seeds plant data
+for (let i = 0; i < plantData.length; i++){
+	console.log("iteration");
+	console.log("Checking...");
+	console.log(plantData[i]);
+	Plant.create(plantData[i], function (err, small) {
+		console.log("Model used")
+	    if (err) {
+	      console.log(err);
+	    } else {
+	      // saved!
+	      if (!err) console.log(small);
+	      console.log("Saved");
+	    }; 
+	});
+};

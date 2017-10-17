@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div id="wrapper">
         <Navbar/>
-        <AllCrops/>
+        <AllGuides/>
       </div>
     );
   }

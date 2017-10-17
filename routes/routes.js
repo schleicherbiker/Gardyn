@@ -1,11 +1,16 @@
 const express = require("express");
 const router = express.Router();
-// const Note = require("../models/Note.js");
+const Plant = require("../models/Plant.js");
 // const Article = require("../models/Article.js");
 const request = require("request");
 
 	// GET /plants
-		// Returns all plants where parent-level is true.
+	router.get("/plants", function(req, res) {
+	  // Returns all plants where parentLevel is true.
+	  Plant.find({parentLevel: true}, function(err, doc){
+	    res.json(doc);
+	  });
+	});
 
 	// GET /guides
 		// Returns all guides

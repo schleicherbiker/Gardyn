@@ -1,13 +1,4 @@
 /**
- * Gardyn.js
- *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
- * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
- */
-
- // I'm assuming since we're using Mongoose rather than Sails' default database system this model should be replaced by a Mongoose model. 
- // I'm leaving the original Sails model commented out in case I'm wrong about that. 
-
 /*
 module.exports = {
 

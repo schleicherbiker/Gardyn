@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import AllCrops from "./components/AllCrops"
-import Navbar from "./components/Navbar"
+import AllCrops from "./components/AllCrops";
+import AllGuides from "./components/AllGuides";
+import Navbar from "./components/Navbar";
 import './App.css';
 
 class App extends Component {

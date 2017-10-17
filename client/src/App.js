@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Crop from "./components/Crop"
+import AllCrops from "./components/AllCrops"
 import Navbar from "./components/Navbar"
 import './App.css';
 
@@ -8,9 +8,7 @@ class App extends Component {
     return (
       <div id="wrapper">
         <Navbar/>
-        <div id="crops">
-          <Crop cropName="Apple"/>
-        </div>
+        <AllCrops/>
       </div>
     );
   }

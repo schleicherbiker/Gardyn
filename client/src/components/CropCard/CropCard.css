@@ -1,0 +1,24 @@
+.crop {
+    margin: 48px 24px 0px 24px;
+    width: 148px;
+    height: 148px;
+    background-color: yellow;
+    position: relative;
+}
+
+
+.cropName {
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    padding-top: 8px;
+    width: 100%;
+    height: 42px;
+    background-color: darkgrey;
+    position: absolute;
+    top: 65%;
+}
+
+.cropImage {
+    display: inline;
+}

@@ -7,7 +7,7 @@
 }
 
 
-.crop-name {
+.cropName {
     text-align: center;
     margin: 0;
     font-size: 24px;
@@ -19,6 +19,6 @@
     top: 65%;
 }
 
-.crop-image {
+.cropImage {
     display: inline;
 }

@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Crop from "./components/Crop"
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div id="wrapper">
+        <div id="navbar">
+              <img id="icon" src="./leaf.png"></img>
+              <h1 id="navbar-title">Gardyn</h1>
+        </div>
+
+        <div id="crops">
+          <Crop cropName="Apple"/>
+        </div>
       </div>
     );
   }

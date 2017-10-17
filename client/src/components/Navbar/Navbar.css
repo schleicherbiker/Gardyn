@@ -1,0 +1,43 @@
+#navbar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #3d3d3f;
+    margin: auto;
+}
+
+#navbarTitle {
+    margin: 0;
+    font-size: 48px;
+    color: 	#3d3d3f;
+}
+
+#icon {
+    padding: 8px;
+    width: 64px;
+    height: 64px;
+}
+
+/* Phone */
+@media only screen and (max-width: 400px) {
+    body {
+      background-color: #F09A9D;
+    }
+  }
+  
+  /* Tablet */
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+      background-color: #F5CF8E;
+    }
+  }
+  
+  /* Desktop */
+  @media only screen and (min-width: 961px) {
+      body {
+          background-color: #B2D6FF;
+      }
+      
+      #navbar {
+          width: 832px;
+      }  
+  }

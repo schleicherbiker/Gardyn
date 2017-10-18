@@ -21,4 +21,6 @@
 
 .cropImage {
     display: inline;
+    max-width: 148px;
+    max-height: 148px;
 }

@@ -82,7 +82,8 @@ db.plants.insertMany([
     "bullets": null,
     "skillLevel": "Intermediate",
     "parentLevel": true,
-    "parentCat": null
+    "parentCat": null,
+    "imageURL": "http://assets.nydailynews.com/polopoly_fs/1.2834910.1476795531!/img/httpImage/image.jpg_gen/derivatives/article_750/488059328.jpg"
   },
   {
     "title": "Bell Peppers",
@@ -96,7 +97,8 @@ db.plants.insertMany([
     "bullets": null,
     "skillLevel": "Intermediate",
     "parentLevel": true,
-    "parentCat": null
+    "parentCat": null,
+    "imageURL": "https://img.buzzfeed.com/buzzfeed-static/static/2017-05/4/12/asset/buzzfeed-prod-fastlane-01/sub-buzz-20636-1493915918-9.jpg?downsize=715:*&output-format=auto&output-quality=auto"
   },
   {
     "title": "Broccoli",
@@ -110,6 +112,7 @@ db.plants.insertMany([
     "bullets": null,
     "skillLevel": "Intermediate",
     "parentLevel": true,
-    "parentCat": null
+    "parentCat": null, 
+    "imageURL": "https://www.cookforyourlife.org/wp-content/uploads/2015/08/shutterstock_294838064-min.jpg"
   }
 ])

@@ -42,6 +42,7 @@ class AllCrops extends Component {
 		              <CropCard
 		                cropName={item.title}
 		                key={item._id}
+		                imageURL={item.imageURL}
 		              />
 		            ))
 	          	}

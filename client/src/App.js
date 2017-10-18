@@ -8,8 +8,9 @@ class App extends Component {
   render() {
     return (
       <div id="wrapper">
-        <Navbar/>
-        <AllGuides/>
+        <Navbar />
+        <AllCrops />
+        <AllGuides />
       </div>
     );
   }

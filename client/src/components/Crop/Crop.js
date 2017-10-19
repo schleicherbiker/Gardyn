@@ -14,7 +14,7 @@ const Crop = (props) => (
       </div>
   	  <div className="col-md-9">
   	    <p className = "cropParagraph">
-    		Climate: {"{props climage info}"}
+    		Climate: {"{props climate info}"}
         </p>
         <p className = "cropParagraph">
     		Sunlight: {"{props sunlight info}"}

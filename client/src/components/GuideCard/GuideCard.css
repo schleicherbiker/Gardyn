@@ -1,4 +1,4 @@
-.guide {
+.guideCard {
     display: flex;
     align-items: center;
     width: 812px;
@@ -12,7 +12,7 @@
     border-radius: 8px;
 }
 
-.guideName {
+.guideCardName {
     text-align: center;
     margin: 0;
     font-size: 36px;
@@ -22,6 +22,6 @@
     color: #eee;
 }
 
-.guideImage {
+.guideCardImage {
     width: 100%;
 }

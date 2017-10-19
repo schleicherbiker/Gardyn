@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
 	    <Switch>
-	      <Route exact path='/' component={Navbar} />
+	      <Route exact path='/' component={AllCrops} />
 	    </Switch>
     );
   }

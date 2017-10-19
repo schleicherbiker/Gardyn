@@ -19,6 +19,7 @@ class App extends Component {
     return (
 	    <Switch>
 	      <Route exact path='/' component={Navbar} />
+	      <Route exact path='/Crop' component={Crop} />
 	    </Switch>
     );
   }

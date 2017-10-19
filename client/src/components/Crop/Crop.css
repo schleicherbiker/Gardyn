@@ -1,27 +1,23 @@
-.crop {
-    display: flex;
+.cropAlign {
     align-items: center;
     width: 812px;
-    height: 96px;
     margin: auto;
-    margin-bottom: 48px;
-    position: relative;
-    background-color: yellow;
-    overflow: hidden;
-    border: 2px solid black;
-    border-radius: 8px;
 }
 
 .cropName {
-    text-align: center;
-    margin: 0;
+    text-align: left;
     font-size: 36px;
-    position: absolute;
-    left: 5%;
     font-weight: bold;
-    color: #eee;
+    color: #000;
 }
 
 .cropImage {
-    width: 100%;
+	align-items: right;
+    width: 200px;
+    height: auto;
+}
+
+.cropParagraph {
+	font-size: 24px;
+	align-items: left;
 }

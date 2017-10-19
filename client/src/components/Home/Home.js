@@ -1,8 +1,10 @@
 import React from "react";
-import "./Wrapper.css";
+import "./Home.css";
 
-const Wrapper = (props) => (
-    <div id="wrapper">{props.children}</div>
-);
+const Home = (props) => (
+    <div>
+    	
+    </div>
+)
 
-export default Wrapper;
+export default Home;

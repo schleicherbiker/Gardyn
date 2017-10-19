@@ -17,9 +17,6 @@ class App extends Component {
         <Navbar />
         <AllCrops />
         <AllGuides />
-
-        //Testing individual pages
-        <Crop />
       </Wrapper>
     );
   }

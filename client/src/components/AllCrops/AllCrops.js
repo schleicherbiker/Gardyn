@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import CropCard from "../CropCard";
+import Navbar from "../Navbar";
+import Wrapper from "../Wrapper";
 import "./AllCrops.css";
 import axios from "axios";
 
@@ -35,20 +37,23 @@ class AllCrops extends Component {
 	// state.cropData stores an array of objects, each representing a crop to be displayed. 
 	// This code then maps that data to CropCard elements. 
 	render() {
-	    return (
-		    <div id="allCrops">
-			    {
-		            this.state.cropData.map(item => (
-		              <CropCard
-		                cropName={item.title}
-		                key={item._id}
-		                imageURL={item.imageURL}
-		              />
-		            ))
-	          	}
-		    </div>
-	    )
-  	}
+	  return (
+		  <Wrapper>
+				<div id="allCrops">
+					<Navbar/>
+					{
+						this.state.cropData.map(item => (
+							<CropCard
+								cropName={item.title}
+								key={item._id}
+								imageURL={item.imageURL}
+							/>
+						))
+					}
+		  	</div>
+			</Wrapper>
+	  )
+  }
 }
 
 export default AllCrops;

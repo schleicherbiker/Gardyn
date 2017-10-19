@@ -3,7 +3,10 @@ import { Switch, Route } from 'react-router-dom';
 import AllCrops from "./components/AllCrops";
 import AllGuides from "./components/AllGuides";
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 import Wrapper from "./components/Wrapper";
+import SingleGuidePage from "./components/SingleGuidePage";
+import SinglePlantPage from "./components/SinglePlantPage";
 
 //Testing individual pages
 import Crop from "./components/Crop";
@@ -11,15 +14,17 @@ import Guide from "./components/Guide";
 
 import './App.css';
 
-// <Route path='/results' component={Results}/>
-// <Route path='/saved_articles' component={SavedArticles}/>
-
 class App extends Component {
   render() {
     return (
 	    <Switch>
 	      <Route exact path='/' component={Navbar} />
-	      <Route exact path='/Crop' component={Crop} />
+	        <Route path='/Crop' component={Crop} />
+	      	<Route path='/crops' component={AllCrops}/>
+			<Route path='/guides' component={AllGuides}/>
+			<Route path='/single_plant/:id' component={SinglePlantPage}/>
+			<Route path='/single_guide/:id' component={SingleGuidePage}/>
+//1ef87004e96e32da6f655d6c02bf3b47a4757dd6
 	    </Switch>
     );
   }

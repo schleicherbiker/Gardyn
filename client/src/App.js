@@ -5,6 +5,8 @@ import AllGuides from "./components/AllGuides";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Wrapper from "./components/Wrapper";
+import SingleGuidePage from "./components/SingleGuidePage";
+import SinglePlantPage from "./components/SinglePlantPage";
 
 //Testing individual pages
 import Crop from "./components/Crop";
@@ -19,6 +21,8 @@ class App extends Component {
 	      <Route exact path='/' component={Navbar} />
 	      	<Route path='/crops' component={AllCrops}/>
 			<Route path='/guides' component={AllGuides}/>
+			<Route path='/single_plant/:id' component={SinglePlantPage}/>
+			<Route path='/single_guide/:id' component={SingleGuidePage}/>
 	    </Switch>
     );
   }

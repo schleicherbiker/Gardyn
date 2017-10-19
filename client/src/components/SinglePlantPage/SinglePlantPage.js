@@ -1,8 +1,11 @@
 import React from "react";
-import "./Wrapper.css";
+import "./SinglePlantPage.css";
 
-const Wrapper = (props) => (
-    <div id="wrapper">{props.children}</div>
+// Add single plant page here
+const SinglePlantPage = (props) => (
+    <div>
+    	<p>Single Plant Page</p>
+    </div>
 );
 
-export default Wrapper;
+export default SinglePlantPage;

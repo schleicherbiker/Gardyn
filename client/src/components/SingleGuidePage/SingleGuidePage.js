@@ -1,8 +1,11 @@
 import React from "react";
-import "./Wrapper.css";
+import "./SingleGuidePage.css";
 
-const Wrapper = (props) => (
-    <div id="wrapper">{props.children}</div>
+// Add single guide page stuff here
+const SingleGuidePage = (props) => (
+    <div>
+    	<p>Single Guide Page</p>
+    </div>
 );
 
-export default Wrapper;
+export default SingleGuidePage;

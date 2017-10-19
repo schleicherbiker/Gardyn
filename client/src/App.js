@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import AllCrops from "./components/AllCrops";
 import AllGuides from "./components/AllGuides";
 import Navbar from "./components/Navbar";
@@ -10,17 +11,15 @@ import Guide from "./components/Guide";
 
 import './App.css';
 
+// <Route path='/results' component={Results}/>
+// <Route path='/saved_articles' component={SavedArticles}/>
+
 class App extends Component {
   render() {
     return (
-      <Wrapper>
-        <Navbar />
-        <AllCrops />
-        <AllGuides />
-
-        //Testing individual pages
-        <Crop />
-      </Wrapper>
+	    <Switch>
+	      <Route exact path='/' component={Navbar} />
+	    </Switch>
     );
   }
 }

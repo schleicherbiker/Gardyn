@@ -3,6 +3,12 @@ import { Switch, Route } from 'react-router-dom';
 import AllCrops from "./components/AllCrops";
 import AllGuides from "./components/AllGuides";
 import Navbar from "./components/Navbar";
+import Wrapper from "./components/Wrapper";
+
+//Testing individual pages
+import Crop from "./components/Crop";
+import Guide from "./components/Guide";
+
 import './App.css';
 
 // <Route path='/results' component={Results}/>

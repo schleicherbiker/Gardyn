@@ -1,4 +1,4 @@
-.crop {
+.cropCard {
     margin: 48px 24px 0px 24px;
     width: 148px;
     height: 148px;
@@ -7,8 +7,7 @@
     overflow: hidden;
 }
 
-
-.cropName {
+.cropCardName {
     text-align: center;
     margin: 0;
     font-size: 24px;
@@ -20,11 +19,11 @@
     bottom: 0;
 }
 
-.cropImage {
+.cropCardImage {
     width: 100%;
 }
 
-.cropDifficulty{
+.cropCardDifficulty{
     background-color: green;
     width: 100%;
     height: 24px;

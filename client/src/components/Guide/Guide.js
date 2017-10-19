@@ -11,7 +11,7 @@ const Guide = (props) => (
     <p>
       {/*guide info goes here*/}
     </p>
-  </div>;
+  </div>
 );
 
 export default Guide;

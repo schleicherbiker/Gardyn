@@ -8,10 +8,8 @@ const Crop = (props) => (
     <div className = "jumbotron">
       <h2>Crop</h2>
     </div>
-    <p>
-      {/*crop info goes here*/}
-    </p>
-  </div>;
+    <p>{/*crop info goes here*/}</p>
+  </div>
 );
 
 export default Crop;

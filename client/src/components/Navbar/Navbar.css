@@ -19,6 +19,18 @@
     padding: 8px;
     width: 64px;
     height: 64px;
+    float: left;
+}
+
+/* Flat-link styling is used to overwrite link styling elsewhere in the project when link styling should be minimal, such as in the navbar.*/
+.flat-link {
+  padding: 0px;
+  margin: 0px;
+  width: 250px;
+}
+
+.flat-link:hover {
+  text-decoration: none;
 }
 
 .button {
@@ -45,4 +57,14 @@
 .flex {
     display: flex;
     align-items: center;
+}
+
+.nav-element-link {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-element-link:hover {
+    color: black;
+    text-decoration: none;
 }

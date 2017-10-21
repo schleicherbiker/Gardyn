@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
 	    <Switch>
-	      <Route exact path='/' component={Navbar} />
+	      <Route exact path='/' component={Home} />
 	        <Route path='/crop/:name' component={Crop} />
 	      	<Route path='/crops' component={AllCrops}/>
 			    <Route path='/guides' component={AllGuides}/>

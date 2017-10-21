@@ -7,6 +7,9 @@ import "./AllGuides.css";
 const AllCrops = () => (
     <Wrapper>
         <Navbar/>
+        <div id="allGuidesHeader">
+		    <h1 id="allGuidesHeaderTitle">All Guides</h1>
+		</div>
         <div id="allGuides">
             <GuideCard guideName="Soil 101"/>
             <GuideCard guideName="Watering"/>

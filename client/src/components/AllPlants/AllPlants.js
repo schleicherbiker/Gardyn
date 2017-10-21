@@ -1,27 +1,27 @@
 import React, { Component } from "react";
-import CropCard from "../CropCard";
+import PlantCard from "../PlantCard";
 import Navbar from "../Navbar";
 import Wrapper from "../Wrapper";
-import "./AllCrops.css";
+import "./AllPlants.css";
 import axios from "axios";
 
 
-class AllCrops extends Component {
+class AllPlants extends Component {
 	// This stores what crop data should be displayed
 	// Includes dummy data in case the component loads before the data is retrieved. 
 	state = {
-		cropData: [{cropName: "Loading...", _id: "000"}]
+		plantData: [{plantName: "Loading...", _id: "000"}]
 	}
 
 	// Retrieves plant data from the backend and stores it in state. 
-	retrieveCrops = () => {
+	retrievePlants = () => {
 		// To ensure context of 'this' isn't lost inside the axios function. 
 		const parentObj = this;
 		axios.get('/api/plants')
 	      .then(function (response) {
 	        console.log(response.data);
 	        parentObj.setState({
-	          cropData: response.data
+	          plantData: response.data
 	        })
 	      })
 	      .catch(function (error) {
@@ -31,7 +31,7 @@ class AllCrops extends Component {
 
 	// Before the component can load the retrieveCrops function is executed in order to retrieve data from the backend. 
 	componentWillMount() {
-	    this.retrieveCrops();
+	    this.retrievePlants();
 	  }
 
 	// state.cropData stores an array of objects, each representing a crop to be displayed. 
@@ -40,27 +40,27 @@ class AllCrops extends Component {
 	  return (
 		  <Wrapper>
 				<Navbar/>
-				<div id="allCropsHeader">
-					<h1 id="allCropsHeaderTitle">All Crops</h1>
+				<div id="allPlantsHeader">
+					<h1 id="allPlantsHeaderTitle">All Plants</h1>
 				</div>
-				<div id="allCrops">
+				<div id="allPlants">
 					{
-						this.state.cropData.map(item => (
-							<CropCard
+						this.state.plantData.map(item => (
+							<PlantCard
 								item = {item}
 							/>
 						))
 					}
 					{
-						this.state.cropData.map(item => (
-							<CropCard
+						this.state.plantData.map(item => (
+							<PlantCard
 								item = {item}
 							/>
 						))
 					}
 					{
-						this.state.cropData.map(item => (
-							<CropCard
+						this.state.plantData.map(item => (
+							<PlantCard
 								item = {item}
 							/>
 						))
@@ -71,4 +71,4 @@ class AllCrops extends Component {
   }
 }
 
-export default AllCrops;
+export default AllPlants;

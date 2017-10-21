@@ -58,3 +58,13 @@
     display: flex;
     align-items: center;
 }
+
+.nav-element-link {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-element-link:hover {
+    color: black;
+    text-decoration: none;
+}

@@ -19,6 +19,7 @@
     float: left;
 }
 
+/* Flat-link styling is used to overwrite link styling elsewhere in the project when link styling should be minimal, such as in the navbar.*/
 .flat-link {
   padding: 0px;
   margin: 0px;

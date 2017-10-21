@@ -1,12 +1,3 @@
-/*
-module.exports = {
-
-  attributes: {
-
-  }
-};
-*/
-
 // This schema defines the structure for guides. 
 // For now it is simply a title, body and photo. 
 // We can add more as time allows as we feel so inclined. 

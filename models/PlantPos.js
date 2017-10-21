@@ -1,12 +1,3 @@
-/*
-module.exports = {
-
-  attributes: {
-
-  }
-};
-*/
-
 // This schema defines the structure for the collection to store possible plants. 
 // That is, this collection stores plants that have been proposed but not yet approved. 
 // From a formatting standpoint, it should be basically the same as the actual plants model, since data will be passed from this to that.  

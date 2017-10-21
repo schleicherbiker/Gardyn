@@ -116,3 +116,22 @@ db.plants.insertMany([
     "imageURL": "https://www.cookforyourlife.org/wp-content/uploads/2015/08/shutterstock_294838064-min.jpg"
   }
 ])
+
+// Format for guide data: 
+[
+    {
+        title: ,
+        body: ,
+        photoLink: 
+    },
+    {
+        title: ,
+        body: ,
+        photoLink: 
+    },
+    {
+        title: ,
+        body: ,
+        photoLink: 
+    }
+];

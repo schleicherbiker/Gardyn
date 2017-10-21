@@ -1,13 +1,3 @@
-/**
-/*
-module.exports = {
-
-  attributes: {
-
-  }
-};
-*/
-
 // This schema defines the structure for the collection to store possible guides. 
 // That is, this collection stores guides that have been proposed but not yet approved. 
 // From a formatting standpoint, it should be basically the same as the actual guides model, since data will be passed from this to that.  

@@ -1,12 +1,3 @@
-/*
-module.exports = {
-
-  attributes: {
-
-  }
-};
-*/
-
 // This schema defines the structure for data stored in the plant collection. 
 // The plant collection stores data for both plant detail pages as well as plant category pages. 
 // This model therefore includes definitions for all categories for both types but does not require them. 

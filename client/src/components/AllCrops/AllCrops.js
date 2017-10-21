@@ -39,8 +39,25 @@ class AllCrops extends Component {
 	render() {
 	  return (
 		  <Wrapper>
+				<Navbar/>
+				<div id="allCropsHeader">
+					<h1 id="allCropsHeaderTitle">All Crops</h1>
+				</div>
 				<div id="allCrops">
-					<Navbar/>
+					{
+						this.state.cropData.map(item => (
+							<CropCard
+								item = {item}
+							/>
+						))
+					}
+					{
+						this.state.cropData.map(item => (
+							<CropCard
+								item = {item}
+							/>
+						))
+					}
 					{
 						this.state.cropData.map(item => (
 							<CropCard

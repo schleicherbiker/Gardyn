@@ -1,0 +1,23 @@
+.plantAlign {
+    align-items: center;
+    width: 812px;
+    margin: auto;
+}
+
+.plantName {
+    text-align: left;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+}
+
+.plantImage {
+	align-items: right;
+    width: 200px;
+    height: auto;
+}
+
+.plantParagraph {
+	font-size: 24px;
+	align-items: left;
+}

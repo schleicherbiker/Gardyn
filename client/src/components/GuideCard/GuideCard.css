@@ -1,0 +1,27 @@
+.guideCard {
+    display: flex;
+    align-items: center;
+    width: 812px;
+    height: 96px;
+    margin: auto;
+    margin-bottom: 48px;
+    position: relative;
+    background-color: yellow;
+    overflow: hidden;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.guideCardName {
+    text-align: center;
+    margin: 0;
+    font-size: 36px;
+    position: absolute;
+    left: 5%;
+    font-weight: bold;
+    color: #eee;
+}
+
+.guideCardImage {
+    width: 100%;
+}

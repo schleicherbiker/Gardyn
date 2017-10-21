@@ -1,0 +1,70 @@
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #3d3d3f;
+    margin: auto;
+    background: #c3ffba;
+    overflow: hidden;
+    height: 64px;
+}
+
+#navbarTitle {
+    margin: 0;
+    font-size: 48px;
+    color: 	#3d3d3f;
+}
+
+#icon {
+    padding: 8px;
+    width: 64px;
+    height: 64px;
+    float: left;
+}
+
+/* Flat-link styling is used to overwrite link styling elsewhere in the project when link styling should be minimal, such as in the navbar.*/
+.flat-link {
+  padding: 0px;
+  margin: 0px;
+  width: 250px;
+}
+
+.flat-link:hover {
+  text-decoration: none;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 0 12px 0 12px;
+    border-left: 1px solid #3d3d3f;
+    height: 200px;
+    margin: 0;
+    margin-right: -6px;
+    margin-left: 8px;
+    transform: rotate(15deg);
+}
+
+.button:hover {
+    background: #ade2a7;
+}
+
+.button h4 {
+    transform: rotate(-15deg);
+    font-size: 24px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.nav-element-link {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-element-link:hover {
+    color: black;
+    text-decoration: none;
+}

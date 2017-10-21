@@ -16,8 +16,8 @@ class Home extends Component {
 		return (
 		    <Wrapper>
 				<Navbar/>
-				<h3>This is the homepage.</h3>
-				<img id="homeImage" src={this.farmerImageLink}/>		
+				<h3 id="homeOverlay">From planting to harvest, Gardyn helps you get into gardening faster.</h3>
+				<img id="homeImage" src={this.farmerImageLink} alt="A gardener smiles holding his freshly picked produce"/>		
 			</Wrapper>
 		)
 	}

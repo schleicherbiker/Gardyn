@@ -24,7 +24,7 @@ class App extends Component {
 			    <Route path='/guides' component={AllGuides}/>
 			    <Route path='/single_plant/:id' component={SinglePlantPage}/>
 			    <Route path='/single_guide/:id' component={SingleGuidePage}/>
-//1ef87004e96e32da6f655d6c02bf3b47a4757dd6
+//1ef87004e96e32da6f655d6c02bf3b47a4757dd6 XX
 	    </Switch>
     );
   }

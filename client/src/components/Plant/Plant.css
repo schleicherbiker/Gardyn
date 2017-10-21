@@ -1,23 +1,23 @@
-.cropAlign {
+.plantAlign {
     align-items: center;
     width: 812px;
     margin: auto;
 }
 
-.cropName {
+.plantName {
     text-align: left;
     font-size: 36px;
     font-weight: bold;
     color: #000;
 }
 
-.cropImage {
+.plantImage {
 	align-items: right;
     width: 200px;
     height: auto;
 }
 
-.cropParagraph {
+.plantParagraph {
 	font-size: 24px;
 	align-items: left;
 }

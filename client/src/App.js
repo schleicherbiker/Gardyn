@@ -5,9 +5,9 @@ import AllGuides from "./components/AllGuides";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Wrapper from "./components/Wrapper";
+import Plant from "./components/Plant";
 
 //Testing individual pages
-import Plant from "./components/Plant";
 import Guide from "./components/Guide";
 
 import './App.css';
@@ -20,6 +20,9 @@ class App extends Component {
 	        <Route path='/plants/:name' component={Plant} />
 	      	<Route path='/plants' component={AllPlants}/>
 			    <Route path='/guides' component={AllGuides}/>
+
+			//Testing individual guide page
+			<Route exact path='/guide' component={Guide}/>
 	    </Switch>
     );
   }

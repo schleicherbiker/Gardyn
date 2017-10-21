@@ -66,7 +66,7 @@ class AllPlants extends Component {
 						))
 					}
 		  	</div>
-			</Wrapper>
+		  </Wrapper>
 	  )
   }
 }

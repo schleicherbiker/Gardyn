@@ -10,6 +10,7 @@ class Home extends Component {
 
 	}
 
+	// We can make this image whatever. I just figured I'd set it up to display some image so we could see what that looked like.
 	farmerImageLink = "https://1yd7z7koz052nb8r33cfxyw5-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/huge-old-farmer.png";
 
 	render() {

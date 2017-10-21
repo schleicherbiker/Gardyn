@@ -14,23 +14,21 @@
 	top: 325px;
 }
 
+/* Snaps with same breakpoints as Wrapper component. */
 @media only screen and (max-width: 400px) {
 	#homeOverlay {
 		top: 225px;
-		color: green;
 	}
 }
 
 @media only screen and (min-width: 401px) and (max-width: 960px) {
 	#homeOverlay {
 		top: 225px;
-		color: yellow;
 	}
 }
 
 @media only screen and (min-width: 961px) {
 	#homeOverlay {
 		top: 325px;
-		color: red;
 	}
 }

@@ -12,11 +12,10 @@ const Crop = (props) => {
 
   return (
   	<Wrapper>
-  	  <Navbar>
-  	  	<div id="individualCropHeader">
-  	  	  <h2 className = "cropName">{props.title}</h2>
-		</div>
-  	  </Navbar>
+  	  <Navbar/>
+	  <div id="individualCropHeader">
+	  	<h2 className = "cropName">{props.title}</h2>
+	  </div>
 	  <div className = "cropAlign">
 	    <hr/>
 	    <div className = "row">

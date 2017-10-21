@@ -1,4 +1,4 @@
-#allCrops {
+#allPlants {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -7,11 +7,11 @@
     margin: auto;
 }
 
-#allCropsHeader {
+#allPlantsHeader {
     margin-bottom: 48px;
     margin: 0 48px 48px 48px;
 }
 
-#allCropsHeaderTitle {
+#allPlantsHeaderTitle {
     border-bottom: 1px solid gray;
 }

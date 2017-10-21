@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import GuideCard from "../GuideCard";
 import Navbar from "../Navbar";
 import Wrapper from "../Wrapper";
 import "./AllGuides.css";
+import axios from "axios";
 
 const AllCrops = () => (
     <Wrapper>

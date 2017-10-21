@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./Home.css";
 import Navbar from "../Navbar";
 import Wrapper from "../Wrapper";
+import "./Home.css";
 
 // This component is not in it's final version. 
 // Just a stand in for reference purposes.

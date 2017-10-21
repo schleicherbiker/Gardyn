@@ -1,0 +1,34 @@
+#homeImage {
+	max-width: 100%;
+	display: block;
+	margin: auto;
+}
+
+#homeOverlay {
+	position: relative;
+	text-align: center;
+	color: white;
+	max-width: 60%;
+	display: block;
+	margin: auto;
+	top: 325px;
+}
+
+/* Snaps with same breakpoints as Wrapper component. */
+@media only screen and (max-width: 400px) {
+	#homeOverlay {
+		top: 225px;
+	}
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+	#homeOverlay {
+		top: 225px;
+	}
+}
+
+@media only screen and (min-width: 961px) {
+	#homeOverlay {
+		top: 325px;
+	}
+}

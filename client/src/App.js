@@ -2,8 +2,14 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import AllPlants from "./components/AllPlants";
 import AllGuides from "./components/AllGuides";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+
+// Are these two needed?
+// import Wrapper from "./components/Wrapper";
+// import SingleGuidePage from "./components/SingleGuidePage";
+// import SinglePlantPage from "./components/SinglePlantPage";
+
 import Wrapper from "./components/Wrapper";
 import Plant from "./components/Plant";
 

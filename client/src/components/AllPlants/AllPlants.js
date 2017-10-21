@@ -38,7 +38,7 @@ class AllPlants extends Component {
 	// This code then maps that data to CropCard elements. 
 	render() {
 	  return (
-		  <Wrapper>
+			<Wrapper>
 				<Navbar/>
 				<div id="allPlantsHeader">
 					<h1 id="allPlantsHeaderTitle">All Plants</h1>
@@ -65,8 +65,8 @@ class AllPlants extends Component {
 							/>
 						))
 					}
-		  	</div>
-		  </Wrapper>
+			  	</div>
+			</Wrapper>
 	  )
   }
 }

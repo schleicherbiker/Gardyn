@@ -44,9 +44,7 @@ class AllCrops extends Component {
 					{
 						this.state.cropData.map(item => (
 							<CropCard
-								cropName={item.title}
-								key={item._id}
-								imageURL={item.imageURL}
+								item = {item}
 							/>
 						))
 					}

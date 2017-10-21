@@ -3,14 +3,18 @@ import "./Crop.css";
 
 /* TODO: We need to pass in a name, a picture, and optionally a difficulty */
 
-const Crop = (props) => (    
+const Crop = (props) => {
+  
+  props = props.location.state.props.item;
+
+  return (    
   <div className = "cropAlign">
-    <h2 className = "cropName">{"{CropName}"}{/*props crop name*/}</h2>
+    <h2 className = "cropName">{props.title}</h2>
     
     <hr/>
     <div className = "row">
       <div className="col-md-3">
-        <img className = "cropImage" src = "https://placeholder.baker.com/200" alt="200x200"/>
+        <img className = "cropImage" src={props.imageURL} alt="200x200"/>
       </div>
   	  <div className="col-md-9">
   	    <p className = "cropParagraph">
@@ -31,6 +35,6 @@ const Crop = (props) => (
   	  </div>
     </div>
   </div>
-);
+)};
 
 export default Crop;

@@ -1,10 +1,11 @@
-// import React from "react";
 import React, { Component } from "react";
 import "./Home.css";
 import Navbar from "../Navbar";
 import Wrapper from "../Wrapper";
 
-// const Home = (props) => (
+// This component is not in it's final version. 
+// Just a stand in for reference purposes.
+
 class Home extends Component {
 	state: {
 

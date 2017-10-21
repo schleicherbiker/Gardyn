@@ -10,7 +10,7 @@ const Navbar = () => (
         </div>
       </a>
       <div className="flex">
-          <h3 className="button"><a className="nav-element-link" href="/crops"><h4>Plants</h4></a></h3>
+          <h3 className="button"><a className="nav-element-link" href="/plants"><h4>Plants</h4></a></h3>
           <h3 className="button"><a className="nav-element-link" href="/guides"><h4>Guides</h4></a></h3>
       </div>
     </div>

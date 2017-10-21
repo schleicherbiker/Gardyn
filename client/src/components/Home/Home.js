@@ -1,10 +1,12 @@
 import React from "react";
+import Navbar from "../Navbar";
+import Wrapper from "../Wrapper";
 import "./Home.css";
 
 const Home = (props) => (
-    <div>
-    	<p>This is the homepage.</p>
-    </div>
+    <Wrapper>
+        <Navbar/>
+    </Wrapper>
 )
 
 export default Home;

@@ -1,6 +1,10 @@
 #wrapper {
     margin: auto;
-    background: #eee;
+    padding: -15px;
+    background: #e0fcde;
+    border-left: 1px solid #3d3d3d;
+    border-right: 1px solid #3d3d3d;
+    box-sizing: content-box;
   }
   
   /* Phone */
@@ -20,7 +24,7 @@
     /* Desktop */
     @media only screen and (min-width: 961px) {
         body {
-            background-color: #B2D6FF;
+            background-color: #effff1;
         }
         
         #wrapper {

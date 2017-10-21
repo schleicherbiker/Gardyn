@@ -66,7 +66,7 @@ class AllCrops extends Component {
 						))
 					}
 		  	</div>
-			</Wrapper>
+		  </Wrapper>
 	  )
   }
 }

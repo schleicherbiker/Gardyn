@@ -5,19 +5,21 @@ import "./Guide.css";
 
 /* TODO: We need to pass in a name, a picture, and optionally a difficulty */
 
-const Guide = (props) => (    
-  <Wrapper>
-	<Navbar/>
-	<div id="individualGuideHeader">
-	  <h2 className = "Guide">{"{props.guide or something}"}</h2>
-	</div>
-	<div className = "jumbotron">
-      <h2>Guide</h2>
-    </div>
+const Guide = (props) => {   
+  
+  console.log("Nothing to link to yet.");
+
+  return (
+    <Wrapper>
+  	<Navbar/>
+  	<div id="individualGuideHeader">
+  	  <h2 className = "Guide">{"{Guide name here}"}</h2>
+  	</div>
+    <hr/>
     <p>
-      {/*Guide info goes here*/}
+      {"{Guide info goes here"}
     </p>
-  </Wrapper>
-);
+    </Wrapper>
+)};
 
 export default Guide;

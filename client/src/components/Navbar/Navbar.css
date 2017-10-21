@@ -16,6 +16,13 @@
     padding: 8px;
     width: 64px;
     height: 64px;
+    float: left;
+}
+
+.flat-link {
+  padding: 0px;
+  margin: 0px;
+  width: 250px;
 }
 
 /* Phone */

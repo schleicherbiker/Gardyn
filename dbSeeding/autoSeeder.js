@@ -135,3 +135,31 @@ db.plants.insertMany([
         photoLink: 
     }
 ];
+
+// Format for plant data
+[
+    {
+        "title": ,
+        "Climate": ,
+        "Sunlight": ,
+        "Support": ,
+        "Spacing": ,
+        "Water": ,
+        "Special": ,
+        "description": ,
+        "bullets": ,
+        "skillLevel": ,
+        "parentLevel": BOOLEAN,
+        "parentCat": , 
+        "imageURL": 
+    }
+]
+
+// Format for plant category data
+[
+    {
+        title: ,
+        description: ,
+        childPlants: ARRAY OF PLANT NAMES,
+    }
+]

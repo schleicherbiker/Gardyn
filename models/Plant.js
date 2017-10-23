@@ -62,6 +62,8 @@ var PlantSchema = new Schema({
 
   // Child plants should recieve an array. 
   // The array should store MongoDB IDs (from this table) of each child plant in the given category.
+  // Actually using plant names instead, since IDs will not be known prior to seeding. 
+  // Can be updated later if IDs work better. 
   childPlants: {
     type: Array
   } 

@@ -187,5 +187,10 @@ db.plants.insertMany([
         title: 'Leafy Greens',
         description: "Edible greens. Some are great for salads, some cooking, some both.",
         childPlants: [{title: 'Lettuce', description: ADD}, {title: 'Spinach', description: ADD}, {title: 'Kale', description: ADD}]
+    },
+    {
+        title: 'Melons',
+        description: "Toward the end of the growing season, pinch off any small melons so the larger melons will ripen and sweeten up.",
+        childPlants: [{title: 'Watermelon', description: ADD}, {title: 'Cantaloupe', description: ADD}, {title: 'Honeydew', description: ADD}]
     }
 ])

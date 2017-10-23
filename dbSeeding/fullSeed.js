@@ -172,6 +172,10 @@ db.plants.insertMany([
 
 
 // For seeding plant categories 
+// childPlants parameter stores an array of objects. Each object reprsents a child plant. 
+// Each child plant object has two parameters: title and description. 
+// Title should match the title given to the child plant in the database. 
+// Description should help users decide which variation to choose. 
 db.plants.insertMany([
     {
         title: 'Peas',

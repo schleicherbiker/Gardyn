@@ -164,3 +164,12 @@ db.plants.insertMany([
         childPlants: ARRAY OF PLANT NAMES,
     }
 ]
+
+// For putting a test plant cat in the database
+db.plants.insertOne({
+        title: 'Melons',
+        description: "Toward the end of the growing season, pinch off any small melons so the larger melons will ripen and sweeten up.",
+        childPlants: [{title: 'Watermelon', description: "Add watermelon description.", imageURL: "https://www.organicfacts.net/wp-content/uploads/2013/05/watermelon2.jpg"}, {title: 'Cantaloupe', description: "Add cantaloupe description.", imageURL: "https://groceries.morrisons.com/productImages/251/251646011_0_640x640.jpg?identifier=d85d41c1540345090c691ef4e3af7b53"}, {title: 'Honeydew', description: "Add honeydew description.", imageURL: "http://vanhornerestaurant.com/wp-content/uploads/2016/09/how-to-tell-honeydew-melon-is-ripe.jpg"}],
+        imageURL: "https://groceries.morrisons.com/productImages/210/210305011_0_640x640.jpg?identifier=6ff605c91cd0384439fa1acbd7de32a1",
+        parentLevel: true
+    })

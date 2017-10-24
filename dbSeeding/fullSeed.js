@@ -180,21 +180,30 @@ db.plants.insertMany([
     {
         title: 'Peas',
         description: 'To get peas in the ground and germinating as early as possible in the spring, plant them in raised beds. The raised beds warm up faster than the surrounding ground.',
-        childPlants: [{title: 'Snap Peas', description: ADD}, {title: 'Snow Peas', description: ADD}, {title: 'Field Peas', description: ADD}]
+        childPlants: [{title: 'Snap Peas', description: ADD}, {title: 'Snow Peas', description: ADD}, {title: 'Field Peas', description: ADD}],
+        imageURL: ADD
     },
     {
         title: 'Herbs',
         description: "Recommended planting and growing these indoors. Seeds should be sowed indoors, but after 5-10 weeks seedlings will be ready to move outside. Water enough to keep the soil moist, but not soggy and avoid frequent light waterings which can draw roots to the soil surface. Certain species need extra moist soil, while others need less moist soil, so water accordingly.",
-        childPlants: [{title: 'Cilantro', description: ADD}, {title: 'Basil', description: ADD}, {title: 'Thyme', description: ADD}, {title: 'Rosemary', description: ADD}, {title: 'Mint', description: ADD}, {title: 'Chives', description: ADD}]
+        childPlants: [{title: 'Cilantro', description: ADD}, {title: 'Basil', description: ADD}, {title: 'Thyme', description: ADD}, {title: 'Rosemary', description: ADD}, {title: 'Mint', description: ADD}, {title: 'Chives', description: ADD}],
+        imageURL: ADD
     },
     {
         title: 'Leafy Greens',
         description: "Edible greens. Some are great for salads, some cooking, some both.",
-        childPlants: [{title: 'Lettuce', description: ADD}, {title: 'Spinach', description: ADD}, {title: 'Kale', description: ADD}]
+        childPlants: [{title: 'Lettuce', description: ADD}, {title: 'Spinach', description: ADD}, {title: 'Kale', description: ADD}],
+        imageURL: ADD
     },
     {
         title: 'Melons',
         description: "Toward the end of the growing season, pinch off any small melons so the larger melons will ripen and sweeten up.",
-        childPlants: [{title: 'Watermelon', description: ADD}, {title: 'Cantaloupe', description: ADD}, {title: 'Honeydew', description: ADD}]
+        childPlants: [{title: 'Watermelon', description: ADD}, {title: 'Cantaloupe', description: ADD}, {title: 'Honeydew', description: ADD}],
+        imageURL: ADD
     }
 ])
+
+
+
+// For seeding guides 
+db.plants.insertMany()

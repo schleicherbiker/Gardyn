@@ -66,6 +66,9 @@ var PlantSchema = new Schema({
   // Can be updated later if IDs work better. 
   childPlants: {
     type: Array
+  },
+  isCat: {
+    type: Boolean,
   } 
 });
 

@@ -22,3 +22,13 @@
 	font-size: 24px;
 	align-items: left;
 }
+
+#childPlantHolder {
+    width: 60%;
+    float: right;
+}
+
+#catDetailsHolder {
+    width: 70%;
+    float: right;
+}

@@ -31,6 +31,7 @@ class AllPlants extends Component {
 
 	// Before the component can load the retrieveCrops function is executed in order to retrieve data from the backend. 
 	componentWillMount() {
+		console.log(this.state)
 	    this.retrievePlants();
 	}
 

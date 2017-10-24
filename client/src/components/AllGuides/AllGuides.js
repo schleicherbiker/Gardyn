@@ -5,8 +5,9 @@ import Wrapper from "../Wrapper";
 import "./AllGuides.css";
 import axios from "axios";
 
+
 class AllGuides extends Component {
-	state: {
+	state = {
 		guideData: [{guideName: "Loading...", _id: "000"}]
 	}
 
@@ -26,6 +27,7 @@ class AllGuides extends Component {
 	}
 
 	componentWillMount() {
+		console.log(this.state)
 	    this.retrieveGuides();
 	}
 
@@ -34,9 +36,13 @@ class AllGuides extends Component {
 		    <Wrapper>
 		        <Navbar/>
 		        <div id="allGuides">
-		            <GuideCard guideName="Soil 101"/>
-		            <GuideCard guideName="Watering"/>
-		            <GuideCard guideName="Pests and You"/>
+		        	{
+						this.state.guideData.map(item => (
+							<GuideCard
+								item = {item}
+							/>
+						))
+					}
 		        </div>
 		    </Wrapper>
 		)

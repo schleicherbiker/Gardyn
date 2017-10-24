@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Navbar";
 import Wrapper from "../Wrapper";
 import "./Plant.css";
+import PlantCard from "../PlantCard";
 
 const Plant = (props) => {
   
@@ -41,7 +42,19 @@ const Plant = (props) => {
 			        </p>
 			  	  </div>
 			  	  :
-			  	  <p>Not true</p>
+			  	  <div id="catDetailsHolder">
+				  	  <p>{props.description}</p>
+				  	  <h3>Varieties:</h3>
+				  	  <div id="childPlantHolder">
+					  	  {
+							props.childPlants.map(item => (
+								<PlantCard
+									item = {item}
+								/>
+							))
+						   }
+					   </div>
+			  	  </div>
 		  	  }
 		    </div>
 		  </div>

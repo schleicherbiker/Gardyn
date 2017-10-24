@@ -4,6 +4,7 @@ import Wrapper from "../Wrapper";
 import "./Plant.css";
 import PlantCard from "../PlantCard";
 
+// Uses a ternatry statement to either render a plant or category detail page.
 const Plant = (props) => {
   
   props = props.location.state.props.item;

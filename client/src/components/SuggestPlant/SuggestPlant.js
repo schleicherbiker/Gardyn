@@ -12,9 +12,15 @@ class SuggestPlant extends Component {
 		parentLevel: true
 	}
 
-	// This function captures form data and sends it to the backend
+	// This function captures state data and sends it to the backend
 	handleSubmit = () => {
-		console.log(this.state);
+		axios.post('/api/pos_plant', this.state)
+		  .then(function (response) {
+		    console.log(response);
+		  })
+		  .catch(function (error) {
+		    console.log(error);
+		  });
 	}
 
 	handleChange = (e) => {
@@ -24,15 +30,18 @@ class SuggestPlant extends Component {
 	render() {
 	  return (
 			<Wrapper>
-				<input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange} />
-				<input type="text" name="Climate" placeholder="Climate" value={this.state.Climate} onChange={this.handleChange} />
-				<input type="text" name="Sunlight" placeholder="Sunlight" value={this.state.Sunlight} onChange={this.handleChange} />
-				<input type="text" name="Support" placeholder="Support" value={this.state.Support} onChange={this.handleChange} />
-				<input type="text" name="Spacing" placeholder="Spacing" value={this.state.Spacing} onChange={this.handleChange} />
-				<input type="text" name="Water" placeholder="Water" value={this.state.Water} onChange={this.handleChange} />
-				<input type="text" name="Special" placeholder="Special" value={this.state.Special} onChange={this.handleChange} />
-				<input type="text" name="skillLevel" placeholder="Skill level (Easy, Intermediate, Difficult)" value={this.state.skillLevel} onChange={this.handleChange} />
-				<button type="button" onClick={this.handleSubmit}>Submit</button>
+				<Navbar />
+				<div className="inputForm">
+					<input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange} />
+					<input type="text" name="Climate" placeholder="Climate" value={this.state.Climate} onChange={this.handleChange} />
+					<input type="text" name="Sunlight" placeholder="Sunlight" value={this.state.Sunlight} onChange={this.handleChange} />
+					<input type="text" name="Support" placeholder="Support" value={this.state.Support} onChange={this.handleChange} />
+					<input type="text" name="Spacing" placeholder="Spacing" value={this.state.Spacing} onChange={this.handleChange} />
+					<input type="text" name="Water" placeholder="Water" value={this.state.Water} onChange={this.handleChange} />
+					<input type="text" name="Special" placeholder="Special" value={this.state.Special} onChange={this.handleChange} />
+					<input type="text" name="skillLevel" placeholder="Skill level (Easy, Intermediate, Difficult)" value={this.state.skillLevel} onChange={this.handleChange} />
+					<button type="button" onClick={this.handleSubmit}>Submit</button>
+				</div>
 			</Wrapper>
 	  )
   }

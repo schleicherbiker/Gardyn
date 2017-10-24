@@ -11,7 +11,7 @@ const GuideCard = (props) => {
 
 	return (
 		<Link to={{
-	        pathname: `/guides/${props.item.title}`,
+	        pathname: `/guide/${props.item.title}`,
 	        state: {props}
 	    }}>   
 		    <div className="guideCard">

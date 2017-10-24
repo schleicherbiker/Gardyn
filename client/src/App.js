@@ -20,9 +20,6 @@ class App extends Component {
 	      	<Route path='/plants' component={AllPlants}/>
 			<Route path='/guides' component={AllGuides}/>
 			<Route path='/guide/:name' component={Guide}/>
-
-			//Testing individual guide page
-			<Route exact path='/guide' component={Guide}/>
 	    </Switch>
     );
   }

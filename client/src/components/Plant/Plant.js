@@ -3,8 +3,6 @@ import Navbar from "../Navbar";
 import Wrapper from "../Wrapper";
 import "./Plant.css";
 
-/* TODO: We need to pass in a name, a picture, and optionally a difficulty */
-
 const Plant = (props) => {
   
   props = props.location.state.props.item;

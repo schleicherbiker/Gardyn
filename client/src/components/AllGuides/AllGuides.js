@@ -5,15 +5,48 @@ import Wrapper from "../Wrapper";
 import "./AllGuides.css";
 import axios from "axios";
 
-const AllCrops = () => (
-    <Wrapper>
-        <Navbar/>
-        <div id="allGuides">
-            <GuideCard guideName="Soil 101"/>
-            <GuideCard guideName="Watering"/>
-            <GuideCard guideName="Pests and You"/>
-        </div>
-    </Wrapper>
-);
 
-export default AllCrops;
+class AllGuides extends Component {
+	state = {
+		guideData: [{guideName: "Loading...", _id: "000"}]
+	}
+
+	retrieveGuides = () => {
+		// To ensure context of 'this' isn't lost inside the axios function. 
+		const parentObj = this;
+		axios.get('/api/guides')
+	      .then(function (response) {
+	        console.log(response.data);
+	        parentObj.setState({
+	          guideData: response.data
+	        })
+	      })
+	      .catch(function (error) {
+	        console.log(error);
+	      });
+	}
+
+	componentWillMount() {
+		console.log(this.state)
+	    this.retrieveGuides();
+	}
+
+	render() {
+		return (
+		    <Wrapper>
+		        <Navbar/>
+		        <div id="allGuides">
+		        	{
+						this.state.guideData.map(item => (
+							<GuideCard
+								item = {item}
+							/>
+						))
+					}
+		        </div>
+		    </Wrapper>
+		)
+  	}
+}
+
+export default AllGuides;

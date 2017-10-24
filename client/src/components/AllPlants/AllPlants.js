@@ -31,8 +31,9 @@ class AllPlants extends Component {
 
 	// Before the component can load the retrieveCrops function is executed in order to retrieve data from the backend. 
 	componentWillMount() {
+		console.log(this.state)
 	    this.retrievePlants();
-	  }
+	}
 
 	// state.cropData stores an array of objects, each representing a crop to be displayed. 
 	// This code then maps that data to CropCard elements. 

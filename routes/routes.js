@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const Plant = require("../models/Plant.js");
 const Guide = require("../models/Guide.js");
+const PlantPos = require("../models/PlantPos.js");
+const GuidePos = require("../models/GuidePos.js");
 const request = require("request");
 
 	// GET /plants

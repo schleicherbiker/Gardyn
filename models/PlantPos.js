@@ -18,8 +18,7 @@ var PlantPosSchema = new Schema({
   // It should be used both for plant detail information and category information. 
   title: {
     type: String,
-    required: true, 
-    unique: true
+    required: true
   },
     Climate:{
     type: 'string'
@@ -60,7 +59,10 @@ var PlantPosSchema = new Schema({
   // The array should store MongoDB IDs (from this table) of each child plant in the given category.
   childPlants: {
     type: Array
-  } 
+  },
+  isCat: {
+    type: Boolean,
+  }  
 });
 
 // Create the model with the schema

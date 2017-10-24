@@ -18,7 +18,7 @@ var GuideSchema = new Schema({
   // MongoDB appears to just store everything as string types?? 
   // If we have problems with it, I'll do further research.
   body: {
-    type: String,
+    type: Array,
     required: true
   },
   photoLink: {

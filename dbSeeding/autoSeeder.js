@@ -118,6 +118,7 @@ db.plants.insertMany([
 ])
 
 // Format for guide data: 
+// Body expect an array of strings, each string representing one paragraph.
 [
     {
         title: ,

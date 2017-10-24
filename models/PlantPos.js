@@ -60,7 +60,10 @@ var PlantPosSchema = new Schema({
   // The array should store MongoDB IDs (from this table) of each child plant in the given category.
   childPlants: {
     type: Array
-  } 
+  },
+  isCat: {
+    type: Boolean,
+  }  
 });
 
 // Create the model with the schema

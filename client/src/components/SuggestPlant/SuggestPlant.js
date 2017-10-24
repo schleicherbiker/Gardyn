@@ -9,6 +9,11 @@ class SuggestPlant extends Component {
 
 	}
 
+	// This function captures form data and sends it to the backend
+	captureData = () => {
+
+	}
+
 	render() {
 	  return (
 			<Wrapper>

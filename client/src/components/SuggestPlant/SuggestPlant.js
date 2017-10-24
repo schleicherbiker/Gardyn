@@ -6,28 +6,24 @@ import axios from "axios";
 
 class SuggestPlant extends Component {
 	state = {
-		newPlantObj: {}
+		
 	}
 
 	// This function captures form data and sends it to the backend
 	handleSubmit = () => {
-		console.log(this.state.newPlantObj.title);
-		console.log(this.state.newPlantObj.climate);
+		console.log(this.state.title);
+		console.log(this.state.climate);
 	}
 
-	handleTitleChange = (e) => {
-		this.setState({newPlantObj.title: e.target.value});
-	}
-
-	handleClimateChange = (e) => {
-		this.setState({newPlantObj.climate: e.target.value});
+	handleChange = (e) => {
+		this.setState({[e.target.name]: e.target.value});
 	}
 
 	render() {
 	  return (
 			<Wrapper>
-				<input type="text" name="title" placeholder="Title" value={this.state.newPlantObj.title} onChange={this.handleTitleChange} />
-				<input type="text" name="climate" placeholder="Climate" value={this.state.newPlantObj.climate} onChange={this.handleClimateChange} />
+				<input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange} />
+				<input type="text" name="climate" placeholder="Climate" value={this.state.climate} onChange={this.handleChange} />
 				<button type="button" onClick={this.handleSubmit}>Submit</button>
 			</Wrapper>
 	  )

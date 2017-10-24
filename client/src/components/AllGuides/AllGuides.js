@@ -35,6 +35,9 @@ class AllGuides extends Component {
 		return (
 		    <Wrapper>
 		        <Navbar/>
+						<div id="allGuidesHeader">
+							<h1 id="allGuidesHeaderTitle">All Guides</h1>
+						</div>
 		        <div id="allGuides">
 		        	{
 						this.state.guideData.map(item => (

@@ -1,10 +1,9 @@
 .guideCard {
     display: flex;
     align-items: center;
-    width: 812px;
+    width: 736px;
     height: 96px;
-    margin: auto;
-    margin-bottom: 48px;
+    margin: 0 24px 48px 24px;
     position: relative;
     background-color: yellow;
     overflow: hidden;

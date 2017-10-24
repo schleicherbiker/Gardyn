@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Plant = require("../models/Plant.js");
-// const Article = require("../models/Article.js");
+const Guide = require("../models/Guide.js");
 const request = require("request");
 
 	// GET /plants
@@ -14,11 +14,10 @@ const request = require("request");
 
 	// GET /guides
 	router.get("/guides", function(req, res) {
-//		console.log("Guide route hit")
 	  // Returns all guides
-//	  Guide.find({}, function(err, doc){
-	    res.json({message: "sent"});
-//	  });
+	  Guide.find({}, function(err, doc){
+	    res.json(doc);
+	  });
 	});
 
 	// GET /plant/:id

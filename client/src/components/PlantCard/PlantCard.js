@@ -4,13 +4,31 @@ import "./PlantCard.css";
 
 const PlantCard = (props) => {
 
+    var difficulty = "hard"; //should be props.difficulty when added to DB
+
+    if (difficulty === "easy") { //if (props.difficulty === "easy") {
+        var easyDif = "easyDifficulty";
+        var medDif = "mediumDifficulty hidden";
+        var hardDif = "hardDifficulty hidden";
+    } else if (difficulty === "medium") { //if (props.difficulty === "medium") {
+        var easyDif = "easyDifficulty hidden";
+        var medDif = "mediumDifficulty";
+        var hardDif = "hardDifficulty hidden";
+    } else {
+        var easyDif = "easyDifficulty hidden";
+        var medDif = "mediumDifficulty hidden";
+        var hardDif = "hardDifficulty";
+    }
+
     return (  
         <Link to={{
             pathname: `/plants/${props.item.title}`,
             state: {props}
         }}>
             <div className="plantCard">
-                <div className="plantCardDifficulty"></div>
+                <div className={easyDif}></div>
+                <div className={medDif}></div>
+                <div className={hardDif}></div>
                 <img className="plantCardImage" alt="" src={props.item.imageURL}></img>
                 <h2 className="plantCardName">{props.item.title}</h2>
             </div>

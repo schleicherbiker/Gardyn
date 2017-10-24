@@ -180,21 +180,47 @@ db.plants.insertMany([
     {
         title: 'Peas',
         description: 'To get peas in the ground and germinating as early as possible in the spring, plant them in raised beds. The raised beds warm up faster than the surrounding ground.',
-        childPlants: [{title: 'Snap Peas', description: ADD}, {title: 'Snow Peas', description: ADD}, {title: 'Field Peas', description: ADD}]
+        childPlants: [{title: 'Snap Peas', description: ADD}, {title: 'Snow Peas', description: ADD}, {title: 'Field Peas', description: ADD}],
+        imageURL: ADD
     },
     {
         title: 'Herbs',
         description: "Recommended planting and growing these indoors. Seeds should be sowed indoors, but after 5-10 weeks seedlings will be ready to move outside. Water enough to keep the soil moist, but not soggy and avoid frequent light waterings which can draw roots to the soil surface. Certain species need extra moist soil, while others need less moist soil, so water accordingly.",
-        childPlants: [{title: 'Cilantro', description: ADD}, {title: 'Basil', description: ADD}, {title: 'Thyme', description: ADD}, {title: 'Rosemary', description: ADD}, {title: 'Mint', description: ADD}, {title: 'Chives', description: ADD}]
+        childPlants: [{title: 'Cilantro', description: ADD}, {title: 'Basil', description: ADD}, {title: 'Thyme', description: ADD}, {title: 'Rosemary', description: ADD}, {title: 'Mint', description: ADD}, {title: 'Chives', description: ADD}],
+        imageURL: ADD
     },
     {
         title: 'Leafy Greens',
         description: "Edible greens. Some are great for salads, some cooking, some both.",
-        childPlants: [{title: 'Lettuce', description: ADD}, {title: 'Spinach', description: ADD}, {title: 'Kale', description: ADD}]
+        childPlants: [{title: 'Lettuce', description: ADD}, {title: 'Spinach', description: ADD}, {title: 'Kale', description: ADD}],
+        imageURL: ADD
     },
     {
         title: 'Melons',
         description: "Toward the end of the growing season, pinch off any small melons so the larger melons will ripen and sweeten up.",
-        childPlants: [{title: 'Watermelon', description: ADD}, {title: 'Cantaloupe', description: ADD}, {title: 'Honeydew', description: ADD}]
+        childPlants: [{title: 'Watermelon', description: ADD}, {title: 'Cantaloupe', description: ADD}, {title: 'Honeydew', description: ADD}],
+        imageURL: ADD
+    }
+])
+
+
+
+// For seeding guides 
+// Body expect an array of strings, each string representing one paragraph.
+db.plants.insertMany([
+    {
+        title: "Soil",
+        body: ["Healthy soil is the basis of healthy plants and a successful garden. When soil is in good shape there is less need for fertilizers or pesticides. Good soil is rich in humus which comes from decaying organic compost. It is loose and fluffy, holds moisture, drains well, and has plenty of minerals essential for plant growth. Living organisms like earthworms, certain fungi, and bacteria also help maintain the quality of the soil.", "Finding the right fertilizer for your soil is another important aspect. Macronutrients such as nitrogen, phosphorous, potassium, magnesium, calcium, sulfur are important to plant health. Micronutrients like boron, iron, zinc, etc are also important, in smaller quantities, to the health of your plants. A good balance together not only assure healthy growth, but they also help your plants fight off pests and diseases.", "The final touch for the perfect soil composition is proper pH. Although other aspects such as soil nutrients are largely important, soil pH still plays its part. A good way to test soil pH is to mix some soil with distilled water in a container until muddy, and then add vinegar. If it fizzes then your soil is too acidic. If that is the case, adding some pulverized limestone, which has magnesium and calcium carbonate, will raise the pH of your soil. Usually the natural pH of soil is between 6-7, so you should not have to worry.", "Always remember, a great way to keep your garden soil rich is by adding organic compost. Things like grass clippings, leaves, plants trimmings, table scraps, etc are excellent use for compost. These items contain various amounts of micronutrients, and their use in compost guarantees returning those micronutrients to the soil."],
+        photoLink: ADD
+    },
+    {
+        title: ,
+        body: ,
+        photoLink: 
+    },
+    {
+        title: ,
+        body: ,
+        photoLink: 
     }
 ])

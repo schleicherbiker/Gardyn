@@ -11,7 +11,7 @@ class SuggestPlant extends Component {
 
 	// This function captures form data and sends it to the backend
 	handleSubmit = () => {
-
+		console.log(this.state.title);
 	}
 
 	handleTitleChange = (e) => {
@@ -28,4 +28,4 @@ class SuggestPlant extends Component {
   }
 }
 
-export default AllPlants;
+export default SuggestPlant;

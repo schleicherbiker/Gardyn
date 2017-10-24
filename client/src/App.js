@@ -5,11 +5,6 @@ import AllGuides from "./components/AllGuides";
 // import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 
-// Are these two needed?
-// import Wrapper from "./components/Wrapper";
-// import SingleGuidePage from "./components/SingleGuidePage";
-// import SinglePlantPage from "./components/SinglePlantPage";
-
 import Wrapper from "./components/Wrapper";
 import Plant from "./components/Plant";
 
@@ -25,7 +20,8 @@ class App extends Component {
 	      <Route exact path='/' component={Home} />
 	        <Route path='/plants/:name' component={Plant} />
 	      	<Route path='/plants' component={AllPlants}/>
-			    <Route path='/guides' component={AllGuides}/>
+			<Route path='/guides' component={AllGuides}/>
+			<Route path='/guide/water' component={Guide}/>
 
 			//Testing individual guide page
 			<Route exact path='/guide' component={Guide}/>

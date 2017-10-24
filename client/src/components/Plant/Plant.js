@@ -22,7 +22,7 @@ const Plant = (props) => {
 		        <img className = "plantImage" src={props.imageURL} alt="200x200"/>
 		      </div>
 		      {
-		      	  (props.isCat !== true)
+		      	  (!props.isCat)
 		      	  ?
 			  	  <div className="col-md-9">
 			  	    <p className = "plantParagraph">

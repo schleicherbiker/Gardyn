@@ -3,12 +3,9 @@ import Navbar from "../Navbar";
 import Wrapper from "../Wrapper";
 import "./Guide.css";
 
-/* TODO: We need to pass in a name, a picture, and optionally a difficulty */
-
 const Guide = (props) => {   
   
   props = props.location.state.props.item;
-  console.log(props);
 
   return (
     <Wrapper>

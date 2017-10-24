@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import AllPlants from "./components/AllPlants";
 import AllGuides from "./components/AllGuides";
-// import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Plant from "./components/Plant";
-
-//Testing individual pages
 import Guide from "./components/Guide";
-
 import './App.css';
 
 class App extends Component {

@@ -67,7 +67,7 @@ class AllPlants extends Component {
 						))
 					}
 					<a href="/suggest_plant">
-					<img src="AddOne.jpg" alt="Suggest a new plant" className="plantCard"/>
+						<img src="AddOne.jpg" alt="Suggest a new plant" className="plantCard"/>
 					</a>
 			  	</div>
 			</Wrapper>

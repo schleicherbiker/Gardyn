@@ -18,8 +18,7 @@ var PlantPosSchema = new Schema({
   // It should be used both for plant detail information and category information. 
   title: {
     type: String,
-    required: true, 
-    unique: true
+    required: true
   },
     Climate:{
     type: 'string'

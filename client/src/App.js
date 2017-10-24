@@ -4,8 +4,6 @@ import AllPlants from "./components/AllPlants";
 import AllGuides from "./components/AllGuides";
 // import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-
-import Wrapper from "./components/Wrapper";
 import Plant from "./components/Plant";
 
 //Testing individual pages

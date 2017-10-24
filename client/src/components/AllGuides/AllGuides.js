@@ -34,7 +34,7 @@ class AllGuides extends Component {
 		    <Wrapper>
 		        <Navbar/>
 		        <div id="allGuides">
-		            <GuideCard guideName="Soil 102"/>
+		            <GuideCard guideName="Soil 101"/>
 		            <GuideCard guideName="Watering"/>
 		            <GuideCard guideName="Pests and You"/>
 		        </div>

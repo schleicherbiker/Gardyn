@@ -14,10 +14,11 @@ const request = require("request");
 
 	// GET /guides
 	router.get("/guides", function(req, res) {
+//		console.log("Guide route hit")
 	  // Returns all guides
-	  Guide.find({}, function(err, doc){
-	    res.json(doc);
-	  });
+//	  Guide.find({}, function(err, doc){
+	    res.json({message: "sent"});
+//	  });
 	});
 
 	// GET /plant/:id

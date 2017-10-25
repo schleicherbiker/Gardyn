@@ -21,7 +21,7 @@ class SuggestPlant extends Component {
 		this.setState({submitErrorMessage: ""});
 
 		// Stores the values that are allowed to be passed to the backend
-		const allowed = ['title', 'Climate', 'Sunlight', 'Support', 'Spacing', 'Water', 'Special', 'skillLevel', 'parentLevel'];
+		const allowed = ['title', 'imageURL', 'Climate', 'Sunlight', 'Support', 'Spacing', 'Water', 'Special', 'skillLevel', 'parentLevel'];
 
 		// Filters out state properties that are not listed in 'allowed'
 		const filteredState = Object.keys(this.state)

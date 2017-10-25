@@ -46,6 +46,9 @@ class AllGuides extends Component {
 							/>
 						))
 					}
+					<a href="/suggest_guide" className="guideCard" id="addGuide">
+						<img src="AddOneG.png" alt="Suggest a new guide" id="addGuideImage"/>
+					</a>
 		        </div>
 		    </Wrapper>
 		)

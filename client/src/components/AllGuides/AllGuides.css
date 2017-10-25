@@ -15,3 +15,14 @@
 #allGuidesHeaderTitle {
     border-bottom: 1px solid gray;
 }
+
+#addGuideImage {
+	height: 100%;
+	width: auto;
+	display: block;
+	margin: auto;
+}
+
+#addGuide {
+	background: #c3c3c3;
+}

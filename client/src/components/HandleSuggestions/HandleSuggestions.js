@@ -47,7 +47,7 @@ class HandleSuggestions extends Component {
 
 	deletePlant = (e) => {
 		// e.target.value represents the mongo ID of the submission to be deleted
-		axios.get('/api/pos_guide/' + e.target.value)
+		axios.delete('/api/pos_plant/' + e.target.value)
 		  .then(function (response) {
 		    console.log(response);
 			})

@@ -121,13 +121,15 @@ const request = require("request");
 	// DELETE /pos_plant/:id
 	router.delete("/pos_plant/:id", function(req, res) {
 	  // Deletes a plant from the consideration queue
-	  PlantPos.findByIdAndRemove(req.params.id, (err, todo) => {  
+/*	  PlantPos.findByIdAndRemove(req.params.id, (err, todo) => {  
 	      let response = {
 	          message: "Plant suggestion successfully deleted",
 	          id: todo._id
 	      };
-	      res.status(200).send(response);
-	  });
+//	      res.status(200).send(response);
+		  res.sendStatus(200);
+	  });*/
+	  	res.sendStatus(200);
 	});
 
 	// DELETE /pos_guide/:id

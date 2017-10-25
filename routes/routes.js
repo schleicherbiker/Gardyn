@@ -38,6 +38,22 @@ const request = require("request");
 	  });
 	});
 
+	// GET /pos_plants
+	router.get("/pos_plants", function(req, res) {
+	  // Returns all suggested plants
+	  PlantPos.find({}, function(err, doc){
+	    res.json(doc);
+	  });
+	});
+
+	// GET /pos_guides
+	router.get("/pos_guides", function(req, res) {
+	  // Returns all suggested guides
+	  GuidePos.find({}, function(err, doc){
+	    res.json(doc);
+	  });
+	});
+
 	// POST /pos_plant
 	router.post("/pos_plant", function(req, res) {
 	  // Saves a possible plant to the queue for consideration

@@ -20,6 +20,9 @@ var PlantPosSchema = new Schema({
     type: String,
     required: true
   },
+  imageURL:{
+    type: 'string'
+  },
     Climate:{
     type: 'string'
   },

@@ -18,9 +18,6 @@ class SuggestGuide extends Component {
 		this.setState({submitMessage: ""});
 		this.setState({submitErrorMessage: ""});
 
-		this.setState({ticket: "Hard coded"});
-		console.log(this.state)
-/*
 		// Stores the values that are allowed to be passed to the backend
 		const allowed = ['title', 'photoLink', 'body'];
 
@@ -38,17 +35,17 @@ class SuggestGuide extends Component {
 		// To preserve context of 'this' inside axios call
 		const parentObj = this;
 
-		axios.post('/api/pos_plant', filteredState)
+		axios.post('/api/pos_guides', filteredState)
 		  .then(function (response) {
 		    console.log(response);
-		    parentObj.setState({submitMessage: "Thanks for submitting a new plant! Your suggestion is being reviewed."});
-		    setTimeout(function(){ window.location = "http://localhost:3000/plants"; }, 2500);
+		    parentObj.setState({submitMessage: "Thanks for submitting a new guide! Your suggestion is being reviewed."});
+		    setTimeout(function(){ window.location = "/guides"; }, 2500);
 		  })
 		  .catch(function (error) {
 		    console.log(error);
 		    parentObj.setState({submitErrorMessage: "Sorry, there your submission was not recieved. Please review your info and try again."});
 
-		  });*/
+		  });
 	}
 
 	handleChange = (e) => {

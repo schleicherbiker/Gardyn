@@ -45,7 +45,7 @@ class SuggestPlant extends Component {
 		  })
 		  .catch(function (error) {
 		    console.log(error);
-		    parentObj.setState({submitErrorMessage: "Sorry, there your submission was not recieved. Please review your info and try again."});
+		    parentObj.setState({submitErrorMessage: "Sorry, your submission was not recieved. Please review your info and try again."});
 
 		  });
 	}

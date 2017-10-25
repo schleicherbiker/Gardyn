@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Navbar from "../Navbar";
 import Wrapper from "../Wrapper";
+import axios from "axios";
+import PlantCard from "../PlantCard";
 import "./HandleSuggestions.css";
 
 class HandleSuggestions extends Component {
@@ -38,11 +40,21 @@ class HandleSuggestions extends Component {
 	      });
 	}
 
+	componentWillMount() {
+	    this.retrieveSuggestions();
+	}
+
 	render() {
 		return (
 		    <Wrapper>
 				<Navbar/>
-						
+				{
+					this.state.plantData.map(item => (
+						<PlantCard
+							item = {item}
+						/>
+					))
+				}	
 			</Wrapper>
 		)
 	}

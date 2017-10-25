@@ -12,7 +12,7 @@ db.plants.insertMany([
     "Special": "Recommend burying two-thirds of the stem when planting (note method of deep planting only works with tomatoes)",
     "description": null,
     "bullets": null,
-    "skillLevel": "Intermediate",
+    "skillLevel": "Easy",
     "parentLevel": true,
     "parentCat": null,
     "imageURL": "http://assets.nydailynews.com/polopoly_fs/1.2834910.1476795531!/img/httpImage/image.jpg_gen/derivatives/article_750/488059328.jpg"
@@ -27,7 +27,7 @@ db.plants.insertMany([
     "Special": "Start pepper seeds three to a pot, and thin out the weakest seedling. Let the remaining two pepper plants spend their entire lives together as one plant. The leaves of two plants help protect peppers against sunscald and the yield is often twice as good as two segregated plants.",
     "description": null,
     "bullets": null,
-    "skillLevel": "Intermediate",
+    "skillLevel": "Easy",
     "parentLevel": true,
     "parentCat": null,
     "imageURL": "https://img.buzzfeed.com/buzzfeed-static/static/2017-05/4/12/asset/buzzfeed-prod-fastlane-01/sub-buzz-20636-1493915918-9.jpg?downsize=715:*&output-format=auto&output-quality=auto"
@@ -87,7 +87,7 @@ db.plants.insertMany([
         "Special": "Brussels sprouts also need more boron than most other vegetables. If your brussels sprouts develop hollow stems and small buds, you can add boron to the soil by dissolving 1 level tablespoon of borax in 5 quarts of water and sprinkling it evenly over 50 square feet of bed. DO NOT be tempted to mix more, and do not apply unless your plants have shown the deficiency symptoms we just mentioned.",
         "description": null,
         "bullets": null,
-        "skillLevel": "Intermediate",
+        "skillLevel": "Difficult",
         "parentLevel": true,
         "parentCat": null, 
         "imageURL": "http://www.well-beingsecrets.com/wp-content/uploads/Brussels-Sprouts-and-Manganese.jpg"
@@ -117,7 +117,7 @@ db.plants.insertMany([
         "Special": "To produce the best crop possible, double-dig your planting area or build up a raised bed.",
         "description": null,
         "bullets": null,
-        "skillLevel": "Intermediate",
+        "skillLevel": "Difficult",
         "parentLevel": true,
         "parentCat": null, 
         "imageURL": "https://www.organicfacts.net/wp-content/uploads/2013/05/Carrot1.jpg"

@@ -222,9 +222,9 @@ db.guides.insertMany([
         photoLink: "http://sustainablepulse.com/wp-content/uploads/2017/10/soil2.jpg"
     },
     {
-        title: ,
-        body: ,
-        photoLink: 
+        title: "Pest Control",
+        body: ["Pest control is important to the success of any garden. Some larger animals such as raccoons and deer can be blocked by simply fencing in the garden area. The most common form of pests are usually bugs. The best way to prevent insect damage in your garden is to disuade them from approaching at all. In this case, a healthy garden is the best defence.", "Minimize insect habitat. Start by pulling out any weak plants as these may already be infected. Even if not, they will soon attract predators. Remove these plants and dispose of them away from the garden area. Clear garden area of debris and weeds which are breeding places for insects and use clean mulch. If you've been working with infested plants, clean your tools before moving on to other garden areas. This will reduce the speed of invading insects.", "Build healthy, organic soil. Natural composting methods, mulching and top-dressing your soil with compost or natural fertilizer is the best way to develop strong, resistant plants. Seaweed mulch or spray contains trace micronutrients such as iron, zinc, barium, calcium, sulfur and magnesium, which promote healthy development in plants. These nutrients enhance growth and give plants the resilience to withstand disease.", "Keep plant foliage dry. Wet foliage encourages insect and fungal damage to your plants. Optionally, invest in drip-irrigation for methods of delivering water directly to the root s without wetting the foliage. Interplant and rotate crops. Insect pests are often plant specific. When plantings are mixed, pests are less likely to spread throughout a crop. Rotating plants each year is a common method to avoid re-infestation of pests that have settled over winter."],
+        photoLink: "http://www.backyardnature.net/pix/b-swal-c.jpg"
     },
     {
         title: ,

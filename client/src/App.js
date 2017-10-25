@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Plant from "./components/Plant";
 import Guide from "./components/Guide";
 import SuggestPlant from "./components/SuggestPlant";
+import SuggestGuide from "./components/SuggestGuide";
 import './App.css';
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
 			<Route path='/guides' component={AllGuides}/>
 			<Route path='/guide/:name' component={Guide}/>
 			<Route path='/suggest_plant' component={SuggestPlant}/>
+			<Route path='/suggest_guide' component={SuggestGuide}/>
 	    </Switch>
     );
   }

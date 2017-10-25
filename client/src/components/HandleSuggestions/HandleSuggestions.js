@@ -50,12 +50,23 @@ class HandleSuggestions extends Component {
 		axios.delete('/api/pos_plant/' + e.target.value)
 		  .then(function (response) {
 		    console.log(response);
-		    location.reload();
+		    // Suggestions are re-retrieved to account for change
+		    this.retrieveSuggestions();
 			})
 		  .catch(function (error) {
 		    console.log(error);
 			});
-	};
+	}
+
+	acceptPlant = (e) => {
+		axios.post('/api/plant/' + e.target.value, {})
+		  .then(function (response) {
+		    console.log(response);
+		  })
+		  .catch(function (error) {
+		    console.log(error);
+		  });
+	}
 
 	render() {
 		return (
@@ -69,6 +80,7 @@ class HandleSuggestions extends Component {
 								item = {item}
 							/>
 							<button type="button" onClick={this.deletePlant} value={item._id}>Delete</button>
+							<button type="button" onClick={this.acceptPlant} value={item._id}>Accept</button>
 						</div>
 					))
 				}

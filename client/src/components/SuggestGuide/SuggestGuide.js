@@ -18,10 +18,11 @@ class SuggestGuide extends Component {
 		this.setState({submitMessage: ""});
 		this.setState({submitErrorMessage: ""});
 
-		console.log(this.state.guideBody);
-
+		this.setState({ticket: "Hard coded"});
+		console.log(this.state)
+/*
 		// Stores the values that are allowed to be passed to the backend
-/*		const allowed = ['title', 'Climate', 'Sunlight', 'Support', 'Spacing', 'Water', 'Special', 'skillLevel', 'parentLevel'];
+		const allowed = ['title', 'photoLink', 'body'];
 
 		// Filters out state properties that are not listed in 'allowed'
 		const filteredState = Object.keys(this.state)
@@ -51,7 +52,15 @@ class SuggestGuide extends Component {
 	}
 
 	handleChange = (e) => {
-		this.setState({[e.target.name]: e.target.value});
+		// 'Body' in the database expects an array or strings. 
+		// Typically each index/each string is a seperate paragraph. 
+		// However, here, the whole guide body is lumped into one index. 
+		// This may or may not cause problems.... 
+		if (e.target.name !== "body") {
+			this.setState({[e.target.name]: e.target.value});
+		} else {
+			this.setState({body: [e.target.value]});
+		}
 	}
 
 	render() {
@@ -64,7 +73,7 @@ class SuggestGuide extends Component {
 					<div className="inputForm">
 						<input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange} />
 						<input type="text" name="photoLink" placeholder="Photo URL" value={this.state.photoLink} onChange={this.handleChange} />
-						<textarea rows="4" cols="50" placeholder="Write your guide here..." name="guideBody" onChange={this.handleChange}></textarea>
+						<textarea rows="4" cols="50" placeholder="Write your guide here..." name="body" onChange={this.handleChange}></textarea>
 						<p id="errorDisplay">{this.state.submitErrorMessage}</p>
 						<button type="button" onClick={this.handleSubmit}>Submit</button>
 					</div>

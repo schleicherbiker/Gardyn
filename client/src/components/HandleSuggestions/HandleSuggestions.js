@@ -50,6 +50,7 @@ class HandleSuggestions extends Component {
 		axios.delete('/api/pos_plant/' + e.target.value)
 		  .then(function (response) {
 		    console.log(response);
+		    location.reload();
 			})
 		  .catch(function (error) {
 		    console.log(error);

@@ -1,0 +1,13 @@
+.inputForm {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#errorDisplay {
+	color: red;
+}
+
+.successMessage {
+	max-width: 80%;
+	text-align: center;
+}

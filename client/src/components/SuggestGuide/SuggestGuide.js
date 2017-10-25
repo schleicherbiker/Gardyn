@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 import Navbar from "../Navbar";
 import Wrapper from "../Wrapper";
-import "./SuggestPlant.css";
+import "./SuggestGuide.css";
 import axios from "axios";
 
-// Component that handles the suggestion of new plant entries
+// Component that handles the suggestion of new guide entries
 // Validation should be added. 
-// Skill level should be a drop down menu rather than a text entry, if time allows, as the database will reject entries that are not just so. 
-class SuggestPlant extends Component {
+class SuggestGuide extends Component {
 	state = {
-		parentLevel: true,
 		submitMessage: "",
 		submitErrorMessage: ""
 	}
@@ -21,7 +19,7 @@ class SuggestPlant extends Component {
 		this.setState({submitErrorMessage: ""});
 
 		// Stores the values that are allowed to be passed to the backend
-		const allowed = ['title', 'Climate', 'Sunlight', 'Support', 'Spacing', 'Water', 'Special', 'skillLevel', 'parentLevel'];
+		const allowed = ['title', 'photoLink', 'body'];
 
 		// Filters out state properties that are not listed in 'allowed'
 		const filteredState = Object.keys(this.state)
@@ -37,11 +35,11 @@ class SuggestPlant extends Component {
 		// To preserve context of 'this' inside axios call
 		const parentObj = this;
 
-		axios.post('/api/pos_plant', filteredState)
+		axios.post('/api/pos_guides', filteredState)
 		  .then(function (response) {
 		    console.log(response);
-		    parentObj.setState({submitMessage: "Thanks for submitting a new plant! Your suggestion is being reviewed."});
-		    setTimeout(function(){ window.location = "/plants"; }, 2500);
+		    parentObj.setState({submitMessage: "Thanks for submitting a new guide! Your suggestion is being reviewed."});
+		    setTimeout(function(){ window.location = "/guides"; }, 2500);
 		  })
 		  .catch(function (error) {
 		    console.log(error);
@@ -51,7 +49,15 @@ class SuggestPlant extends Component {
 	}
 
 	handleChange = (e) => {
-		this.setState({[e.target.name]: e.target.value});
+		// 'Body' in the database expects an array or strings. 
+		// Typically each index/each string is a seperate paragraph. 
+		// However, here, the whole guide body is lumped into one index. 
+		// This may or may not cause problems.... 
+		if (e.target.name !== "body") {
+			this.setState({[e.target.name]: e.target.value});
+		} else {
+			this.setState({body: [e.target.value]});
+		}
 	}
 
 	render() {
@@ -63,13 +69,8 @@ class SuggestPlant extends Component {
 					?
 					<div className="inputForm">
 						<input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange} />
-						<input type="text" name="Climate" placeholder="Climate" value={this.state.Climate} onChange={this.handleChange} />
-						<input type="text" name="Sunlight" placeholder="Sunlight" value={this.state.Sunlight} onChange={this.handleChange} />
-						<input type="text" name="Support" placeholder="Support" value={this.state.Support} onChange={this.handleChange} />
-						<input type="text" name="Spacing" placeholder="Spacing" value={this.state.Spacing} onChange={this.handleChange} />
-						<input type="text" name="Water" placeholder="Water" value={this.state.Water} onChange={this.handleChange} />
-						<input type="text" name="Special" placeholder="Special" value={this.state.Special} onChange={this.handleChange} />
-						<input type="text" name="skillLevel" placeholder="Skill level (Easy, Intermediate, Difficult)" value={this.state.skillLevel} onChange={this.handleChange} />
+						<input type="text" name="photoLink" placeholder="Photo URL" value={this.state.photoLink} onChange={this.handleChange} />
+						<textarea rows="4" cols="50" placeholder="Write your guide here..." name="body" onChange={this.handleChange}></textarea>
 						<p id="errorDisplay">{this.state.submitErrorMessage}</p>
 						<button type="button" onClick={this.handleSubmit}>Submit</button>
 					</div>
@@ -81,4 +82,4 @@ class SuggestPlant extends Component {
   }
 }
 
-export default SuggestPlant;
+export default SuggestGuide;

@@ -58,6 +58,7 @@ class SuggestPlant extends Component {
 		this.setState({[e.target.name]: e.target.value});
 	}
 
+	// ATTN: INPUT NAMES NEED TO MATCH VALUES IN DATABASE!!
 	render() {
 	  return (
 			<Wrapper>
@@ -72,28 +73,35 @@ class SuggestPlant extends Component {
 						      <label className="col-lg-2 control-label" for="titleInput">Title</label>
 						      <div className="col-lg-10">
 						        <input className="form-control" type="text" id="titleInput" placeholder="Plant name"
-						        name="titleInput" value={this.state.titleInput} onChange={this.handleChange} />
+						        name="title" value={this.state.titleInput} onChange={this.handleChange} />
+						      </div>
+						    </div>
+						    <div className="form-group">
+						      <label className="col-lg-2 control-label" for="imageURLInput">Image URL</label>
+						      <div className="col-lg-10">
+						        <input className="form-control" type="text" id="imageURLInput" placeholder="Image URL"
+						        name="imageURL" value={this.state.imageURL} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
 						      <label className="col-lg-2 control-label" for="climateInput">Climate</label>
 						      <div className="col-lg-10">
 						        <input className="form-control" type="text" id="climateInput" placeholder="Recommended climate" 
-						        name="climateInput" value={this.state.climateInput} onChange={this.handleChange} />
+						        name="Climate" value={this.state.climateInput} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
 						      <label className="col-lg-2 control-label" for="sunlightInput">Sunlight</label>
 						      <div className="col-lg-9">
 						        <input className="form-control" type="number" step="1" max="24" min="0" id="sunlightInput" placeholder="0"
-						        name="sunlightInput" value={this.state.sunlightInput} onChange={this.handleChange} />
+						        name="Sunlight" value={this.state.sunlightInput} onChange={this.handleChange} />
 						      </div>
 						      <div className="col-lg-1">Hours</div>
 						    </div>
 						    <div className="form-group">
 						      <label className="col-lg-2 control-label" for="supportInput">Support</label>
 						      <div class="col-lg-10">
-						        <select className="form-control" id="supportInput">
+						        <select className="form-control" id="supportInput" name="Support" value={this.state.Support} onChange={this.handleChange}>
 						          <option value="maybe">Maybe</option>
 						          <option value="yes">Yes (Cages, Stakes, Trellis)</option>
 						          <option value="no">No</option>
@@ -104,7 +112,7 @@ class SuggestPlant extends Component {
 						      <label className="col-lg-2 control-label" for="spacingInput">Spacing</label>
 						      <div className="col-lg-9">
 						        <input className="form-control" type="number" step="1" max="36" min="0" id="spacingInput" placeholder="0"
-						        name="spacingInput" value={this.state.spacingInput} onChange={this.handleChange} />
+						        name="Spacing" value={this.state.Spacing} onChange={this.handleChange} />
 						      </div>
 						      <div className="col-lg-1">Inches</div>
 						    </div>
@@ -112,18 +120,18 @@ class SuggestPlant extends Component {
 						      <label className="col-lg-2 control-label" for="waterInput">Water</label>
 						      <div className="col-lg-10">
 						        <textarea className="form-control" type="text" rows="3" id="waterInput" placeholder="Watering amount"
-						        name="waterInput" value={this.state.waterInput} onChange={this.handleChange} />
+						        name="Water" value={this.state.Water} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
 						      <label className="col-lg-2 control-label" for="specialInput">Special</label>
 						      <div className="col-lg-10">
 						        <textarea className="form-control" type="text" rows="3" id="specialInput" placeholder="Special needs"
-						        name="specialInput" value={this.state.specialInput} onChange={this.handleChange} />
+						        name="Special" value={this.state.Special} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" for="skillInput">Skill Level</label>
+						      <label className="col-lg-2 control-label" for="skillInput" name="skillLevel" value={this.state.skillLevel} onChange={this.handleChange}>Skill Level</label>
 						      <div class="col-lg-10">
 						        <select className="form-control" id="skillInput">
 						          <option value="Beginner">Beginner</option>

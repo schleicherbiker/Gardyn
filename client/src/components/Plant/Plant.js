@@ -8,22 +8,31 @@ import PlantCard from "../PlantCard";
 const Plant = (props) => {
   
 	props = props.location.state.props.item;
-	var trueDivStyle, falseDivStyle;
-	var needsSupport = true;
-	if (needsSupport) {
-		trueDivStyle = {
-			backgroundColor: "rgba(126, 252, 147, 0.6)"
-		}
-		falseDivStyle = {
-			backgroundColor: "rgba(255, 12, 0, 0)"
-		}
+
+	// Styling for plant support
+	var yesDivStyle, maybeDivStyle, noDivStyle;
+	if (props.Support === "yes") {
+		yesDivStyle = { backgroundColor: "rgba(126, 252, 147, 0.6)" }
+		maybeDivStyle = {backgroundColor: "rgba(126, 252, 147, 0)" }
+		noDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
+	} else if (props.Support === "maybe") {
+		yesDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
+		maybeDivStyle = {backgroundColor: "rgba(126, 252, 147, 0.6)" }
+		noDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
 	} else {
-		trueDivStyle = {
-			backgroundColor: "rgba(126, 252, 147, 0)"
-		}
-		falseDivStyle = {
-			backgroundColor: "rgba(255, 12, 0, 0.6)"
-		}
+		yesDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
+		maybeDivStyle = {backgroundColor: "rgba(126, 252, 147, 0)" }
+		noDivStyle = { backgroundColor: "rgba(126, 252, 147, 0.6)" }
+	}
+
+	// Styling for plant difficulty
+	var difficultyDivStyle;
+	if (props.skillLevel === "Beginner") { 
+		difficultyDivStyle = { backgroundColor: "rgba(126, 252, 147, 1)" }
+	} else if (props.skillLevel === "Intermediate") {
+		difficultyDivStyle = { backgroundColor: "rgba(244, 223, 66, 1)" }
+	} else {
+		difficultyDivStyle = { backgroundColor: "rgba(255, 0, 0, 0.8)" }
 	}
 
 	  return (
@@ -46,28 +55,34 @@ const Plant = (props) => {
 
 								<div className="infoDiv">
 									<img src="http://www.iconarchive.com/download/i89293/icons8/ios7/Weather-Sun.ico" id="sunlightDivIcon"></img>
-									<h4 className="textRight">6 - 8 hours</h4>
+									<h4 className="textRight">{props.Sunlight} hours</h4>
 								</div>
 
-								<div className="infoDiv">
-									<h4 id="difficultyDivText">Intermediate</h4>
+								<div className="infoDiv" style={difficultyDivStyle}>
+									<h4 id="difficultyDivText">{props.skillLevel}</h4>
 								</div>
 
 								<div className="infoDiv">
 									<img src="http://downloadicons.net/sites/default/files/left-right-double-arrow-symbols-icons-68674.png" id="sunlightDivIcon"></img>
-									<h4 className="textRight">12 - 24 inches</h4>
+									<h4 className="textRight">{props.Spacing} inches</h4>
 								</div>
 
 								<div className="infoDiv">
 									<h4 className="textLeft">Support: </h4>
 									<div className="infoDivOptions">
-										<div className="infoDivOptionsDiv" style={trueDivStyle}>
+										<div className="infoDivOptionsDiv" style={yesDivStyle}>
 											<img className="infoDivOptionsImage" src="http://icons.iconarchive.com/icons/icons8/android/512/Very-Basic-Checkmark-icon.png"></img>
 										</div>
 										<div id="divider"/>
-										<div className="infoDivOptionsDiv" style={falseDivStyle}>
+										<div className="infoDivOptionsDiv" style={maybeDivStyle}>
+											<img className="infoDivOptionsImage" src="http://icons.iconarchive.com/icons/icons8/ios7/512/Healthcare-Scales-Of-Balance-Filled-icon.png"></img>
+										</div>
+										<div id="divider"/>
+										<div className="infoDivOptionsDiv" style={noDivStyle}>
 											<img className="infoDivOptionsImage" src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png"></img>
 										</div>
+										
+										
 									</div>
 									
 								</div>

@@ -1,6 +1,5 @@
 body {
-    background-image: url("");
-    background-size: cover;
+    
 }
 
 #wrapper {
@@ -29,7 +28,9 @@ body {
     /* Desktop */
     @media only screen and (min-width: 961px) {
         body {
-            background-color: #effff1;
+            background-image: url("soil_bg.jpg");
+            background-size: contain;
+            background-attachment: fixed;
         }
         
         #wrapper {

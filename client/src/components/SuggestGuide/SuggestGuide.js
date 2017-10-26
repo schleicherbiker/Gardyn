@@ -67,13 +67,37 @@ class SuggestGuide extends Component {
 				{
 					(!this.state.submitMessage)
 					?
-					<div className="inputForm">
-						<input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange} />
-						<input type="text" name="photoLink" placeholder="Photo URL" value={this.state.photoLink} onChange={this.handleChange} />
-						<textarea rows="4" cols="50" placeholder="Write your guide here..." name="body" onChange={this.handleChange}></textarea>
-						<p id="errorDisplay">{this.state.submitErrorMessage}</p>
-						<button type="button" onClick={this.handleSubmit}>Submit</button>
-					</div>
+					<form className="form-horizontal inputForm">
+						<fieldset>
+							<legend className="entry-legend">New Guide Suggestion</legend>
+							<div className="form-group">
+						      <label className="col-lg-2 control-label" for="guideTitleInput">Title</label>
+						      <div className="col-lg-10">
+						        <input className="form-control" type="text" id="guideTitleInput" placeholder="Guide Title"
+						        name="guideTitleInput" value={this.state.guideTitleInput} onChange={this.handleChange} />
+						      </div>
+						    </div>
+						    <div className="form-group">
+						      <label className="col-lg-2 control-label" for="photolinkInput">Photo URL</label>
+						      <div className="col-lg-10">
+						        <input className="form-control" type="text" id="photolinkInput" placeholder="E.g. http://via.placeholder.com/300" 
+						        name="photolinkInput" value={this.state.photolinkInput} onChange={this.handleChange} />
+						      </div>
+						    </div>
+						    <div className="form-group">
+						      <label className="col-lg-2 control-label" for="guideInput">Guide</label>
+						      <div className="col-lg-10">
+						        <textarea className="form-control" type="text" rows="10" id="guideInput" placeholder="Write your guide here!"
+						        name="guideInput" value={this.state.guideInput} onChange={this.handleChange} />
+						      </div>
+						    </div>
+						    <div class="form-group">
+						      <div class="col-lg-10 col-lg-offset-2">
+						        <button type="submit" className="btn btn-success btn-gardyn" onClick={this.handleSubmit}>Submit</button>
+						      </div>
+						    </div>
+						</fieldset>
+					</form>
 					:
 					<h3 className="successMessage">{this.state.submitMessage}</h3>
 				}
@@ -83,3 +107,13 @@ class SuggestGuide extends Component {
 }
 
 export default SuggestGuide;
+
+/*
+					<div className="inputForm">
+						<input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange} />
+						<input type="text" name="photoLink" placeholder="Photo URL" value={this.state.photoLink} onChange={this.handleChange} />
+						<textarea rows="4" cols="50" placeholder="Write your guide here..." name="body" onChange={this.handleChange}></textarea>
+						<p id="errorDisplay">{this.state.submitErrorMessage}</p>
+						<button type="button" onClick={this.handleSubmit}>Submit</button>
+					</div>
+*/

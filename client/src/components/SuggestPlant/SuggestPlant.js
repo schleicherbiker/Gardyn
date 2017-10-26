@@ -61,6 +61,88 @@ class SuggestPlant extends Component {
 				{
 					(!this.state.submitMessage)
 					?
+					<form className="form-horizontal inputForm">
+						<fieldset>
+							<legend className="entry-legend">New Plant Entry</legend>
+							<div className="form-group">
+						      <label className="col-lg-2 control-label" for="titleInput">Title</label>
+						      <div className="col-lg-10">
+						        <input className="form-control" type="text" id="titleInput" placeholder="Plant name"
+						        name="titleInput" value={this.state.titleInput} onChange={this.handleChange} />
+						      </div>
+						    </div>
+						    <div className="form-group">
+						      <label className="col-lg-2 control-label" for="climateInput">Climate</label>
+						      <div className="col-lg-10">
+						        <input className="form-control" type="text" id="climateInput" placeholder="Recommended climate" 
+						        name="climateInput" value={this.state.climateInput} onChange={this.handleChange} />
+						      </div>
+						    </div>
+						    <div className="form-group">
+						      <label className="col-lg-2 control-label" for="sunlightInput">Sunlight</label>
+						      <div className="col-lg-9">
+						        <input className="form-control" type="number" step="1" max="24" min="0" id="sunlightInput" placeholder="0"
+						        name="sunlightInput" value={this.state.sunlightInput} onChange={this.handleChange} />
+						      </div>
+						      <div className="col-lg-1">Hours</div>
+						    </div>
+						    <div className="form-group">
+						      <label className="col-lg-2 control-label" for="supportInput">Support</label>
+						      <div className="col-lg-10">
+						        <input className="form-control" type="text" id="supportInput" placeholder="E.g. Cages, Stakes, Trellis, etc"
+						        name="supportInput" value={this.state.supportInput} onChange={this.handleChange} />
+						      </div>
+						    </div>
+						    <div className="form-group">
+						      <label className="col-lg-2 control-label" for="spacingInput">Spacing</label>
+						      <div className="col-lg-9">
+						        <input className="form-control" type="number" step="1" max="36" min="0" id="spacingInput" placeholder="0"
+						        name="spacingInput" value={this.state.spacingInput} onChange={this.handleChange} />
+						      </div>
+						      <div className="col-lg-1">Inches</div>
+						    </div>
+						    <div className="form-group">
+						      <label className="col-lg-2 control-label" for="waterInput">Water</label>
+						      <div className="col-lg-10">
+						        <textarea className="form-control" type="text" rows="3" id="waterInput" placeholder="Watering amount"
+						        name="waterInput" value={this.state.waterInput} onChange={this.handleChange} />
+						      </div>
+						    </div>
+						    <div className="form-group">
+						      <label className="col-lg-2 control-label" for="specialInput">Special</label>
+						      <div className="col-lg-10">
+						        <textarea className="form-control" type="text" rows="3" id="specialInput" placeholder="Special needs"
+						        name="specialInput" value={this.state.specialInput} onChange={this.handleChange} />
+						      </div>
+						    </div>
+						    <div className="form-group">
+						      <label className="col-lg-2 control-label" for="skillInput">Skill Level</label>
+						      <div class="col-lg-10">
+						        <select className="form-control" id="skillInput">
+						          <option value="Beginner">Beginner</option>
+						          <option value="Intermediate">Intermediate</option>
+						          <option value="Expert">Expert</option>
+						        </select>
+						      </div>
+						    </div>
+						    <div class="form-group">
+						      <div class="col-lg-10 col-lg-offset-2">
+						        <button type="submit" className="btn btn-success btn-gardyn" onClick={this.handleSubmit}>Submit</button>
+						      </div>
+						    </div>
+						</fieldset>
+					</form>
+					:
+					<h3 className="successMessage">{this.state.submitMessage}</h3>
+				}
+			</Wrapper>
+	  )
+  }
+}
+
+export default SuggestPlant;
+
+/*
 					<div className="inputForm">
 						<input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange} />
 						<input type="text" name="Climate" placeholder="Climate" value={this.state.Climate} onChange={this.handleChange} />
@@ -73,12 +155,4 @@ class SuggestPlant extends Component {
 						<p id="errorDisplay">{this.state.submitErrorMessage}</p>
 						<button type="button" onClick={this.handleSubmit}>Submit</button>
 					</div>
-					:
-					<h3 className="successMessage">{this.state.submitMessage}</h3>
-				}
-			</Wrapper>
-	  )
-  }
-}
-
-export default SuggestPlant;
+*/

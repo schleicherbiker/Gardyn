@@ -1,6 +1,7 @@
 .inputForm {
 	padding-top: 30px;
 	padding-bottom: 30px;
+	padding-right: 20px;
 }
 
 #errorDisplay {
@@ -10,4 +11,12 @@
 .successMessage {
 	max-width: 80%;
 	text-align: center;
+}
+
+.btn-gardyn {
+	margin-right: 10px;
+}
+
+.entry-legend {
+	padding-left: 10px;
 }

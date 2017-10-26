@@ -3,6 +3,7 @@ import Navbar from "../Navbar";
 import Wrapper from "../Wrapper";
 import "./SuggestPlant.css";
 import axios from "axios";
+//import { Dropdown, DropdownMenu } from 'reactstrap';
 
 // Component that handles the suggestion of new plant entries
 // Validation should be added. 
@@ -52,12 +53,20 @@ class SuggestPlant extends Component {
 
 		  });
 	}
-
+/*
+	testFunction = () => {
+		console.log("Test function works")
+	}
+*/
 	handleChange = (e) => {
+/*		console.log(e);
 		const localKey = e.target.name + "";
-		const localValue = e.target.value + "";
-		this.setState({[localKey]: localValue});
-		console.log(localKey + " updated to " + localValue);
+		const localValue = e.target.value + "";*/
+		console.log("Function run")
+		this.testFunction();
+		this.setState({value: "A"});
+//		this.setState({[localKey]: localValue});
+//		console.log(localKey + " updated to " + localValue);
 		console.log(this.state)
 	}
 
@@ -145,6 +154,7 @@ class SuggestPlant extends Component {
 						          <option value="Intermediate">Intermediate</option>
 						          <option value="Expert">Expert</option>
 						        </select>
+						        <input type="text" name="skillLevel" placeholder="Skill level (Easy, Intermediate, Difficult)" value={this.state.skillLevel} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div class="form-group">

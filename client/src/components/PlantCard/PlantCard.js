@@ -4,20 +4,21 @@ import "./PlantCard.css";
 
 const PlantCard = (props) => {
 
-    var difficulty = "hard"; //should be props.difficulty when added to DB
+    const test = props.skillLevel;
+    console.log(props.item.skillLevel);
 
-    if (difficulty === "easy") { //if (props.difficulty === "easy") {
+    if (props.skillLevel === "easy") { //if (props.difficulty === "easy") {
         var easyDif = "easyDifficulty";
         var medDif = "mediumDifficulty hidden";
         var hardDif = "hardDifficulty hidden";
-    } else if (difficulty === "medium") { //if (props.difficulty === "medium") {
-        var easyDif = "easyDifficulty hidden";
-        var medDif = "mediumDifficulty";
-        var hardDif = "hardDifficulty hidden";
-    } else {
+    } else if (props.skillLevel === "difficult") { //if (props.difficulty === "medium") {
         var easyDif = "easyDifficulty hidden";
         var medDif = "mediumDifficulty hidden";
         var hardDif = "hardDifficulty";
+    } else {
+        var easyDif = "easyDifficulty hidden";
+        var medDif = "mediumDifficulty";
+        var hardDif = "hardDifficulty hidden";
     }
 
     return (  

@@ -1,3 +1,8 @@
+body {
+    background-image: url("");
+    background-size: cover;
+}
+
 #wrapper {
     margin: auto;
     padding: -15px;

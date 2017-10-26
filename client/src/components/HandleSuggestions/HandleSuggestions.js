@@ -65,7 +65,29 @@ class HandleSuggestions extends Component {
 		// To ensure context of 'this' isn't lost inside the axios function. 
 		const parentObj = this;
 
-		axios.post('/api/plant/' + e.target.value, {})
+		let objToSend;
+
+		for (let i = 0; i < this.state.plantData.length; i++){
+			if (this.state.plantData[i]._id === e.target.value){
+				objToSend = this.state.plantData[i];
+			}
+		}
+/*
+		const allowed = ['title', 'imageURL', 'Climate', 'Sunlight', 'Support', 'Spacing', 'Water', 'Special', 'skillLevel', 'parentLevel'];
+
+		// Filters out properties that are not handled by the new object
+		const filteredPlantObj = Object.keys(objToSend)
+		  .filter(key => allowed.includes(key))
+		  .reduce((obj, key) => {
+		    obj[key] = this.state[key];
+		    return obj;
+		  }, {});
+*/
+		console.log(this.state.plantData);
+		console.log("Extracting: " + e.target.value);
+		console.log(objToSend);
+
+/*		axios.post('/api/plant/' + e.target.value, {})
 		  .then(function (response) {
 		    console.log(response);
 //		    console.log(response.data[0]);
@@ -75,7 +97,7 @@ class HandleSuggestions extends Component {
 		  })
 		  .catch(function (error) {
 		    console.log(error);
-		  });
+		  });*/
 	}
 
 	render() {

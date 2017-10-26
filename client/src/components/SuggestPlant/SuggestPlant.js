@@ -21,7 +21,7 @@ class SuggestPlant extends Component {
 		this.setState({submitErrorMessage: ""});
 
 		// Stores the values that are allowed to be passed to the backend
-		const allowed = ['title', 'Climate', 'Sunlight', 'Support', 'Spacing', 'Water', 'Special', 'skillLevel', 'parentLevel'];
+		const allowed = ['title', 'imageURL', 'Climate', 'Sunlight', 'Support', 'Spacing', 'Water', 'Special', 'skillLevel', 'parentLevel'];
 
 		// Filters out state properties that are not listed in 'allowed'
 		const filteredState = Object.keys(this.state)
@@ -37,6 +37,10 @@ class SuggestPlant extends Component {
 		// To preserve context of 'this' inside axios call
 		const parentObj = this;
 
+//		filteredState.parentLevel = true;
+
+		console.log("About to send:");
+		console.log(filteredState);
 		axios.post('/api/pos_plant', filteredState)
 		  .then(function (response) {
 		    console.log(response);
@@ -148,6 +152,7 @@ export default SuggestPlant;
 /*
 					<div className="inputForm">
 						<input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange} />
+						<input type="text" name="imageURL" placeholder="Image URL" value={this.state.imageURL} onChange={this.handleChange} />
 						<input type="text" name="Climate" placeholder="Climate" value={this.state.Climate} onChange={this.handleChange} />
 						<input type="text" name="Sunlight" placeholder="Sunlight" value={this.state.Sunlight} onChange={this.handleChange} />
 						<input type="text" name="Support" placeholder="Support" value={this.state.Support} onChange={this.handleChange} />

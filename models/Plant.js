@@ -19,6 +19,9 @@ var PlantSchema = new Schema({
     required: true, 
     unique: true
   },
+  imageURL:{
+    type: 'string'
+  },
   Climate:{
     type: 'string'
   },

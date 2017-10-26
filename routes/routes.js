@@ -92,7 +92,18 @@ const request = require("request");
 		// This could potentially be handled in a simpler way..
 		PlantPos.find({_id: "59f12b4b7849e03dd5dabad0"}, function(err, doc){
 			console.log(doc[0])
-		    Plant.create(doc[0], function (err, small) {
+
+			const allowed = ['title', 'imageURL', 'Climate', 'Sunlight', 'Support', 'Spacing', 'Water', 'Special', 'skillLevel', 'parentLevel'];
+
+			// Filters out properties that are not handled by the new object
+			const filteredPlantObj = Object.keys(doc[0])
+			  .filter(key => allowed.includes(key))
+			  .reduce((obj, key) => {
+			    obj[key] = this.state[key];
+			    return obj;
+			  }, {});
+
+		    Plant.create(filteredPlantObj, function (err, small) {
 	/*		    if (err) {
 			      res.send(err)
 			    } else {

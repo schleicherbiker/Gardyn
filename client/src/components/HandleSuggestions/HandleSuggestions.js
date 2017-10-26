@@ -68,7 +68,7 @@ class HandleSuggestions extends Component {
 		axios.post('/api/plant/' + e.target.value, {})
 		  .then(function (response) {
 		    console.log(response);
-		    console.log(response.data[0]);
+//		    console.log(response.data[0]);
 
 		    // Suggestions are re-retrieved to account for change
 		    parentObj.retrieveSuggestions();

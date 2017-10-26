@@ -17,6 +17,7 @@ class SuggestPlant extends Component {
 	// This function captures state data and sends it to the backend
 	handleSubmit = (e) => {
 		e.preventDefault();
+
 		// Clears out errror/success messages 
 		this.setState({submitMessage: ""});
 		this.setState({submitErrorMessage: ""});
@@ -44,7 +45,7 @@ class SuggestPlant extends Component {
 		  .then(function (response) {
 		    console.log(response);
 		    parentObj.setState({submitMessage: "Thanks for submitting a new plant! Your suggestion is being reviewed."});
-//		    setTimeout(function(){ window.location = "/plants"; }, 2500);
+		    setTimeout(function(){ window.location = "/plants"; }, 2500);
 		  })
 		  .catch(function (error) {
 		    console.log(error);

@@ -89,8 +89,9 @@ const request = require("request");
 		// Moves a plant with a particular ID from the queue to the actual collection
 		// First the ID is used to find the given document in the PlantPos collection. 
 		// The object is then saved to the actual plant collection. 
-	/*	PlantPos.find({_id: objectId(req.params.id)}, function(err, doc){
-		    Plant.create(doc[0], function (err, small) {
+		// This could potentially be handled in a simpler way..
+		PlantPos.find({_id: "59f12b4b7849e03dd5dabad0"}, function(err, doc){
+	/*	    Plant.create(doc[0], function (err, small) {
 			    if (err) {
 			      res.send(err)
 			    } else {
@@ -100,10 +101,10 @@ const request = require("request");
 	  				if (!err) res.sendStatus(200);
 	  			  });
 			    }; 
-			})
+			})*/
+			console.log(doc[0])
 			res.json(doc);
-		});*/
-		res.sendStatus(200);
+		});
 	});
 
 	// POST /guide/:id

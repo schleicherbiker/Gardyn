@@ -59,11 +59,12 @@ class SuggestPlant extends Component {
 	}
 */
 	handleChange = (e) => {
+		e.preventDefault();
 /*		console.log(e);
 		const localKey = e.target.name + "";
 		const localValue = e.target.value + "";*/
 		console.log("Function run")
-		this.testFunction();
+//		this.testFunction();
 		this.setState({value: "A"});
 //		this.setState({[localKey]: localValue});
 //		console.log(localKey + " updated to " + localValue);
@@ -148,17 +149,18 @@ class SuggestPlant extends Component {
 						    <div className="form-group">
 						      <label className="col-lg-2 control-label" for="skillInput">Skill Level</label>
 						      <div className="col-lg-10">
-						        <select className="form-control" id="skillInput" name="skillLevel" value={this.state.skillInput} onChange={this.handleChange}>
+						        <select className="form-control" id="skillInput" name="skillLevel" onChange={this.handleChange}>
 						          <option value="">------</option>
 						          <option value="Beginner">Beginner</option>
 						          <option value="Intermediate">Intermediate</option>
 						          <option value="Expert">Expert</option>
 						        </select>
+						        <button onClick={this.handleChange}>Test Button</button>
 						        <input type="text" name="skillLevel" placeholder="Skill level (Easy, Intermediate, Difficult)" value={this.state.skillLevel} onChange={this.handleChange} />
 						      </div>
 						    </div>
-						    <div class="form-group">
-						      <div class="col-lg-10 col-lg-offset-2">
+						    <div className="form-group">
+						      <div className="col-lg-10 col-lg-offset-2">
 						        <button type="submit" className="btn btn-success btn-gardyn" onClick={this.handleSubmit}>Submit</button>
 						      </div>
 						    </div>

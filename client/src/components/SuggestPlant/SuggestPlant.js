@@ -3,7 +3,6 @@ import Navbar from "../Navbar";
 import Wrapper from "../Wrapper";
 import "./SuggestPlant.css";
 import axios from "axios";
-//import { Dropdown, DropdownMenu } from 'reactstrap';
 
 // Component that handles the suggestion of new plant entries
 // Validation should be added. 
@@ -53,22 +52,9 @@ class SuggestPlant extends Component {
 
 		  });
 	}
-/*
-	testFunction = () => {
-		console.log("Test function works")
-	}
-*/
+
 	handleChange = (e) => {
-		e.preventDefault();
-/*		console.log(e);
-		const localKey = e.target.name + "";
-		const localValue = e.target.value + "";*/
-		console.log("Function run")
-//		this.testFunction();
-		this.setState({value: "A"});
-//		this.setState({[localKey]: localValue});
-//		console.log(localKey + " updated to " + localValue);
-		console.log(this.state)
+		this.setState({[e.target.name]: e.target.value});
 	}
 
 	// ATTN: Input names need to match values in database!

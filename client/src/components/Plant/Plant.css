@@ -14,7 +14,9 @@
 
 .plantImage {
 	align-items: right;
-    width: 200px;
+    width: 100%;
+    border: 1px solid black;
+    margin-left: 5%;
     height: auto;
 }
 
@@ -31,4 +33,71 @@
 #catDetailsHolder {
     width: 70%;
     float: right;
+}
+
+
+.infoDiv {
+    width: 80%;
+    height: 48px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background: #eee;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+#sunlightDivIcon {
+    height: 100%;
+    width: auto;
+    padding: 0 5% 0 5%;
+    border-style: border-box;
+    border-right: 1px solid black
+}
+
+.textRight {
+    margin-left: 5%;
+    font-size: 26px;
+}
+
+.textLeft {
+    padding: 0 5% 0 5%;
+    font-size: 26px;
+    border-right: 1px solid black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#difficultyDivText {
+    text-align: center;
+    font-size: 26px;
+    width: 100%;
+}
+
+.infoDivOptions {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.infoDivOptionsImage {
+    height: 60%;
+    width: auto;
+}
+
+#divider {
+    height: 100%;
+    border-left: 1px solid black;
+}
+
+.infoDivOptionsDiv {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

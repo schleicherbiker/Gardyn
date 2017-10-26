@@ -52,20 +52,6 @@ class AllPlants extends Component {
 							/>
 						))
 					}
-					{
-						this.state.plantData.map(item => (
-							<PlantCard
-								item = {item}
-							/>
-						))
-					}
-					{
-						this.state.plantData.map(item => (
-							<PlantCard
-								item = {item}
-							/>
-						))
-					}
 					<a href="/suggest_plant">
 						<img src="AddOne.jpg" alt="Suggest a new plant" className="plantCard"/>
 					</a>

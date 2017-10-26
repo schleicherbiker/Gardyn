@@ -88,9 +88,12 @@ class SuggestPlant extends Component {
 						    </div>
 						    <div className="form-group">
 						      <label className="col-lg-2 control-label" for="supportInput">Support</label>
-						      <div className="col-lg-10">
-						        <input className="form-control" type="text" id="supportInput" placeholder="E.g. Cages, Stakes, Trellis, etc"
-						        name="supportInput" value={this.state.supportInput} onChange={this.handleChange} />
+						      <div class="col-lg-10">
+						        <select className="form-control" id="supportInput">
+						          <option value="maybe">Maybe</option>
+						          <option value="yes">Yes (Cages, Stakes, Trellis)</option>
+						          <option value="no">No</option>
+						        </select>
 						      </div>
 						    </div>
 						    <div className="form-group">

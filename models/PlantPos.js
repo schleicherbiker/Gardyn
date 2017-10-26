@@ -55,6 +55,9 @@ var PlantPosSchema = new Schema({
     type: String,
     enum: ["Easy", "Intermediate", "Difficult"]
   },
+  parentLevel: {
+    type: Boolean,
+  },
 
   // Fields below this point are related to category objects rather than plant detail pages
 

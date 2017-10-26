@@ -135,7 +135,23 @@ db.plants.insertMany([
     {
         title: 'Peas',
         description: 'To get peas in the ground and germinating as early as possible in the spring, plant them in raised beds. The raised beds warm up faster than the surrounding ground.',
-        childPlants: [{title: 'Snap Peas', description: ADD, imageURL: "https://images-na.ssl-images-amazon.com/images/I/61xWA1eNWrL._SX355_.jpg"}, {title: 'Snow Peas', description: ADD, imageURL: "http://www.holypine.com/wp-content/uploads/2015/10/snow-peas2.jpg"}, {title: 'Field Peas', description: ADD, imageURL: "https://humblefeast.files.wordpress.com/2012/09/field-peas-shelled.jpg"}],
+        childPlants: [
+            {
+                title: 'Snap Peas', 
+                description: ADD, 
+                imageURL: "https://images-na.ssl-images-amazon.com/images/I/61xWA1eNWrL._SX355_.jpg"
+            }, 
+            {
+                title: 'Snow Peas', 
+                description: ADD, 
+                imageURL: "http://www.holypine.com/wp-content/uploads/2015/10/snow-peas2.jpg"
+            }, 
+            {
+                title: 'Field Peas', 
+                description: ADD, 
+                imageURL: "https://humblefeast.files.wordpress.com/2012/09/field-peas-shelled.jpg"
+            }
+        ],
         imageURL: "http://www.goodwholefood.com/wp-content/uploads/2016/08/Peas-5.jpg",
         parentLevel: true,
         isCat: true
@@ -143,7 +159,38 @@ db.plants.insertMany([
     {
         title: 'Herbs',
         description: "Recommended planting and growing these indoors. Seeds should be sowed indoors, but after 5-10 weeks seedlings will be ready to move outside. Water enough to keep the soil moist, but not soggy and avoid frequent light waterings which can draw roots to the soil surface. Certain species need extra moist soil, while others need less moist soil, so water accordingly.",
-        childPlants: [{title: 'Cilantro', description: ADD, imageURL: "https://images-na.ssl-images-amazon.com/images/I/91EEvXaIP5L._SX355_.jpg"}, {title: 'Basil', description: ADD, imageURL: "http://media.mercola.com/assets/images/foodfacts/basil-nutrition-facts.jpg"}, {title: 'Thyme', description: ADD, imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Thyme-Bundle.jpg/250px-Thyme-Bundle.jpg"}, {title: 'Rosemary', description: ADD, imageURL: "https://www.organicfacts.net/wp-content/uploads/rosemary-1020x765.jpg"}, {title: 'Mint', description: ADD, imageURL: "http://sportsvape.net/wp-content/uploads/2014/09/Mint.jpg"}, {title: 'Chives', description: ADD, imageURL: "https://cdn1.medicalnewstoday.com/content/images/articles/275/275009/bunch-of-chives.jpg"}],
+        childPlants: [
+            {
+                title: 'Cilantro', 
+                description: ADD, 
+                imageURL: "https://images-na.ssl-images-amazon.com/images/I/91EEvXaIP5L._SX355_.jpg"
+            }, 
+            {
+                title: 'Basil', 
+                description: ADD, 
+                imageURL: "http://media.mercola.com/assets/images/foodfacts/basil-nutrition-facts.jpg"
+            }, 
+            {
+                title: 'Thyme', 
+                description: ADD, 
+                imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Thyme-Bundle.jpg/250px-Thyme-Bundle.jpg"
+            }, 
+            {
+                title: 'Rosemary', 
+                description: ADD, 
+                imageURL: "https://www.organicfacts.net/wp-content/uploads/rosemary-1020x765.jpg"
+            }, 
+            {
+                title: 'Mint', 
+                description: ADD, 
+                imageURL: "http://sportsvape.net/wp-content/uploads/2014/09/Mint.jpg"
+            }, 
+            {
+                title: 'Chives', 
+                description: ADD, 
+                imageURL: "https://cdn1.medicalnewstoday.com/content/images/articles/275/275009/bunch-of-chives.jpg"
+            }
+        ],
         imageURL: "https://www.organicfacts.net/wp-content/uploads/2013/05/Herbs2.jpg",
         parentLevel: true,
         isCat: true
@@ -151,7 +198,23 @@ db.plants.insertMany([
     {
         title: 'Leafy Greens',
         description: "Edible greens. Some are great for salads, some cooking, some both.",
-        childPlants: [{title: 'Lettuce', description: ADD, imageURL: "http://ghk.h-cdn.co/assets/cm/15/11/54ff047186bb0-ghk-iceberg-lettuce-xl.jpg"}, {title: 'Spinach', description: ADD, imageURL: "https://cdn1.medicalnewstoday.com/content/images/articles/270/270609/spinach-leaves.jpg"}, {title: 'Kale', description: ADD, imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CSA-Red-Russian-Kale.jpg/219px-CSA-Red-Russian-Kale.jpg"}],
+        childPlants: [
+            {
+                title: 'Lettuce', 
+                description: ADD, 
+                imageURL: "http://ghk.h-cdn.co/assets/cm/15/11/54ff047186bb0-ghk-iceberg-lettuce-xl.jpg"
+            }, 
+            {
+                title: 'Spinach', 
+                description: ADD, 
+                imageURL: "https://cdn1.medicalnewstoday.com/content/images/articles/270/270609/spinach-leaves.jpg"
+            }, 
+            {
+                title: 'Kale', 
+                description: ADD, 
+                imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CSA-Red-Russian-Kale.jpg/219px-CSA-Red-Russian-Kale.jpg"
+            }
+        ],
         imageURL: "http://thescienceofeating.com/wp-content/uploads/2012/04/Book-Green-Leafy-Veggetables.jpg",
         parentLevel: true,
         isCat: true
@@ -159,7 +222,23 @@ db.plants.insertMany([
     {
         title: 'Melons',
         description: "Toward the end of the growing season, pinch off any small melons so the larger melons will ripen and sweeten up.",
-        childPlants: [{title: 'Watermelon', description: "Add watermelon description.", imageURL: "https://www.organicfacts.net/wp-content/uploads/2013/05/watermelon2.jpg"}, {title: 'Cantaloupe', description: "Add cantaloupe description.", imageURL: "https://groceries.morrisons.com/productImages/251/251646011_0_640x640.jpg?identifier=d85d41c1540345090c691ef4e3af7b53"}, {title: 'Honeydew', description: "Add honeydew description.", imageURL: "http://vanhornerestaurant.com/wp-content/uploads/2016/09/how-to-tell-honeydew-melon-is-ripe.jpg"}],
+        childPlants: [
+            {
+                title: 'Watermelon', 
+                description: "Add watermelon description.", 
+                imageURL: "https://www.organicfacts.net/wp-content/uploads/2013/05/watermelon2.jpg"
+            }, 
+            {
+                title: 'Cantaloupe', 
+                description: "Add cantaloupe description.", 
+                imageURL: "https://groceries.morrisons.com/productImages/251/251646011_0_640x640.jpg?identifier=d85d41c1540345090c691ef4e3af7b53"
+            }, 
+            {
+                title: 'Honeydew', 
+                description: "Add honeydew description.", 
+                imageURL: "http://vanhornerestaurant.com/wp-content/uploads/2016/09/how-to-tell-honeydew-melon-is-ripe.jpg"
+            }
+        ],
         imageURL: "https://groceries.morrisons.com/productImages/210/210305011_0_640x640.jpg?identifier=6ff605c91cd0384439fa1acbd7de32a1",
         parentLevel: true,
         isCat: true

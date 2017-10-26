@@ -46,6 +46,9 @@ class HandleSuggestions extends Component {
 	}
 
 	deletePlant = (e) => {
+		// To ensure context of 'this' isn't lost inside the axios function. 
+		const parentObj = this;
+		
 		// e.target.value represents the mongo ID of the submission to be deleted
 		axios.delete('/api/pos_plant/' + e.target.value)
 		  .then(function (response) {
@@ -59,9 +62,15 @@ class HandleSuggestions extends Component {
 	}
 
 	acceptPlant = (e) => {
+		// To ensure context of 'this' isn't lost inside the axios function. 
+		const parentObj = this;
+
 		axios.post('/api/plant/' + e.target.value, {})
 		  .then(function (response) {
 		    console.log(response);
+
+		    // Suggestions are re-retrieved to account for change
+		    this.retrieveSuggestions();
 		  })
 		  .catch(function (error) {
 		    console.log(error);

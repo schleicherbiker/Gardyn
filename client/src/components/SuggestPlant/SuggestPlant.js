@@ -6,7 +6,6 @@ import axios from "axios";
 
 // Component that handles the suggestion of new plant entries
 // Validation should be added. 
-// Skill level should be a drop down menu rather than a text entry, if time allows, as the database will reject entries that are not just so. 
 class SuggestPlant extends Component {
 	state = {
 		parentLevel: true,

@@ -6,7 +6,6 @@ import axios from "axios";
 
 // Component that handles the suggestion of new plant entries
 // Validation should be added. 
-// Skill level should be a drop down menu rather than a text entry, if time allows, as the database will reject entries that are not just so. 
 class SuggestPlant extends Component {
 	state = {
 		parentLevel: true,
@@ -15,7 +14,9 @@ class SuggestPlant extends Component {
 	}
 
 	// This function captures state data and sends it to the backend
-	handleSubmit = () => {
+	handleSubmit = (e) => {
+		e.preventDefault();
+
 		// Clears out errror/success messages 
 		this.setState({submitMessage: ""});
 		this.setState({submitErrorMessage: ""});
@@ -37,8 +38,6 @@ class SuggestPlant extends Component {
 		// To preserve context of 'this' inside axios call
 		const parentObj = this;
 
-//		filteredState.parentLevel = true;
-
 		console.log("About to send:");
 		console.log(filteredState);
 		axios.post('/api/pos_plant', filteredState)
@@ -58,6 +57,9 @@ class SuggestPlant extends Component {
 		this.setState({[e.target.name]: e.target.value});
 	}
 
+	// ATTN: Input names need to match values in database!
+	// Dropdowns cannot have an opening value because state only updates when the value changes. 
+	// IE-- If it starts as "maybe" and the user leaves it as "maybe", the value won't show up in the database.
 	render() {
 	  return (
 			<Wrapper>
@@ -69,31 +71,39 @@ class SuggestPlant extends Component {
 						<fieldset>
 							<legend className="entry-legend">New Plant Entry</legend>
 							<div className="form-group">
-						      <label className="col-lg-2 control-label" for="titleInput">Title</label>
+						      <label className="col-lg-2 control-label" htmlFor="titleInput">Title</label>
 						      <div className="col-lg-10">
 						        <input className="form-control" type="text" id="titleInput" placeholder="Plant name"
-						        name="titleInput" value={this.state.titleInput} onChange={this.handleChange} />
+						        name="title" value={this.state.titleInput} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" for="climateInput">Climate</label>
+						      <label className="col-lg-2 control-label" htmlFor="imageURLInput">Image URL</label>
+						      <div className="col-lg-10">
+						        <input className="form-control" type="text" id="imageURLInput" placeholder="Image URL"
+						        name="imageURL" value={this.state.imageURL} onChange={this.handleChange} />
+						      </div>
+						    </div>
+						    <div className="form-group">
+						      <label className="col-lg-2 control-label" htmlFor="climateInput">Climate</label>
 						      <div className="col-lg-10">
 						        <input className="form-control" type="text" id="climateInput" placeholder="Recommended climate" 
-						        name="climateInput" value={this.state.climateInput} onChange={this.handleChange} />
+						        name="Climate" value={this.state.climateInput} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" for="sunlightInput">Sunlight</label>
+						      <label className="col-lg-2 control-label" htmlFor="sunlightInput">Sunlight</label>
 						      <div className="col-lg-9">
 						        <input className="form-control" type="number" step="1" max="24" min="0" id="sunlightInput" placeholder="0"
-						        name="sunlightInput" value={this.state.sunlightInput} onChange={this.handleChange} />
+						        name="Sunlight" value={this.state.sunlightInput} onChange={this.handleChange} />
 						      </div>
 						      <div className="col-lg-1">Hours</div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" for="supportInput">Support</label>
-						      <div class="col-lg-10">
-						        <select className="form-control" id="supportInput">
+						      <label className="col-lg-2 control-label" htmlFor="supportInput">Support</label>
+						      <div className="col-lg-10">
+						        <select className="form-control" id="supportInput" name="Support" onChange={this.handleChange}>
+						          <option value="">------</option>
 						          <option value="maybe">Maybe</option>
 						          <option value="yes">Yes (Cages, Stakes, Trellis)</option>
 						          <option value="no">No</option>
@@ -101,39 +111,40 @@ class SuggestPlant extends Component {
 						      </div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" for="spacingInput">Spacing</label>
+						      <label className="col-lg-2 control-label" htmlFor="spacingInput">Spacing</label>
 						      <div className="col-lg-9">
 						        <input className="form-control" type="number" step="1" max="36" min="0" id="spacingInput" placeholder="0"
-						        name="spacingInput" value={this.state.spacingInput} onChange={this.handleChange} />
+						        name="Spacing" value={this.state.Spacing} onChange={this.handleChange} />
 						      </div>
 						      <div className="col-lg-1">Inches</div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" for="waterInput">Water</label>
+						      <label className="col-lg-2 control-label" htmlFor="waterInput">Water</label>
 						      <div className="col-lg-10">
 						        <textarea className="form-control" type="text" rows="3" id="waterInput" placeholder="Watering amount"
-						        name="waterInput" value={this.state.waterInput} onChange={this.handleChange} />
+						        name="Water" value={this.state.Water} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" for="specialInput">Special</label>
+						      <label className="col-lg-2 control-label" htmlFor="specialInput">Special</label>
 						      <div className="col-lg-10">
 						        <textarea className="form-control" type="text" rows="3" id="specialInput" placeholder="Special needs"
-						        name="specialInput" value={this.state.specialInput} onChange={this.handleChange} />
+						        name="Special" value={this.state.Special} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" for="skillInput">Skill Level</label>
-						      <div class="col-lg-10">
-						        <select className="form-control" id="skillInput">
+						      <label className="col-lg-2 control-label" htmlFor="skillInput">Skill Level</label>
+						      <div className="col-lg-10">
+						        <select className="form-control" id="skillInput" name="skillLevel" onChange={this.handleChange}>
+						          <option value="">------</option>
 						          <option value="Beginner">Beginner</option>
 						          <option value="Intermediate">Intermediate</option>
 						          <option value="Expert">Expert</option>
 						        </select>
 						      </div>
 						    </div>
-						    <div class="form-group">
-						      <div class="col-lg-10 col-lg-offset-2">
+						    <div className="form-group">
+						      <div className="col-lg-10 col-lg-offset-2">
 						        <button type="submit" className="btn btn-success btn-gardyn" onClick={this.handleSubmit}>Submit</button>
 						      </div>
 						    </div>

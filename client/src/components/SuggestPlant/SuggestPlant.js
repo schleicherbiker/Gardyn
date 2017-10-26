@@ -15,7 +15,8 @@ class SuggestPlant extends Component {
 	}
 
 	// This function captures state data and sends it to the backend
-	handleSubmit = () => {
+	handleSubmit = (e) => {
+		e.preventDefault();
 		// Clears out errror/success messages 
 		this.setState({submitMessage: ""});
 		this.setState({submitErrorMessage: ""});
@@ -37,15 +38,13 @@ class SuggestPlant extends Component {
 		// To preserve context of 'this' inside axios call
 		const parentObj = this;
 
-//		filteredState.parentLevel = true;
-
 		console.log("About to send:");
 		console.log(filteredState);
 		axios.post('/api/pos_plant', filteredState)
 		  .then(function (response) {
 		    console.log(response);
 		    parentObj.setState({submitMessage: "Thanks for submitting a new plant! Your suggestion is being reviewed."});
-		    setTimeout(function(){ window.location = "/plants"; }, 2500);
+//		    setTimeout(function(){ window.location = "/plants"; }, 2500);
 		  })
 		  .catch(function (error) {
 		    console.log(error);
@@ -55,10 +54,16 @@ class SuggestPlant extends Component {
 	}
 
 	handleChange = (e) => {
-		this.setState({[e.target.name]: e.target.value});
+		const localKey = e.target.name + "";
+		const localValue = e.target.value + "";
+		this.setState({[localKey]: localValue});
+		console.log(localKey + " updated to " + localValue);
+		console.log(this.state)
 	}
 
-	// ATTN: INPUT NAMES NEED TO MATCH VALUES IN DATABASE!!
+	// ATTN: Input names need to match values in database!
+	// Dropdowns cannot have an opening value because state only updates when the value changes. 
+	// IE-- If it starts as "maybe" and the user leaves it as "maybe", the value won't show up in the database.
 	render() {
 	  return (
 			<Wrapper>
@@ -102,6 +107,7 @@ class SuggestPlant extends Component {
 						      <label className="col-lg-2 control-label" for="supportInput">Support</label>
 						      <div class="col-lg-10">
 						        <select className="form-control" id="supportInput" name="Support" value={this.state.Support} onChange={this.handleChange}>
+						          <option value="">------</option>
 						          <option value="maybe">Maybe</option>
 						          <option value="yes">Yes (Cages, Stakes, Trellis)</option>
 						          <option value="no">No</option>
@@ -131,9 +137,10 @@ class SuggestPlant extends Component {
 						      </div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" for="skillInput" name="skillLevel" value={this.state.skillLevel} onChange={this.handleChange}>Skill Level</label>
-						      <div class="col-lg-10">
-						        <select className="form-control" id="skillInput">
+						      <label className="col-lg-2 control-label" for="skillInput">Skill Level</label>
+						      <div className="col-lg-10">
+						        <select className="form-control" id="skillInput" name="skillLevel" value={this.state.skillInput} onChange={this.handleChange}>
+						          <option value="">------</option>
 						          <option value="Beginner">Beginner</option>
 						          <option value="Intermediate">Intermediate</option>
 						          <option value="Expert">Expert</option>

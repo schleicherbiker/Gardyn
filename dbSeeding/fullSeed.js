@@ -128,9 +128,13 @@ db.plants.insertMany([
 
 // For seeding plant categories 
 // childPlants parameter stores an array of objects. Each object reprsents a child plant. 
-// Each child plant object has two parameters: title and description. 
-// Title should match the title given to the child plant in the database. 
-// Description should help users decide which variation to choose. 
+// Info for child plants are now nested inside the parent object.
+// This allows new pages to be loaded without an additional database call. 
+// (Though requires more data to be loaded initially)
+// Even if we run out of time to flesh all the sub-objects out, we may want to leave them in and just not click on them in the demo
+// Also, my research for melons and leafy greens may need to be reviewed/fleshed out. 
+// Ideally I think it's best to be as specific as possible, IE-- an actual number rather than "water moderatly", as I have sometimes done..
+// For now just wanted to get some dummy info in there so we could test the system. 
 db.plants.insertMany([
     {
         title: 'Peas',
@@ -273,39 +277,39 @@ db.plants.insertMany([
         childPlants: [
             {
                 title: 'Lettuce', 
-                Climate: ,
-                Sunlight: ,
-                Support: ,
-                Spacing: ,
-                Water: ,
-                Special: ,
-                skillLevel: ,
+                Climate: "60 to 65°F",
+                Sunlight: "4 - 5",
+                Support: "no",
+                Spacing: '12 - 15',
+                Water: "1 - 2 times/week",
+                Special: "Sow additional seeds every two weeks for continous harvest throughout growing season",
+                skillLevel: "Intermediate",
                 parentLevel: false,
                 parentCat: 'Leafy Greens'
                 imageURL: "http://ghk.h-cdn.co/assets/cm/15/11/54ff047186bb0-ghk-iceberg-lettuce-xl.jpg"
             }, 
             {
                 title: 'Spinach', 
-                Climate: ,
-                Sunlight: ,
-                Support: ,
-                Spacing: ,
-                Water: ,
-                Special: ,
-                skillLevel: ,
+                Climate: "About 70°F",
+                Sunlight: "4 - 5",
+                Support: "no",
+                Spacing: "?",
+                Water: "water regularly",
+                Special: "Use well drained soil rich in organic matter",
+                skillLevel: "Intermediate",
                 parentLevel: false,
                 parentCat: 'Leafy Greens' 
                 imageURL: "https://cdn1.medicalnewstoday.com/content/images/articles/270/270609/spinach-leaves.jpg"
             }, 
             {
                 title: 'Kale', 
-                Climate: ,
-                Sunlight: ,
-                Support: ,
-                Spacing: ,
-                Water: ,
-                Special: ,
-                skillLevel: ,
+                Climate: "Cold-hardy. Plant in spring/fall or even mild winter.",
+                Sunlight: "4 - 5",
+                Support: "no",
+                Spacing: "18 - 24",
+                Water: "Moderate watering",
+                Special: "Eating kale has many health benefits",
+                skillLevel: "Beginner",
                 parentLevel: false,
                 parentCat: 'Leafy Greens'
                 imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CSA-Red-Russian-Kale.jpg/219px-CSA-Red-Russian-Kale.jpg"
@@ -348,12 +352,12 @@ db.plants.insertMany([
             {
                 title: 'Honeydew', 
                 Climate: "Don't plant until ground temperature is above 70 degrees.",
-                Sunlight: ,
-                Support: ,
+                Sunlight: "? - ?",
+                Support: 'maybe',
                 Spacing: "36 - 42",
-                Water: ,
-                Special: ,
-                skillLevel: ,
+                Water: "Water regularly",
+                Special: "Likes well drained soil. Can start seeds indoors if you live in a cooler place.",
+                skillLevel: "Intermediate",
                 parentLevel: false,
                 parentCat: 'Melons' 
                 imageURL: "http://vanhornerestaurant.com/wp-content/uploads/2016/09/how-to-tell-honeydew-melon-is-ripe.jpg"

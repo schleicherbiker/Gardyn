@@ -79,7 +79,7 @@ class HandleSuggestions extends Component {
 		const filteredPlantObj = Object.keys(objToSend)
 		  .filter(key => allowed.includes(key))
 		  .reduce((obj, key) => {
-		    obj[key] = this.state[key];
+		    obj[key] = objToSend[key];
 		    return obj;
 		  }, {});
 
@@ -87,17 +87,17 @@ class HandleSuggestions extends Component {
 		console.log("Extracting: " + e.target.value);
 		console.log(filteredPlantObj);
 
-/*		axios.post('/api/plant/' + e.target.value, {})
+		axios.post('/api/plant', filteredPlantObj)
 		  .then(function (response) {
 		    console.log(response);
 //		    console.log(response.data[0]);
 
 		    // Suggestions are re-retrieved to account for change
-		    parentObj.retrieveSuggestions();
+//		    parentObj.retrieveSuggestions();
 		  })
 		  .catch(function (error) {
 		    console.log(error);
-		  });*/
+		  });
 	}
 
 	render() {

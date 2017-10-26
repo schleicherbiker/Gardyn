@@ -85,12 +85,12 @@ const request = require("request");
 	});
 
 	// POST /plant/:id
-	router.post("/plant/:id", function(req, res) {
+	router.post("/plant", function(req, res) {
 		// Moves a plant with a particular ID from the queue to the actual collection
 		// First the ID is used to find the given document in the PlantPos collection. 
 		// The object is then saved to the actual plant collection. 
 		// This could potentially be handled in a simpler way..
-		PlantPos.find({_id: "59f12b4b7849e03dd5dabad0"}, function(err, doc){
+/*		PlantPos.find({_id: "59f12b4b7849e03dd5dabad0"}, function(err, doc){
 			console.log(doc[0])
 
 			const allowed = ['title', 'imageURL', 'Climate', 'Sunlight', 'Support', 'Spacing', 'Water', 'Special', 'skillLevel', 'parentLevel'];
@@ -101,21 +101,22 @@ const request = require("request");
 			  .reduce((obj, key) => {
 			    obj[key] = this.state[key];
 			    return obj;
-			  }, {});
+			  }, {});*/
 
-		    Plant.create(filteredPlantObj, function (err, small) {
-	/*		    if (err) {
+		    Plant.create(req.body, function (err, small) {
+			    if (err) {
 			      res.send(err)
 			    } else {
 			      // saved!
 			      // Now let's delete it from the consideration queue 
-			      PlantPos.findByIdAndRemove(req.params.id, (err, todo) => {  
+		/*	      PlantPos.findByIdAndRemove(req.params.id, (err, todo) => {  
 	  				if (!err) res.sendStatus(200);
-	  			  });
-			    }; */
-			    res.sendStatus(200);
+	  			  });*/
+	  			  res.sendStatus(200);
+			    }; 
+	//		    res.sendStatus(200);
 			})
-		});
+//		});
 	});
 
 	// POST /guide/:id

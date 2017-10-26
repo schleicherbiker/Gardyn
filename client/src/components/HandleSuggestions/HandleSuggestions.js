@@ -72,7 +72,7 @@ class HandleSuggestions extends Component {
 				objToSend = this.state.plantData[i];
 			}
 		}
-/*
+
 		const allowed = ['title', 'imageURL', 'Climate', 'Sunlight', 'Support', 'Spacing', 'Water', 'Special', 'skillLevel', 'parentLevel'];
 
 		// Filters out properties that are not handled by the new object
@@ -82,10 +82,10 @@ class HandleSuggestions extends Component {
 		    obj[key] = this.state[key];
 		    return obj;
 		  }, {});
-*/
+
 		console.log(this.state.plantData);
 		console.log("Extracting: " + e.target.value);
-		console.log(objToSend);
+		console.log(filteredPlantObj);
 
 /*		axios.post('/api/plant/' + e.target.value, {})
 		  .then(function (response) {

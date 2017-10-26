@@ -98,20 +98,16 @@ const request = require("request");
 	});
 
 	// POST /guide/:id
-	router.post("/guide/:id", function(req, res) {
-		// Moves a guide with a particular ID from the queue to the actual collection
-		// First the ID is used to find the given document in the GuidePos collection. 
-		// The object is then saved to the actual guide collection. 
-		GuidePos.find({_id: req.params.id}, function(err, doc){
-		    Guide.create(doc[0], function (err, small) {
-			    if (err) {
-			      res.send(err)
-			    } else {
-			      // saved!
-			      if (!err) res.sendStatus(200);
-			    }; 
-			})
-		});
+	router.post("/guide", function(req, res) {
+		// Saves a guide to the database
+	    Guide.create(req.body, function (err, small) {
+		    if (err) {
+		      res.send(err)
+		    } else {
+		      // saved!
+  			  res.sendStatus(200);
+		    }; 
+		})
 	});
 
 	// DELETE /pos_plant/:id

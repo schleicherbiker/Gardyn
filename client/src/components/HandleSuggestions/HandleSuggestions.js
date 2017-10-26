@@ -90,7 +90,70 @@ class HandleSuggestions extends Component {
 		    console.log(response);
 
 		    // Once the suggested plant is saved to the plants collection, it is removed from the queue for consideration
+		    // This could be moved to seperate function to reduce duplicate code
 		    axios.delete('/api/pos_plant/' + clickedID)
+			  .then(function (response) {
+			    console.log(response);
+			    // Suggestions are re-retrieved to account for change
+			    parentObj.retrieveSuggestions();
+				})
+			  .catch(function (error) {
+			    console.log(error);
+				});
+
+		  })
+		  .catch(function (error) {
+		    console.log(error);
+		  });
+	}
+
+	deleteGuide = (e) => {
+		// To ensure context of 'this' isn't lost inside the axios function. 
+		const parentObj = this;
+
+		// e.target.value represents the mongo ID of the submission to be deleted
+		axios.delete('/api/pos_guide/' + e.target.value)
+		  .then(function (response) {
+		    console.log(response);
+		    // Suggestions are re-retrieved to account for change
+		    parentObj.retrieveSuggestions();
+			})
+		  .catch(function (error) {
+		    console.log(error);
+			});
+	}
+
+	acceptGuide = (e) => {
+		// To ensure context of 'this' isn't lost inside the axios function. 
+		const parentObj = this;
+
+		const clickedID = e.target.value;
+
+		let objToSend;
+
+		for (let i = 0; i < this.state.guideData.length; i++){
+			if (this.state.guideData[i]._id === e.target.value){
+				objToSend = this.state.guideData[i];
+			}
+		}
+
+		const guideAllowed = ['title', 'photoLink', 'body'];
+
+		// Filters out properties that are not handled by the new object
+		const filteredGuideObj = Object.keys(objToSend)
+		  .filter(key => guideAllowed.includes(key))
+		  .reduce((obj, key) => {
+		    obj[key] = objToSend[key];
+		    return obj;
+		  }, {});
+
+		axios.post('/api/guide', filteredGuideObj)
+		  .then(function (response) {
+		    console.log(response);
+
+		    // Once the suggested guide is saved to the guides collection, it is removed from the queue for consideration
+		    // This could be moved to seperate function to reduce duplicate code
+		    axios.delete('/api/pos_guide/' + clickedID)
 			  .then(function (response) {
 			    console.log(response);
 			    // Suggestions are re-retrieved to account for change
@@ -125,9 +188,13 @@ class HandleSuggestions extends Component {
 				<h2>Open Guide Suggestions</h2>	
 				{
 					this.state.guideData.map(item => (
-						<GuideCard
-							item = {item}
-						/>
+						<div>
+							<GuideCard
+								item = {item}
+							/>
+							<button type="button" onClick={this.deleteGuide} value={item._id}>Delete</button>
+							<button type="button" onClick={this.acceptGuide} value={item._id}>Accept</button>
+						</div>
 					))
 				}
 			</Wrapper>

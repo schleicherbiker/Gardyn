@@ -138,17 +138,41 @@ db.plants.insertMany([
         childPlants: [
             {
                 title: 'Snap Peas', 
-                description: ADD, 
+                Climate: ,
+                Sunlight: ,
+                Support: ,
+                Spacing: ,
+                Water: ,
+                Special: ,
+                skillLevel: ,
+                parentLevel: false,
+                parentCat: 'Peas'
                 imageURL: "https://images-na.ssl-images-amazon.com/images/I/61xWA1eNWrL._SX355_.jpg"
             }, 
             {
                 title: 'Snow Peas', 
-                description: ADD, 
+                Climate: ,
+                Sunlight: ,
+                Support: ,
+                Spacing: ,
+                Water: ,
+                Special: ,
+                skillLevel: ,
+                parentLevel: false,
+                parentCat: 'Peas' 
                 imageURL: "http://www.holypine.com/wp-content/uploads/2015/10/snow-peas2.jpg"
             }, 
             {
                 title: 'Field Peas', 
-                description: ADD, 
+                Climate: ,
+                Sunlight: ,
+                Support: ,
+                Spacing: ,
+                Water: ,
+                Special: ,
+                skillLevel: ,
+                parentLevel: false,
+                parentCat: 'Peas'
                 imageURL: "https://humblefeast.files.wordpress.com/2012/09/field-peas-shelled.jpg"
             }
         ],
@@ -162,32 +186,80 @@ db.plants.insertMany([
         childPlants: [
             {
                 title: 'Cilantro', 
-                description: ADD, 
+                Climate: ,
+                Sunlight: ,
+                Support: ,
+                Spacing: ,
+                Water: ,
+                Special: ,
+                skillLevel: ,
+                parentLevel: false,
+                parentCat: 'Herbs'
                 imageURL: "https://images-na.ssl-images-amazon.com/images/I/91EEvXaIP5L._SX355_.jpg"
             }, 
             {
                 title: 'Basil', 
-                description: ADD, 
+                Climate: ,
+                Sunlight: ,
+                Support: ,
+                Spacing: ,
+                Water: ,
+                Special: ,
+                skillLevel: ,
+                parentLevel: false,
+                parentCat: 'Herbs'
                 imageURL: "http://media.mercola.com/assets/images/foodfacts/basil-nutrition-facts.jpg"
             }, 
             {
                 title: 'Thyme', 
-                description: ADD, 
+                Climate: ,
+                Sunlight: ,
+                Support: ,
+                Spacing: ,
+                Water: ,
+                Special: ,
+                skillLevel: ,
+                parentLevel: false,
+                parentCat: 'Herbs'
                 imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Thyme-Bundle.jpg/250px-Thyme-Bundle.jpg"
             }, 
             {
                 title: 'Rosemary', 
-                description: ADD, 
+                Climate: ,
+                Sunlight: ,
+                Support: ,
+                Spacing: ,
+                Water: ,
+                Special: ,
+                skillLevel: ,
+                parentLevel: false,
+                parentCat: 'Herbs'
                 imageURL: "https://www.organicfacts.net/wp-content/uploads/rosemary-1020x765.jpg"
             }, 
             {
                 title: 'Mint', 
-                description: ADD, 
+                Climate: ,
+                Sunlight: ,
+                Support: ,
+                Spacing: ,
+                Water: ,
+                Special: ,
+                skillLevel: ,
+                parentLevel: false,
+                parentCat: 'Herbs'
                 imageURL: "http://sportsvape.net/wp-content/uploads/2014/09/Mint.jpg"
             }, 
             {
                 title: 'Chives', 
-                description: ADD, 
+                Climate: ,
+                Sunlight: ,
+                Support: ,
+                Spacing: ,
+                Water: ,
+                Special: ,
+                skillLevel: ,
+                parentLevel: false,
+                parentCat: 'Herbs'
                 imageURL: "https://cdn1.medicalnewstoday.com/content/images/articles/275/275009/bunch-of-chives.jpg"
             }
         ],
@@ -201,17 +273,41 @@ db.plants.insertMany([
         childPlants: [
             {
                 title: 'Lettuce', 
-                description: ADD, 
+                Climate: ,
+                Sunlight: ,
+                Support: ,
+                Spacing: ,
+                Water: ,
+                Special: ,
+                skillLevel: ,
+                parentLevel: false,
+                parentCat: 'Leafy Greens'
                 imageURL: "http://ghk.h-cdn.co/assets/cm/15/11/54ff047186bb0-ghk-iceberg-lettuce-xl.jpg"
             }, 
             {
                 title: 'Spinach', 
-                description: ADD, 
+                Climate: ,
+                Sunlight: ,
+                Support: ,
+                Spacing: ,
+                Water: ,
+                Special: ,
+                skillLevel: ,
+                parentLevel: false,
+                parentCat: 'Leafy Greens' 
                 imageURL: "https://cdn1.medicalnewstoday.com/content/images/articles/270/270609/spinach-leaves.jpg"
             }, 
             {
                 title: 'Kale', 
-                description: ADD, 
+                Climate: ,
+                Sunlight: ,
+                Support: ,
+                Spacing: ,
+                Water: ,
+                Special: ,
+                skillLevel: ,
+                parentLevel: false,
+                parentCat: 'Leafy Greens'
                 imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CSA-Red-Russian-Kale.jpg/219px-CSA-Red-Russian-Kale.jpg"
             }
         ],
@@ -225,17 +321,41 @@ db.plants.insertMany([
         childPlants: [
             {
                 title: 'Watermelon', 
-                description: "Add watermelon description.", 
                 imageURL: "https://www.organicfacts.net/wp-content/uploads/2013/05/watermelon2.jpg"
+                Climate: "Likes warmth. Needs long growing season of at least 70 to 85 days",
+                Sunlight: "8 - 10",
+                Support: "maybe",
+                Spacing: "24 - 36",
+                Water: "Water regularly",
+                Special: "Requires warm soil and lots of watering",
+                skillLevel: "Intermediate",
+                parentLevel: false,
+                parentCat: 'Melons'
             }, 
             {
                 title: 'Cantaloupe', 
-                description: "Add cantaloupe description.", 
+                Climate: "Don't plant until ground temperature is above 70 degrees.",
+                Sunlight: "? - ?",
+                Support: 'maybe',
+                Spacing: "36 - 42",
+                Water: "Water regularly",
+                Special: "Likes well drained soil. Can start seeds indoors if you live in a cooler place.",
+                skillLevel: "Intermediate",
+                parentLevel: false,
+                parentCat: 'Melons'
                 imageURL: "https://groceries.morrisons.com/productImages/251/251646011_0_640x640.jpg?identifier=d85d41c1540345090c691ef4e3af7b53"
             }, 
             {
                 title: 'Honeydew', 
-                description: "Add honeydew description.", 
+                Climate: "Don't plant until ground temperature is above 70 degrees.",
+                Sunlight: ,
+                Support: ,
+                Spacing: "36 - 42",
+                Water: ,
+                Special: ,
+                skillLevel: ,
+                parentLevel: false,
+                parentCat: 'Melons' 
                 imageURL: "http://vanhornerestaurant.com/wp-content/uploads/2016/09/how-to-tell-honeydew-melon-is-ripe.jpg"
             }
         ],

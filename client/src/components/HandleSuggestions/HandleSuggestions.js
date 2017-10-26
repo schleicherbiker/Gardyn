@@ -54,7 +54,7 @@ class HandleSuggestions extends Component {
 		  .then(function (response) {
 		    console.log(response);
 		    // Suggestions are re-retrieved to account for change
-		    this.retrieveSuggestions();
+		    parentObj.retrieveSuggestions();
 			})
 		  .catch(function (error) {
 		    console.log(error);
@@ -70,7 +70,7 @@ class HandleSuggestions extends Component {
 		    console.log(response);
 
 		    // Suggestions are re-retrieved to account for change
-		    this.retrieveSuggestions();
+		    parentObj.retrieveSuggestions();
 		  })
 		  .catch(function (error) {
 		    console.log(error);

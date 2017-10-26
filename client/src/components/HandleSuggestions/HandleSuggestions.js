@@ -65,6 +65,8 @@ class HandleSuggestions extends Component {
 		// To ensure context of 'this' isn't lost inside the axios function. 
 		const parentObj = this;
 
+		const clickedID = e.target.value;
+
 		let objToSend;
 
 		for (let i = 0; i < this.state.plantData.length; i++){
@@ -83,17 +85,21 @@ class HandleSuggestions extends Component {
 		    return obj;
 		  }, {});
 
-		console.log(this.state.plantData);
-		console.log("Extracting: " + e.target.value);
-		console.log(filteredPlantObj);
-
 		axios.post('/api/plant', filteredPlantObj)
 		  .then(function (response) {
 		    console.log(response);
-//		    console.log(response.data[0]);
 
-		    // Suggestions are re-retrieved to account for change
-//		    parentObj.retrieveSuggestions();
+		    // Once the suggested plant is saved to the plants collection, it is removed from the queue for consideration
+		    axios.delete('/api/pos_plant/' + clickedID)
+			  .then(function (response) {
+			    console.log(response);
+			    // Suggestions are re-retrieved to account for change
+			    parentObj.retrieveSuggestions();
+				})
+			  .catch(function (error) {
+			    console.log(error);
+				});
+
 		  })
 		  .catch(function (error) {
 		    console.log(error);

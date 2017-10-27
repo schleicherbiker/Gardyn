@@ -10,14 +10,14 @@ const Guide = (props) => {
   return (
     <Wrapper>
       <Navbar/>
-      <div id="individualGuideHeader">
-        <h2 className = "Guide">{props.title}</h2>
-      </div>
       <img alt="Guide thumbnail" src={props.photoLink} className="guideImage"/>
+      <div id="individualGuideHeader">
+        <h2 className="guideTitle">{props.title}</h2>
+      </div>
       <hr/>
       {
         props.body.map(item => (
-          <p>{item}</p>
+          <p className="guideBody">{item}</p>
         ))
       }
     </Wrapper>

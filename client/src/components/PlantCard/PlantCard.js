@@ -7,11 +7,11 @@ const PlantCard = (props) => {
     const test = props.skillLevel;
     console.log(props.item.skillLevel);
 
-    if (props.skillLevel === "Beginner") { //if (props.difficulty === "easy") {
+    if (props.item.skillLevel === "Beginner") { 
         var easyDif = "easyDifficulty";
         var medDif = "mediumDifficulty hidden";
         var hardDif = "hardDifficulty hidden";
-    } else if (props.skillLevel === "Expert") { //if (props.difficulty === "medium") {
+    } else if (props.item.skillLevel === "Expert") { 
         var easyDif = "easyDifficulty hidden";
         var medDif = "mediumDifficulty hidden";
         var hardDif = "hardDifficulty";

@@ -10,14 +10,11 @@ import "./GuideCard.css";
 const GuideCard = (props) => { 
 
 	return (
-		<Link to={{
+		<Link className="guideCard" to={{
 	        pathname: `/guide/${props.item.title}`,
 	        state: {props}
 	    }}>   
-		    <div className="guideCard">
-		        <img className="guideCardImage" alt="" src="http://earth-lite.com/wp-content/uploads/2014/07/DIRT2.jpg"></img>
-		        <h2 className="guideCardName">{props.item.title}</h2>
-		    </div>
+		    <div className="guideCardName">{props.item.title}</div>
 		</Link> 
 	);
 }

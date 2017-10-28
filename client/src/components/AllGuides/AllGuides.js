@@ -39,9 +39,7 @@ class AllGuides extends Component {
 		        <div id="allGuides">
 		        	{
 						this.state.guideData.map(item => (
-							<GuideCard
-								item = {item}
-							/>
+							<GuideCard item = {item}/>
 						))
 					}
 					<a href="/suggest_guide" className="guideCard" id="addGuide">

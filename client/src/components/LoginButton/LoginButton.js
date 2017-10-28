@@ -12,10 +12,10 @@ const LoginButton = (props) => {
     const FBOptions = {
         clientID: FACEBOOK_APP_ID,
         clientSecret: FACEBOOK_APP_SECRET,
-        callbackURL: "http://localhost:3001/auth/facebook/callback" 
+        callbackURL: "http://localhost:3000/auth/facebook/callback" 
     }
     
-    const FBCallback = function(accessToken, refreshToken,cb){
+    const FBCallback = function(accessToken, refreshToken, profile, cb){
         //console.log(accessToken, refreshToken, profile)
     };
     

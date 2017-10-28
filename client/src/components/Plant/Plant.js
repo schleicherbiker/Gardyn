@@ -93,6 +93,7 @@ const Plant = (props) => {
 						<p className = "plantGuideDescription">{props.Climate}</p>
 						<br />
 						<p className = "plantGuideTitle">Special</p>
+						<p className = "plantGuideDescription">{props.Water}</p>
 						<p className = "plantGuideDescription">{props.Special}</p>
 					</div>
 				</div>

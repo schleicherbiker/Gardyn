@@ -19,7 +19,6 @@ class HandleSuggestions extends Component {
 		// Database call to retrieve proposed plants.
 		axios.get('/api/pos_plants')
 	      .then(function (response) {
-	        console.log(response.data);
 	        parentObj.setState({
 	          plantData: response.data
 	        })
@@ -31,7 +30,6 @@ class HandleSuggestions extends Component {
 	    // Database call to retrieve proposed guides. 
 	    axios.get('/api/pos_guides')
 	      .then(function (response) {
-	        console.log(response.data);
 	        parentObj.setState({
 	          guideData: response.data
 	        })
@@ -52,7 +50,6 @@ class HandleSuggestions extends Component {
 		// e.target.value represents the mongo ID of the submission to be deleted
 		axios.delete('/api/pos_plant/' + e.target.value)
 		  .then(function (response) {
-		    console.log(response);
 		    // Suggestions are re-retrieved to account for change
 		    parentObj.retrieveSuggestions();
 			})
@@ -87,13 +84,11 @@ class HandleSuggestions extends Component {
 
 		axios.post('/api/plant', filteredPlantObj)
 		  .then(function (response) {
-		    console.log(response);
 
 		    // Once the suggested plant is saved to the plants collection, it is removed from the queue for consideration
 		    // This could be moved to seperate function to reduce duplicate code
 		    axios.delete('/api/pos_plant/' + clickedID)
 			  .then(function (response) {
-			    console.log(response);
 			    // Suggestions are re-retrieved to account for change
 			    parentObj.retrieveSuggestions();
 				})
@@ -114,7 +109,6 @@ class HandleSuggestions extends Component {
 		// e.target.value represents the mongo ID of the submission to be deleted
 		axios.delete('/api/pos_guide/' + e.target.value)
 		  .then(function (response) {
-		    console.log(response);
 		    // Suggestions are re-retrieved to account for change
 		    parentObj.retrieveSuggestions();
 			})
@@ -149,13 +143,11 @@ class HandleSuggestions extends Component {
 
 		axios.post('/api/guide', filteredGuideObj)
 		  .then(function (response) {
-		    console.log(response);
 
 		    // Once the suggested guide is saved to the guides collection, it is removed from the queue for consideration
 		    // This could be moved to seperate function to reduce duplicate code
 		    axios.delete('/api/pos_guide/' + clickedID)
 			  .then(function (response) {
-			    console.log(response);
 			    // Suggestions are re-retrieved to account for change
 			    parentObj.retrieveSuggestions();
 				})

@@ -19,7 +19,6 @@ class AllPlants extends Component {
 		const parentObj = this;
 		axios.get('/api/plants')
 	      .then(function (response) {
-	        console.log(response.data);
 	        parentObj.setState({
 	          plantData: response.data
 	        })
@@ -31,7 +30,6 @@ class AllPlants extends Component {
 
 	// Before the component can load the retrieveCrops function is executed in order to retrieve data from the backend. 
 	componentWillMount() {
-		console.log(this.state)
 	    this.retrievePlants();
 	}
 

@@ -5,7 +5,6 @@ import "./PlantCard.css";
 const PlantCard = (props) => {
 
     const test = props.skillLevel;
-    console.log(props.item.skillLevel);
 
     if (props.item.skillLevel === "Beginner") { 
         var easyDif = "easyDifficulty";

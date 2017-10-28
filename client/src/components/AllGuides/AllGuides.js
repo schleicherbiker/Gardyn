@@ -16,7 +16,6 @@ class AllGuides extends Component {
 		const parentObj = this;
 		axios.get('/api/guides')
 	      .then(function (response) {
-	        console.log(response.data);
 	        parentObj.setState({
 	          guideData: response.data
 	        })
@@ -27,7 +26,6 @@ class AllGuides extends Component {
 	}
 
 	componentWillMount() {
-		console.log(this.state)
 	    this.retrieveGuides();
 	}
 

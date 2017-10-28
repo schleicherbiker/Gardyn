@@ -15,6 +15,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+app.use(session({
+  secret: "Team Gardynbase",
+  resave: true,
+  saveUninitialized: true
+}));
 
 // Database configuration with mongoose
 mongoose.connect("mongodb://localhost/gardynbase");

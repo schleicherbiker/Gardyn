@@ -29,15 +29,11 @@ class SuggestGuide extends Component {
 		    return obj;
 		  }, {});
 
-		  console.log("Filtered state:")
-		  console.log(filteredState)
-
 		// To preserve context of 'this' inside axios call
 		const parentObj = this;
 
 		axios.post('/api/pos_guides', filteredState)
 		  .then(function (response) {
-		    console.log(response);
 		    parentObj.setState({submitMessage: "Thanks for submitting a new guide! Your suggestion is being reviewed."});
 		    setTimeout(function(){ window.location = "/guides"; }, 2500);
 		  })

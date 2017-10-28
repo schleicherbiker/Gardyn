@@ -32,17 +32,11 @@ class SuggestPlant extends Component {
 		    return obj;
 		  }, {});
 
-		  console.log("Filtered state:")
-		  console.log(filteredState)
-
 		// To preserve context of 'this' inside axios call
 		const parentObj = this;
 
-		console.log("About to send:");
-		console.log(filteredState);
 		axios.post('/api/pos_plant', filteredState)
 		  .then(function (response) {
-		    console.log(response);
 		    parentObj.setState({submitMessage: "Thanks for submitting a new plant! Your suggestion is being reviewed."});
 		    setTimeout(function(){ window.location = "/plants"; }, 2500);
 		  })

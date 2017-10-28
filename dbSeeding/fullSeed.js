@@ -19,7 +19,7 @@ db.plants.insertMany([
   },
   {
     "title": "Bell Peppers",
-    "Climate": "Peppers need at least 70oF for germination, and 65oF for successful transplanting.",
+    "Climate": "Peppers need at least 70°F for germination, and 65°F for successful transplanting.",
     "Sunlight": "6 - 8",
     "Support": "maybe",
     "Spacing": "18 - 24",

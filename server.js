@@ -17,7 +17,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/gardynbase");
+mongoose.connect("mongodb://gardyn_admin:richsoil@ds237855.mlab.com:37855/heroku_htkwql1k");
 const db = mongoose.connection;
 
 // Show any mongoose errors

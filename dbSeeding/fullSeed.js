@@ -2,59 +2,59 @@
 
 // For seeding plants 
 db.plants.insertMany([
-  {
+{
     "title": "Tomatoes",
     "Climate": "Tomatoes need warmth; plant in late spring and early summer for most breeds",
     "Sunlight": "6 - 8",
     "Support": "yes",
     "Spacing": "24 - 36",
     "Water": "Water regularly",
-    "Special": "Recommend burying two-thirds of the stem when planting (note method of deep planting only works with tomatoes)",
+    "Special": ["Recommend burying two-thirds of the stem when planting (note method of deep planting only works with tomatoes)"],
     "description": null,
     "bullets": null,
     "skillLevel": "Beginner",
     "parentLevel": true,
     "parentCat": null,
     "imageURL": "http://assets.nydailynews.com/polopoly_fs/1.2834910.1476795531!/img/httpImage/image.jpg_gen/derivatives/article_750/488059328.jpg"
-  },
-  {
+},
+{
     "title": "Bell Peppers",
     "Climate": "Peppers need at least 70°F for germination, and 65°F for successful transplanting.",
     "Sunlight": "6 - 8",
     "Support": "maybe",
     "Spacing": "18 - 24",
     "Water": "Water regularly",
-    "Special": "Start pepper seeds three to a pot, and thin out the weakest seedling. Let the remaining two pepper plants spend their entire lives together as one plant. The leaves of two plants help protect peppers against sunscald and the yield is often twice as good as two segregated plants.",
+    "Special": ["Start pepper seeds three to a pot, and thin out the weakest seedling. Let the remaining two pepper plants spend their entire lives together as one plant. The leaves of two plants help protect peppers against sunscald and the yield is often twice as good as two segregated plants."],
     "description": null,
     "bullets": null,
     "skillLevel": "Intermediate",
     "parentLevel": true,
     "parentCat": null,
     "imageURL": "https://img.buzzfeed.com/buzzfeed-static/static/2017-05/4/12/asset/buzzfeed-prod-fastlane-01/sub-buzz-20636-1493915918-9.jpg?downsize=715:*&output-format=auto&output-quality=auto"
-  },
-  {
+},
+{
     "title": "Broccoli",
     "Climate": "Broccoli is a cool-season crop that, like spinach, can be grown in the spring or fall. Broccoli can germinate in soil with temperatures as low as 40°F.",
     "Sunlight": "6 - 10",
     "Support": "no",
     "Spacing": "16 - 24",
     "Water": "Water frequently, keep up moisture but do not wet head.",
-    "Special": "Do not get developing heads wet when watering. Roots are very shallow, do not cultivate. Use mulch to keep soil temperature low.",
+    "Special": ["Do not get developing heads wet when watering. Roots are very shallow, do not cultivate. Use mulch to keep soil temperature low."],
     "description": null,
     "bullets": null,
     "skillLevel": "Expert",
     "parentLevel": true,
     "parentCat": null, 
     "imageURL": "https://www.cookforyourlife.org/wp-content/uploads/2015/08/shutterstock_294838064-min.jpg"
-  },
-  {
+},
+{
     "title": 'Radishes',
     "Climate": 'There are two main types of radishes, spring radishes and winter radishes. Avoid warm weather, radishes do not thrive above 65°F.',
     "Sunlight": "6 - 10",
     "Support": 'no',
     "Spacing": '12 - 16',
     "Water": "Water moderately. If the soil is too dry, radishes will bolt and become pithy and too pungent to eat. If too wet, the roots will split and rot. Never let the soil dry out, but don't keep it mucky, either.",
-    "Special": "Prepare a light, well-drained soil with a pH of 5.8 to 6.8 for best production. When preparing the soil, avoid fresh manure and organic materials or fertilizers high in nitrogen.",
+    "Special": ["Prepare a light, well-drained soil with a pH of 5.8 to 6.8 for best production. When preparing the soil, avoid fresh manure and organic materials or fertilizers high in nitrogen."],
     "description": null,
     "bullets": null,
     "skillLevel": "Beginner",
@@ -69,7 +69,7 @@ db.plants.insertMany([
     "Support": "yes",
     "Spacing": "6 - 10 inches",
     "Water": "Water intensively once a week",
-    "Special": "Beans generally don't need extra nitrogen for good growth because the beneficial bacteria that live in nodules on bean roots help to provide nitrogen for the plants. To speed up growth, give beans—particularly long-bearing pole beans or heavy-feeding limas—a midseason side-dressing of compost or kelp extract solution.",
+    "Special": ["Beans generally don't need extra nitrogen for good growth because the beneficial bacteria that live in nodules on bean roots help to provide nitrogen for the plants. To speed up growth, give beans—particularly long-bearing pole beans or heavy-feeding limas—a midseason side-dressing of compost or kelp extract solution."],
     "description": null,
     "bullets": null,
     "skillLevel": "Beginner",
@@ -84,7 +84,7 @@ db.plants.insertMany([
     "Support": "no",
     "Spacing": "18 - 24",
     "Water": "Water regularly",
-    "Special": "Brussels sprouts also need more boron than most other vegetables. If your brussels sprouts develop hollow stems and small buds, you can add boron to the soil by dissolving 1 level tablespoon of borax in 5 quarts of water and sprinkling it evenly over 50 square feet of bed. DO NOT be tempted to mix more, and do not apply unless your plants have shown the deficiency symptoms we just mentioned.",
+    "Special": ["Brussels sprouts also need more boron than most other vegetables. If your brussels sprouts develop hollow stems and small buds, you can add boron to the soil by dissolving 1 level tablespoon of borax in 5 quarts of water and sprinkling it evenly over 50 square feet of bed. DO NOT be tempted to mix more, and do not apply unless your plants have shown the deficiency symptoms we just mentioned."],
     "description": null,
     "bullets": null,
     "skillLevel": "Intermediate",
@@ -99,7 +99,7 @@ db.plants.insertMany([
     "Support": "no",
     "Spacing": "2 - 4",
     "Water": "Water regularly",
-    "Special": "You can plant beets in partial shade, but when growing beets, you want their roots to reach a depth of at least 3-6 inches, so don’t plant them under a tree where they might run into tree roots.",
+    "Special": ["You can plant beets in partial shade, but when growing beets, you want their roots to reach a depth of at least 3-6 inches, so don’t plant them under a tree where they might run into tree roots."],
     "description": null,
     "bullets": null,
     "skillLevel": "Beginner",
@@ -114,14 +114,156 @@ db.plants.insertMany([
     "Support": "no",
     "Spacing": "1 - 3",
     "Water": "Water gently",
-    "Special": "To produce the best crop possible, double-dig your planting area or build up a raised bed.",
+    "Special": ["To produce the best crop possible, double-dig your planting area or build up a raised bed."],
     "description": null,
     "bullets": null,
     "skillLevel": "Expert",
     "parentLevel": true,
     "parentCat": null, 
     "imageURL": "https://www.organicfacts.net/wp-content/uploads/2013/05/Carrot1.jpg"
-   }
+}
+])
+
+//Seedint plant categories test
+db.plants.insertMany([
+{
+    "title": 'Melons',
+    "description": "Toward the end of the growing season, pinch off any small melons so the larger melons will ripen and sweeten up.",
+    "imageURL": "https://groceries.morrisons.com/productImages/210/210305011_0_640x640.jpg?identifier=6ff605c91cd0384439fa1acbd7de32a1",
+    "parentLevel": true,
+    "childPlants": [
+        {
+            "title": "Watermelon",
+            "Climate": "Likes warmth. Needs long growing season of at least 70 to 85 days. If you live in warmer climates, you can sow seeds directly outdoors, but wait until the soil temperature warms to at least 70°F.",
+            "Sunlight": "8 - 10",
+            "Support": "maybe",
+            "Spacing": "2 - 6 Feet",
+            "Water": "Water regularly, 1-2 Inches per week",
+            "Special": ["Watering is very important—from planting until fruit begins to form. Keep soil moist, but not waterlogged. Water at the vine’s base in the morning, and try to avoid wetting the leaves and avoid overhead watering. Reduce watering once fruit are growing. Dry weather produces the sweetest melons. If you choose to fertilize (and many do), make sure it delivers more nitrogen than phosphorus and potassium. However, after flowering begins, use a fertilizer with less nitrogen. Pruning isn’t necessary, but vine productivity may be improved if you do not allow lateral vines to grow and stick to the main vine. When the plant is young, cut off the end buds as they form. Pinch off some blossoms to focus the energy on fewer melons. Blossoms require pollination to set fruit, so be kind to the bees! As fruit is ripening, prevent rotting by gently lifting it and putting cardboard or straw between the fruit and the soil.",
+                "While harvesting, if the watermelon sounds hollow it’s ripe. Look at the color on the top. The watermelon is ripe when there is little contrast between the stripes. Look at the color on the bottom. A green watermelon will have a white bottom; a ripe melon will have a cream- or yellow-colored bottom. Check the tendril. If it’s green, wait. If it’s half-dead, the watermelon is nearly ripe or ripe. If the tendril is fully dead, it’s ripe or overripe. Stems should be cut with a sharp knife close to the fruit."],
+            "description": null,
+            "bullets": null,
+            "skillLevel": "Intermediate",
+            "parentLevel": false,
+            "parentCat": "Melons",
+            "imageURL": "https://www.organicfacts.net/wp-content/uploads/2013/05/watermelon2.jpg"
+        }, 
+        {
+            "title": "Cantaloupe",
+            "Climate": "Likes warmth. Needs long growing season of at least 70 to 85 days. If you live in warmer climates, you can sow seeds directly outdoors, but wait until the soil temperature warms to at least 70°F.",
+            "Sunlight": "8 - 10",
+            "Support": "yes",
+            "Spacing": "18 - 36 Inches",
+            "Water": "Water regularly, 1-2 Inches per week",
+            "Special": ["Amend soil with aged manure or compost before planting. Growing the vines in raised rows, known as hills, ensures good drainage and will hold the sun’s heat longer. If you are in a cooler zone, start seeds indoors about a month before transplanting. Plant seeds one inch deep, 18 inches apart, in hills about 3 feet apart.",
+                "Cantaloupe likes loamy, well-drained soil. Handle them gently when you transplant. Add lots of compost to the area before planting and after planting. Mulching with black plastic will warm the soil, hinder weed growth, and keep developing fruits clean. Fertilize when vines start growing. Water in the morning, and try to avoid wetting the leaves. Reduce watering once fruit are growing. Dry weather produces the sweetest melon. If you’ve had an exceptional amount of rainfall during the ripening stage, this could cause bland fruit. Once fruit begins to grow, prune end buds off vines to increaes quality of remaining fruit. Blossoms require pollination to set fruit, so be kind to the bees!",
+                "When rinds begin to change from green to tan or yellow, the melon is probably ripe, but be careful not to pick too early. Look for a crack in the stem where it attaches to the fruit. This is a sign of ripeness as well. The fruit should be easy to separate from the vine, but if they fall off by themselves they are usually overripe. Harvest melon when vines are dry, and be careful not to damage them. They will soften after harvesting, but will not continue to sweeten off the vine."],
+            "description": null,
+            "bullets": null,
+            "skillLevel": "Intermediate",
+            "parentLevel": false,
+            "parentCat": "Melons",
+            "imageURL": "https://groceries.morrisons.com/productImages/251/251646011_0_640x640.jpg?identifier=d85d41c1540345090c691ef4e3af7b53"
+        }, 
+        {
+            "title": "Honeydew",
+            "Climate": "Likes warmth. Needs long growing season of at least 70 to 85 days. If you live in warmer climates, you can sow seeds directly outdoors, but wait until the soil temperature warms to at least 70°F.",
+            "Sunlight": "8 - 10",
+            "Support": "yes",
+            "Spacing": "18 - 36 Inches",
+            "Water": "Water regularly, 1-2 Inches per week",
+            "Special": ["Amend soil with aged manure or compost before planting. Growing the vines in raised rows, known as hills, ensures good drainage and will hold the sun’s heat longer. If you are in a cooler zone, start seeds indoors about a month before transplanting. Plant seeds one inch deep, 18 inches apart, in hills about 3 feet apart.",
+                "Honeydew likes loamy, well-drained soil. Handle them gently when you transplant. Add lots of compost to the area before planting and after planting. Mulching with black plastic will warm the soil, hinder weed growth, and keep developing fruits clean. Fertilize when vines start growing. Water in the morning, and try to avoid wetting the leaves. Reduce watering once fruit are growing. Dry weather produces the sweetest melon. If you’ve had an exceptional amount of rainfall during the ripening stage, this could cause bland fruit. Once fruit begins to grow, prune end buds off vines to increaes quality of remaining fruit. Blossoms require pollination to set fruit, so be kind to the bees!",
+                "When rinds begin to change from green to tan or yellow, the melon is probably ripe, but be careful not to pick too early. Look for a crack in the stem where it attaches to the fruit. This is a sign of ripeness as well. The fruit should be easy to separate from the vine, but if they fall off by themselves they are usually overripe. Harvest melon when vines are dry, and be careful not to damage them. They will soften after harvesting, but will not continue to sweeten off the vine."],
+            "description": null,
+            "bullets": null,
+            "skillLevel": "Intermediate",
+            "parentLevel": false,
+            "parentCat": "Melons",
+            "imageURL": "http://vanhornerestaurant.com/wp-content/uploads/2016/09/how-to-tell-honeydew-melon-is-ripe.jpg"
+        }
+    ],
+    "isCat": true
+},
+{
+    "title": 'Berries',
+    "description": "Toward the end of the growing season, pinch off any small melons so the larger melons will ripen and sweeten up.",
+    "childPlants": [
+        {
+            "title": "Strawberries",
+            "Climate": "Plan to plant as soon as the ground can be worked in the Spring.",
+            "Sunlight": "8 - 10",
+            "Support": "No",
+            "Spacing": "20",
+            "Water": "Water regularly, 1 Inch per week",
+            "Special": ["Strawberry plants come in three types: Day-Neutral, Everbearer, Junebearer. For home gardens, the recommended type is Junebearers. These produce buds during autumn, flowers and fruits the following spring, and bears fruit during summer.",
+                "Although you will have to wait until the year after planting for fruit harvesting, it will be worth the wait. Tolerant of different soil types, but prefers loam. Prepare aged manure or compost several months before planting. Planting site must be well-drained so raised beds are a good option for strawberry plants. In the first year, pick off blossoms to discourage strawberry plants from bearing fruit. Instead they will develope healthier roots."],
+            "description": null,
+            "bullets": null,
+            "skillLevel": "Expert",
+            "parentLevel": false,
+            "parentCat": "Berries",
+            "imageURL": ""
+        }, 
+        {
+            "title": "Blueberries",
+            "Climate": "Bushes should be planted as early in the spring as possible.",
+            "Sunlight": "8 - 10",
+            "Support": "No",
+            "Spacing": "5+ Feet",
+            "Water": "Water regularly, 1-2 Inches per week",
+            "Special": ["There are three types of blueberries: Highbush, Lowbush, and Hybrid Half-high. The most commonly planted blueberry is the Highbush. Blueberries thrive in soil that is acidic. The soil pH should ideally be between 4 and 5. The more organic matter added, the more tolerance to acidity blueberries will have.",
+                "When planting, dig holes about 20 inches deep and 18 inches wide. Prepare a planting mixture of 2 parts loam and one part oak leaf mold, peat moss, aged sawdust, or compost, and place a layer of this mixture in the bottom of the hole. Apply fertilizer one month after planting, not at time of planting.",
+                "If you plant two-year-old blueberry plants, they should start to bear within a year or two. Pick off any flowers that form the first year or two after planting, to allow the bush to growfirst. Full production is reached after 6 years."],
+            "description": null,
+            "bullets": null,
+            "skillLevel": "Expert",
+            "parentLevel": false,
+            "parentCat": "Berries",
+            "imageURL": ""
+        }, 
+        {
+            "title": "Blackberries",
+            "Climate": "Planting may be done in late fall, however, it should be delayed until early spring in very cold areas.",
+            "Sunlight": "8 - 10",
+            "Support": "Yes",
+            "Spacing": "5+ Feet",
+            "Water": "Water regularly, 1-2 Inches per week",
+            "Special": ["There are three basic types of blackberries: Erect Thorny, Erect Thornless, Trailing Thornless. All blackberries are perennials, meaning the roots come back year after year. However, the plant portion above the soil is biennial, meaning the plant grows vegetatively for a year, bears fruit the next year, die, then repeat.",
+                "Erect blackberries produce stiff, shorter canes that come from the crown and from root suckering. Erect blackberries benefit from summer pruning. Remove the top one to two inches of new primocanes when they are four feet tall.",
+                "If you have primocane-fruiting erect blackberries, cut all canes off just above the ground in the late winter for the best fruit. In the summer, when the primocanes are 3½ feet tall, removed the top 6 inches.",
+                "If you have semi-erect blackberries, they are easier to manage on a Double T Trellis. Install four-foot cross arms at the top of a six-foot post. Install a three-foot cross arm about two feet below the top line. Semi-erect berries need to be pruned in the summer. When the primocanes are five feet tall, remove the top two inches to encourage branching. Several pruning sessions will be required as canes reach the appropriate height."],
+            "description": null,
+            "bullets": null,
+            "skillLevel": "Expert",
+            "parentLevel": false,
+            "parentCat": "Berries",
+            "imageURL": ""
+        },
+        {
+            "title": "Raspberries",
+            "Climate": "Plant bare-root transplants in the early spring after threat of frost has passed and as soon as the soil can be worked.",
+            "Sunlight": "8-10",
+            "Support": "Yes",
+            "Spacing": "2 - 4 Feet",
+            "Water": "Water regularly, 1 Inch per week",
+            "Special": ["Prepare soil with a couple inches of compost or aged manure a couple weeks before planting. Till the soil well before planting. Before planting, soak the roots for an hour or two. Mulching is important throughout the season to conserve moisture and suffocate weeds. Keep a thick layer of mulch surrounding plants at all times. The roots send up an abundant amount of shoots, called canes. Keep order by pruning away the majority of them, so that the survivors can produce lots of berries.",
+                "Red raspberries: Prune any time after the last harvest and before growth begins in the spring. Cut all canes that produced fruit to the ground. Thin to 6 sturdy canes per hill (per foot of row).",
+                "Black and purple raspberries: When primocanes are between 24 to 30 inches in height, pinch out the tip of each shoot to induce branching. This will make the fruit easier to pick and increase production. After harvest, cut down all canes that bore fruit to ground level.",
+                "Ever-bearing or fall-bearing raspberries: Cut all canes to the ground any time after harvest and before growth begins in the spring. Mow them to the ground or use pruning shears for a small patch.",
+                "All varieties will begin to produce fruit in their second season. In some cases, ever-bearers may bear small berries in their first autumn. In early summer, berries will ripen over a time of about 2 weeks. You will need to pick berries every couple of days. Try to harvest berries on a sunny day, when they are dry. Don’t tug too hard on your raspberries when picking. A ripe raspberry will leave the vine willingly."],
+            "description": null,
+            "bullets": null,
+            "skillLevel": "Expert",
+            "parentLevel": false,
+            "parentCat": "Berries",
+            "imageURL": ""
+        }
+    ],
+    "imageURL": "https://groceries.morrisons.com/productImages/210/210305011_0_640x640.jpg?identifier=6ff605c91cd0384439fa1acbd7de32a1",
+    "parentLevel": true,
+    "isCat": true
+}
 ])
 
 
@@ -316,54 +458,6 @@ db.plants.insertMany([
             }
         ],
         imageURL: "http://thescienceofeating.com/wp-content/uploads/2012/04/Book-Green-Leafy-Veggetables.jpg",
-        parentLevel: true,
-        isCat: true
-    },
-    {
-        title: 'Melons',
-        description: "Toward the end of the growing season, pinch off any small melons so the larger melons will ripen and sweeten up.",
-        childPlants: [
-            {
-                title: 'Watermelon', 
-                imageURL: "https://www.organicfacts.net/wp-content/uploads/2013/05/watermelon2.jpg"
-                Climate: "Likes warmth. Needs long growing season of at least 70 to 85 days",
-                Sunlight: "8 - 10",
-                Support: "maybe",
-                Spacing: "24 - 36",
-                Water: "Water regularly",
-                Special: "Requires warm soil and lots of watering",
-                skillLevel: "Intermediate",
-                parentLevel: false,
-                parentCat: 'Melons'
-            }, 
-            {
-                title: 'Cantaloupe', 
-                Climate: "Don't plant until ground temperature is above 70 degrees.",
-                Sunlight: "? - ?",
-                Support: 'maybe',
-                Spacing: "36 - 42",
-                Water: "Water regularly",
-                Special: "Likes well drained soil. Can start seeds indoors if you live in a cooler place.",
-                skillLevel: "Intermediate",
-                parentLevel: false,
-                parentCat: 'Melons'
-                imageURL: "https://groceries.morrisons.com/productImages/251/251646011_0_640x640.jpg?identifier=d85d41c1540345090c691ef4e3af7b53"
-            }, 
-            {
-                title: 'Honeydew', 
-                Climate: "Don't plant until ground temperature is above 70 degrees.",
-                Sunlight: "? - ?",
-                Support: 'maybe',
-                Spacing: "36 - 42",
-                Water: "Water regularly",
-                Special: "Likes well drained soil. Can start seeds indoors if you live in a cooler place.",
-                skillLevel: "Intermediate",
-                parentLevel: false,
-                parentCat: 'Melons' 
-                imageURL: "http://vanhornerestaurant.com/wp-content/uploads/2016/09/how-to-tell-honeydew-melon-is-ripe.jpg"
-            }
-        ],
-        imageURL: "https://groceries.morrisons.com/productImages/210/210305011_0_640x640.jpg?identifier=6ff605c91cd0384439fa1acbd7de32a1",
         parentLevel: true,
         isCat: true
     }

@@ -39,7 +39,7 @@ var PlantPosSchema = new Schema({
     type: 'string'
   },
   Special:{
-    type: 'string'
+    type: Array
   },
   // Again, it is my understanding that MongoDB stores longer text as still just strings as opposed to text blobs. 
   // I'm not completly confident about that, however, so if we have problems I'll do more research. 

@@ -36,13 +36,14 @@ class AllPlants extends Component {
 	// state.cropData stores an array of objects, each representing a crop to be displayed. 
 	// This code then maps that data to CropCard elements. 
 	render() {
+		console.log(this.state.plantData);
 	  return (
 			<Wrapper>
 				<Navbar/>
-				<div id="allPlantsHeader">
-					<h1 id="allPlantsHeaderTitle">All Plants</h1>
-				</div>
 				<div id="allPlants">
+					<div id="allPlantsHeader">
+						<h1 id="allPlantsHeaderTitle">All Plants</h1>
+					</div>
 					{
 						this.state.plantData.map(item => (
 							<PlantCard

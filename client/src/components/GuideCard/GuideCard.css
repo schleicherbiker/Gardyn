@@ -5,11 +5,17 @@
     height: 96px;
     margin: 0px 24px 48px 24px;
     position: relative;
-    background-color: yellow;
+    background-color: gray;
     overflow: hidden;
     border: 2px solid black;
     border-radius: 8px;
     background-image: url("http://earth-lite.com/wp-content/uploads/2014/07/DIRT2.jpg");
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.guideCard:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
 .guideCardName {

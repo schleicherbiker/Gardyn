@@ -35,21 +35,29 @@ const Plant = (props) => {
 		difficultyDivStyle = { backgroundColor: "rgba(255, 0, 0, 0.8)" }
 	}
 
+	var plantImage = {
+		backgroundImage: `url(${props.imageURL})`
+	}
+
+	console.log(`url(${props.imageURL})`);
 	  return (
 	  	<Wrapper>
 	  	  <Navbar/>
-		  <div id="individualPlantHeader">
-		  	<h2 className = "plantName">{props.title}</h2>
-		  </div>
 		  <div className = "plantAlign">
-		    <hr/>
+		  	<div id="individualPlantHeader">
+			  	<h2 className = "plantName">{props.title}</h2>
+		  	</div>  
 		      {
 	      	  (!props.isCat)
 				?
 				<div>
 					<div className = "row plantSectionSeparate">
-				        <div className="col-md-6">
-				        	<img className = "plantImage" src={props.imageURL} alt="200x200"/>
+				        <div className="col-md-6" id="leftColumn">
+				        	
+							<div className="plantImageDiv" style={plantImage}>
+								<h4 id="difficultyDivText" style={difficultyDivStyle}>{props.skillLevel}</h4>
+							</div>
+
 				        </div>
 						<div className="col-md-6">
 
@@ -58,8 +66,9 @@ const Plant = (props) => {
 								<h4 className="textRight">{props.Sunlight} Hours</h4>
 							</div>
 
-							<div className="infoDiv" style={difficultyDivStyle}>
-								<h4 id="difficultyDivText">{props.skillLevel}</h4>
+							<div className="infoDiv">
+								<img src="http://www.iconarchive.com/download/i89293/icons8/ios7/Weather-Sun.ico" id="sunlightDivIcon"></img>
+								<h4 className="textRight">{props.Sunlight} Hours</h4>
 							</div>
 
 							<div className="infoDiv">
@@ -74,14 +83,9 @@ const Plant = (props) => {
 										<img className="infoDivOptionsImage" src="http://icons.iconarchive.com/icons/icons8/android/512/Very-Basic-Checkmark-icon.png"></img>
 									</div>
 									<div id="divider"/>
-									<div className="infoDivOptionsDiv" style={maybeDivStyle}>
-										<img className="infoDivOptionsImage" src="http://icons.iconarchive.com/icons/icons8/ios7/512/Healthcare-Scales-Of-Balance-Filled-icon.png"></img>
-									</div>
-									<div id="divider"/>
 									<div className="infoDivOptionsDiv" style={noDivStyle}>
 										<img className="infoDivOptionsImage" src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png"></img>
 									</div>
-									
 									
 								</div>
 								
@@ -89,11 +93,6 @@ const Plant = (props) => {
 						</div>
 					</div>
 					<div className = "row plantSectionSeparate">
-						<p className = "plantGuideTitle">Climate</p>
-						<p className = "plantGuideDescription">{props.Climate}</p>
-						<br />
-						<p className = "plantGuideTitle">Special</p>
-						<p className = "plantGuideDescription">{props.Water}</p>
 						<p className = "plantGuideDescription">{props.Special}</p>
 					</div>
 				</div>

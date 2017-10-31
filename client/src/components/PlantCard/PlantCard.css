@@ -3,24 +3,33 @@
     width: 148px;
     height: 148px;
     position: relative;
-    border: 1px solid black;
+    border: 1px solid #000000;
     overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.plantCard:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
 .plantCardName {
     text-align: center;
     margin: 0;
-    font-size: 24px;
+    font-size: 22px;
     padding-top: 8px;
     width: 100%;
     height: 42px;
-    background-color: #eee;
+    background-color: rgba(255, 255, 255, 0.8);
     position: absolute;
     bottom: 0;
+    color: black;
+    font-family: 'Source Serif Pro', serif;
 }
 
 .plantCardImage {
-    width: 100%;
+    height: 100%;
 }
 
 .easyDifficulty, .mediumDifficulty, .hardDifficulty {
@@ -34,13 +43,18 @@
 }
 
 .easyDifficulty {
-    background-color: green;
+    background-color: #4ae275;
 }
 
 .mediumDifficulty {
-    background-color: yellow;
+    background-color: #edff6b;
 }
 
 .hardDifficulty {
-    background-color: red;
+    background-color: #ff5c3f;
+}
+
+@keyframes onHover {
+    0% { box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
+    100% { box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6); }
 }

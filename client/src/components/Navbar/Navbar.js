@@ -9,9 +9,11 @@ const Navbar = () => (
             <h1 id="navbarTitle">gardyn</h1>
         </div>
       </a>
+      <h4 className="nav-elemnt-link">User: <span id="navbar-user">Some Name</span></h4>
       <div className="flex">
-          <h3 className="button"><a className="nav-element-link" href="/plants"><h4>plants</h4></a></h3>
-          <h3 className="button"><a className="nav-element-link" href="/guides"><h4>guides</h4></a></h3>
+          <h3 className="button"><a className="nav-element-link" href="/plants"><h4>Plants</h4></a></h3>
+          <h3 className="button"><a className="nav-element-link" href="/guides"><h4>Guides</h4></a></h3>
+          <h3 className="button"><a className="nav-element-link" href="/"><h4>Logout</h4></a></h3>
       </div>
     </div>
 );

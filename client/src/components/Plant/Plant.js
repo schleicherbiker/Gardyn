@@ -62,8 +62,16 @@ const Plant = (props) => {
 						<div className="col-md-6">
 
 							<div className="infoDiv">
-								<img src="http://www.iconarchive.com/download/i89293/icons8/ios7/Weather-Sun.ico" id="sunlightDivIcon"></img>
-								<h4 className="textRight">{props.Sunlight} Hours</h4>
+								<h4 className="textLeft">Climate: </h4>
+								<div className="infoDivOptions">
+									<div className="infoDivOptionsDiv" style={yesDivStyle}>
+										<img className="infoDivOptionsImage" src="https://www.shareicon.net/download/2015/09/02/94489_flame.svg"></img>
+									</div>
+									<div id="divider"/>
+									<div className="infoDivOptionsDiv" style={noDivStyle}>
+										<img className="infoDivOptionsImage" src="https://image.flaticon.com/icons/svg/63/63341.svg"></img>
+									</div>	
+								</div>
 							</div>
 
 							<div className="infoDiv">
@@ -85,11 +93,15 @@ const Plant = (props) => {
 									<div id="divider"/>
 									<div className="infoDivOptionsDiv" style={noDivStyle}>
 										<img className="infoDivOptionsImage" src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png"></img>
-									</div>
-									
+									</div>	
 								</div>
-								
 							</div>
+
+							<div className="infoDiv">
+								<img src="http://downloadicons.net/sites/default/files/left-right-double-arrow-symbols-icons-68674.png" id="sunlightDivIcon"></img>
+								<h4 className="textRight">{props.Spacing} Days</h4>
+							</div>
+
 						</div>
 					</div>
 					<div className = "row plantSectionSeparate">

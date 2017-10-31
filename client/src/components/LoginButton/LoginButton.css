@@ -1,7 +1,9 @@
 #loginButton {
-	position: absolute;
+	/* position: absolute;
 	right: 0;
-	top: 0;
+	top: 0; */
+	float: right;
+	display: inline-block;
 	color: white;
 	font-size: 20px;
 	padding: 2px 6px 2px 6px;
@@ -35,4 +37,28 @@
 #loginButton:active {
 	color: black;
 	text-decoration: none;
+}
+
+#logoutButton {
+	float:right;
+	/* position: absolute;
+	right: 0;
+	top: 0; */
+	display: inline-block;
+	color: white;
+	font-size: 20px;
+	padding: 2px 6px 2px 6px;
+	margin: 1.5vh;
+	border: 1px solid white;
+	border-radius: 6px;
+}
+
+#logoutButton:hover {
+	color: #e8ffe2;
+	border: solid 1px #e8ffe2;
+	background-color: rgba(255, 255, 255, 0.7);
+	color: black;
+	cursor: pointer;
+	text-decoration:  none;
+	border: none;
 }

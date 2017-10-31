@@ -3,11 +3,18 @@ import "./LoginButton.css";
 
 class LoginButton extends Component {
     
+    
     constructor(props){
     super(props); 
     this.handleClick = this.handleClick.bind(this);
+    this.fbLogOut = this.fbLogOut.bind(this);
     }
+
     componentDidMount() {
+
+      localStorage.clear();
+      console.log("Cleared!");
+
       window.fbAsyncInit = function() {
         window.FB.init({
           appId      : "124126441638491",
@@ -30,6 +37,8 @@ class LoginButton extends Component {
         // These three cases are handled in the callback function.
         window.FB.getLoginStatus(function(response) {
           this.statusChangeCallback(response);
+          
+            const ID = response.authResponse.userID;
           }.bind(this));
         }.bind(this);
     
@@ -50,6 +59,9 @@ class LoginButton extends Component {
       window.FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('loginButton').innerHTML = response.name;
+      document.createElement("BUTTON").innerHTML = "Logout";
+      const USER = response.name;
+      localStorage.setItem(`USER`, USER);
       });
     }
     
@@ -89,11 +101,24 @@ class LoginButton extends Component {
       window.FB.login(this.checkLoginState());
     }
 
+    fbLogOut() {
+      window.FB.logout((response)=> {
+  // user is now logged out
+  //document.getElementById('loginButton').innerHTML = "Login";
+});
+    }
+
     render() {
 
     return (
         <div>
-        <a href="/" id="loginButton" onClick={this.handleClick}>Login</a>
+          <div>
+            <a href="/" id="logoutButton" onClick={this.fbLogOut}>Logout</a>
+          </div>
+          <div>
+            <a href="/" id="loginButton" onClick={this.handleClick}>Login</a>
+          </div>
+          
         </div>
     );
     }

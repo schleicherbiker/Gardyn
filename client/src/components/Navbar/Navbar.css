@@ -2,17 +2,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #3d3d3f;
     margin: auto;
-    background: #c3ffba;
+    background: #49dd57;
     overflow: hidden;
     height: 64px;
+    font-family: 'Source Serif Pro', serif;
 }
 
 #navbarTitle {
     margin: 0;
     font-size: 48px;
-    color: 	#3d3d3f;
+    color: 	#333333;
 }
 
 #icon {
@@ -46,7 +46,7 @@
 }
 
 .button:hover {
-    background: #ade2a7;
+    background: #437f4d;
 }
 
 .button h4 {

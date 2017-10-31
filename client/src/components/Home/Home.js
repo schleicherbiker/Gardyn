@@ -11,8 +11,8 @@ class Home extends Component {
 		    <div id="titleCenterDiv">
 				<div id="contentDiv">
 					<h1 id="homeTitle">gardyn</h1>
-					<a href="/plants" className="titleButton" id="allPlantsButton">Plants</a>
-					<a href="/guides" className="titleButton" id="allGuidesButton">Guides</a>
+					<a href="/plants" className="titleButton" id="allPlantsButton">plants</a>
+					<a href="/guides" className="titleButton" id="allGuidesButton">guides</a>
 					<LoginButton/>
 				</div>
 			</div>

@@ -1,35 +1,28 @@
+body {
+    background-image: url("soil_bg.jpg");
+    background-size: contain;
+    background-attachment: fixed;
+}
+
 #wrapper {
     margin: auto;
+    padding-bottom: 32px;
     padding: -15px;
-    background: #e0fcde;
-    border-left: 1px solid #3d3d3d;
-    border-right: 1px solid #3d3d3d;
+    background: linear-gradient(#c9ffce,#57c663);
     box-sizing: content-box;
   }
   
   /* Phone */
   @media only screen and (max-width: 400px) {
-      body {
-        background-color: #F09A9D;
-      }
     }
     
     /* Tablet */
     @media only screen and (min-width: 401px) and (max-width: 960px) {
-      body {
-        background-color: #F5CF8E;
-      }
     }
     
     /* Desktop */
-    @media only screen and (min-width: 961px) {
-        body {
-            background-image: url("soil_bg.jpg");
-            background-size: contain;
-            background-attachment: fixed;
-        }
-        
+    @media only screen and (min-width: 961px) { 
         #wrapper {
-            width: 832px;
+            width: 864px;
         }  
     }

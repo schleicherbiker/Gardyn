@@ -9,27 +9,31 @@ const Plant = (props) => {
   
 	props = props.location.state.props.item;
 
+	// Styling for plant climage
+	var warmDivStyle, coolDivStyle;
+	if (props.climate === "warm") {
+		warmDivStyle = { backgroundColor: "rgba(126, 252, 147, 0.6)" }
+		coolDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
+	} else {
+		warmDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
+		coolDivStyle = { backgroundColor: "rgba(126, 252, 147, 0.6)" }
+	}
+
 	// Styling for plant support
-	var yesDivStyle, maybeDivStyle, noDivStyle;
-	if (props.Support === "yes") {
+	var yesDivStyle, noDivStyle;
+	if (props.support) {
 		yesDivStyle = { backgroundColor: "rgba(126, 252, 147, 0.6)" }
-		maybeDivStyle = {backgroundColor: "rgba(126, 252, 147, 0)" }
-		noDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
-	} else if (props.Support === "maybe") {
-		yesDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
-		maybeDivStyle = {backgroundColor: "rgba(126, 252, 147, 0.6)" }
 		noDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
 	} else {
 		yesDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
-		maybeDivStyle = {backgroundColor: "rgba(126, 252, 147, 0)" }
 		noDivStyle = { backgroundColor: "rgba(126, 252, 147, 0.6)" }
 	}
 
 	// Styling for plant difficulty
 	var difficultyDivStyle;
-	if (props.skillLevel === "Beginner") { 
+	if (props.difficulty === "beginner") { 
 		difficultyDivStyle = { backgroundColor: "rgba(126, 252, 147, 1)" }
-	} else if (props.skillLevel === "Intermediate") {
+	} else if (props.skillLevel === "intermediate") {
 		difficultyDivStyle = { backgroundColor: "rgba(244, 223, 66, 1)" }
 	} else {
 		difficultyDivStyle = { backgroundColor: "rgba(255, 0, 0, 0.8)" }
@@ -38,6 +42,8 @@ const Plant = (props) => {
 	var plantImage = {
 		backgroundImage: `url(${props.imageURL})`
 	}
+
+	var difficulty = props.difficulty.charAt(0).toUpperCase() + props.difficulty.slice(1);
 
 	console.log(`url(${props.imageURL})`);
 	  return (
@@ -55,7 +61,7 @@ const Plant = (props) => {
 				        <div className="col-md-6" id="leftColumn">
 				        	
 							<div className="plantImageDiv" style={plantImage}>
-								<h4 id="difficultyDivText" style={difficultyDivStyle}>{props.skillLevel}</h4>
+								<h4 id="difficultyDivText" style={difficultyDivStyle}>{difficulty}</h4>
 							</div>
 
 				        </div>
@@ -76,12 +82,12 @@ const Plant = (props) => {
 
 							<div className="infoDiv">
 								<img src="http://www.iconarchive.com/download/i89293/icons8/ios7/Weather-Sun.ico" id="sunlightDivIcon"></img>
-								<h4 className="textRight">{props.Sunlight} Hours</h4>
+								<h4 className="textRight">{props.sunlight}</h4>
 							</div>
 
 							<div className="infoDiv">
 								<img src="http://downloadicons.net/sites/default/files/left-right-double-arrow-symbols-icons-68674.png" id="sunlightDivIcon"></img>
-								<h4 className="textRight">{props.Spacing} Inches</h4>
+								<h4 className="textRight">{props.spacing}</h4>
 							</div>
 
 							<div className="infoDiv">
@@ -98,29 +104,25 @@ const Plant = (props) => {
 							</div>
 
 							<div className="infoDiv">
-								<img src="http://downloadicons.net/sites/default/files/left-right-double-arrow-symbols-icons-68674.png" id="sunlightDivIcon"></img>
-								<h4 className="textRight">{props.Spacing} Days</h4>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Ic_schedule_48px.svg/2000px-Ic_schedule_48px.svg.png" id="sunlightDivIcon"></img>
+								<h4 className="textRight">{props.growingPeriod}</h4>
 							</div>
 
 						</div>
 					</div>
 					<div className = "row plantSectionSeparate">
-						<p className = "plantGuideDescription">{props.Special}</p>
+						<p className = "plantGuideDescription">{props.special}</p>
 					</div>
 				</div>
 				:
-				<div id="catDetailsHolder">
-				  <p>{props.description}</p>
-				  <h3>Varieties:</h3>
-				  <div id="childPlantHolder">
-					{
-						props.childPlants.map(item => (
-							<PlantCard
-								item = {item}
-							/>
-						))
-					}
-				  </div>
+				<div id="childPlantHolder">
+				{
+					props.childPlants.map(item => (
+						<PlantCard
+							item = {item}
+						/>
+					))
+				}
 				</div>
 		  	  }
 		  </div>

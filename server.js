@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const PORT = /*process.env.PORT ||*/ 3001; // Uncomment process.env before deploying.
+const PORT = process.env.PORT || 3001; // Uncomment process.env before deploying.
 const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -18,7 +18,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/gardynbase"); // For production version use: mongodb://gardyn_admin:richsoil@ds237855.mlab.com:37855/heroku_htkwql1k      For development use: mongodb://localhost/gardynbase
+mongoose.connect("mongodb://gardyn_admin:richsoil@ds237855.mlab.com:37855/heroku_htkwql1k"); // For production version use: mongodb://gardyn_admin:richsoil@ds237855.mlab.com:37855/heroku_htkwql1k      For development use: mongodb://localhost/gardynbase
 const db = mongoose.connection;
 
 // Show any mongoose errors

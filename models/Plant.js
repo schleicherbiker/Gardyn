@@ -22,33 +22,37 @@ var PlantSchema = new Schema({
   imageURL:{
     type: 'string'
   },
-  Climate:{
+  climate:{
     type: 'string'
   },
-  Sunlight:{
+  sunlight:{
     type: 'string'
   },
-  Support:{
+  support:{
     type: 'string'
   },
-  Spacing:{
+  spacing:{
     type: 'string'
   },
-  Water:{
+  /*
+  water:{
     type: 'string'
   },
-  Special:{
+  */
+  special:{
     type: Array
   },
   // Again, it is my understanding that MongoDB stores longer text as still just strings as opposed to text blobs. 
   // I'm not completly confident about that, however, so if we have problems I'll do more research. 
+  /*
   description: {
     type: String
   },
   // Bullets are stored as an array of strings.
   bullets: {
     type: Array
-  }, 
+  },
+  */
   // Enum part of this model has not been tested yet.
   // 'Easy' and 'Difficult' are legacy and can be removed before going to production version. 
   skillLevel: {

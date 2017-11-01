@@ -70,25 +70,25 @@ class SuggestGuide extends Component {
 						      <label className="col-lg-2 control-label" for="guideTitleInput">Title</label>
 						      <div className="col-lg-10">
 						        <input className="form-control" type="text" id="guideTitleInput" placeholder="Guide Title"
-						        name="guideTitleInput" value={this.state.guideTitleInput} onChange={this.handleChange} />
+						        name="title" value={this.state.title} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
 						      <label className="col-lg-2 control-label" for="photolinkInput">Photo URL</label>
 						      <div className="col-lg-10">
 						        <input className="form-control" type="text" id="photolinkInput" placeholder="E.g. http://via.placeholder.com/300" 
-						        name="photolinkInput" value={this.state.photolinkInput} onChange={this.handleChange} />
+						        name="photoLink" value={this.state.photoLink} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
 						      <label className="col-lg-2 control-label" for="guideInput">Guide</label>
 						      <div className="col-lg-10">
 						        <textarea className="form-control" type="text" rows="10" id="guideInput" placeholder="Write your guide here!"
-						        name="guideInput" value={this.state.guideInput} onChange={this.handleChange} />
+						        name="body" value={this.state.body} onChange={this.handleChange} />
 						      </div>
 						    </div>
-						    <div class="form-group">
-						      <div class="col-lg-10 col-lg-offset-2">
+						    <div className="form-group">
+						      <div className="col-lg-10 col-lg-offset-2">
 						        <button type="submit" className="btn btn-success btn-gardyn" onClick={this.handleSubmit}>Submit</button>
 						      </div>
 						    </div>

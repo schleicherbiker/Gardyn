@@ -52,7 +52,7 @@ class HandleSuggestions extends Component {
 		  .then(function (response) {
 		    // Suggestions are re-retrieved to account for change
 		    parentObj.retrieveSuggestions();
-			})
+		  })
 		  .catch(function (error) {
 		    console.log(error);
 			});

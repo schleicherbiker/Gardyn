@@ -3,6 +3,7 @@
     width: 148px;
     height: 148px;
     background-size: cover;
+    background-position: center;
     position: relative;
     border: 1px solid #000000;
     overflow: hidden;
@@ -48,11 +49,11 @@
 }
 
 .mediumDifficulty {
-    background-color: #edff6b;
+    background-color: #fcff54;
 }
 
 .hardDifficulty {
-    background-color: #ff5c3f;
+    background-color: #f74845;
 }
 
 @keyframes onHover {

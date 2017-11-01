@@ -12,7 +12,8 @@ db.plants.insertMany([
         "Tomatoes have two types of growth: determinate and indeterminate. Determinate tomato plants stop growing at a certain size. They tend to set and produce all their fruit at once over a 2 to 3 week period. Often called bush tomatoes, they can be planted closer together and do well in a container.\n",
         "An indeterminate tomato plant will keep on growing and producing fruit until it is killed by frost. These plants get quite large and will need some kind of support. Whether you use a trellis, stakes, or cages is up to you, but supporting them is necessary to keep the plants from sprawling on the ground.\n"],
     "parentLevel": true,
-    "parentCat": null
+    "parentCat": null,
+    "iscat": false
 }, {
     "title": "Broccoli",
     "imageURL": "https://www.cookforyourlife.org/wp-content/uploads/2015/08/shutterstock_294838064-min.jpg",

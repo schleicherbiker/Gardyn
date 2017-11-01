@@ -55,9 +55,12 @@ var PlantSchema = new Schema({
   */
   // Enum part of this model has not been tested yet.
   // 'Easy' and 'Difficult' are legacy and can be removed before going to production version. 
-  skillLevel: {
+  difficulty: {
     type: String,
-    enum: ["Easy", "Intermediate", "Difficult", "Beginner", "Expert"]
+    enum: ["beginner", "intermediate", "expert"]
+  },
+  growingPeriod: {
+    type: String
   },
   parentLevel: {
     type: Boolean,

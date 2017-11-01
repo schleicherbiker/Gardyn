@@ -13,7 +13,7 @@ db.plants.insertMany([
         "An indeterminate tomato plant will keep on growing and producing fruit until it is killed by frost. These plants get quite large and will need some kind of support. Whether you use a trellis, stakes, or cages is up to you, but supporting them is necessary to keep the plants from sprawling on the ground.\n"],
     "parentLevel": true,
     "parentCat": null,
-    "iscat": false
+    "isCat": false
 }, {
     "title": "Broccoli",
     "imageURL": "https://www.cookforyourlife.org/wp-content/uploads/2015/08/shutterstock_294838064-min.jpg",

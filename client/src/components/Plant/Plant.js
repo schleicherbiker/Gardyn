@@ -43,7 +43,10 @@ const Plant = (props) => {
 		backgroundImage: `url(${props.imageURL})`
 	}
 
-	var difficulty = props.difficulty.charAt(0).toUpperCase() + props.difficulty.slice(1);
+	var difficulty;
+	if ( props.difficulty ) {
+		difficulty = props.difficulty.charAt(0).toUpperCase() + props.difficulty.slice(1);
+	}
 
 	console.log(`url(${props.imageURL})`);
 	  return (

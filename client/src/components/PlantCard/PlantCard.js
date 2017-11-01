@@ -8,11 +8,11 @@ const PlantCard = (props) => {
         backgroundImage: `url(${props.item.imageURL})`
     }
 
-    if (props.item.skillLevel === "Beginner") { 
+    if (props.item.difficulty === "beginner") { 
         var easyDif = "easyDifficulty";
         var medDif = "mediumDifficulty hidden";
         var hardDif = "hardDifficulty hidden";
-    } else if (props.item.skillLevel === "Expert") { 
+    } else if (props.item.difficulty === "expert") { 
         var easyDif = "easyDifficulty hidden";
         var medDif = "mediumDifficulty hidden";
         var hardDif = "hardDifficulty";

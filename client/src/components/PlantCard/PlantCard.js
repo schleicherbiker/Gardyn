@@ -4,7 +4,9 @@ import "./PlantCard.css";
 
 const PlantCard = (props) => {
 
-    const test = props.skillLevel;
+    var plantCardBackground = {
+        backgroundImage: `url(${props.item.imageURL})`
+    }
 
     if (props.item.skillLevel === "Beginner") { 
         var easyDif = "easyDifficulty";
@@ -25,11 +27,10 @@ const PlantCard = (props) => {
             pathname: `/plants/${props.item.title}`,
             state: {props}
         }}>
-            <div className="plantCard">
+            <div className="plantCard" style={plantCardBackground}>
                 <div className={easyDif}></div>
                 <div className={medDif}></div>
                 <div className={hardDif}></div>
-                <img className="plantCardImage" alt="" src={props.item.imageURL}></img>
                 <h2 className="plantCardName">{props.item.title}</h2>
             </div>
         </Link>

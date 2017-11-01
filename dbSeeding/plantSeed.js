@@ -1,22 +1,24 @@
+use gardynbase
+db.plants.remove({})
 db.plants.insertMany([
 {
     "title": "Tomatoes",
-    "imageURL": "http://assets.nydailynews.com/polopoly_fs/1.2834910.1476795531!/img/httpImage/image.jpg_gen/derivatives/article_750/488059328.jpg",
+    "imageURL": "http://suttons.s3.amazonaws.com/p/VETOM21649_3.jpg",
     "climate": "warm",
     "sunlight": "6 - 8 Hours",
     "spacing": "24 - 36 Inches",
     "support": true,
     "difficulty": "beginner",
-    "special": ["Tomatoes need warmth; plant in late spring and early summer for most breeds. Recommend burying two-thirds of the stem when planting. Note method of deep planting only works with tomatoes.\n",
-        "Tomato plants need 1 to 2 inches of water per week. Uneven watering can set the stage for blossom-end rot and may also cause fruits to crack open.\n",
-        "Tomatoes have two types of growth: determinate and indeterminate. Determinate tomato plants stop growing at a certain size. They tend to set and produce all their fruit at once over a 2 to 3 week period. Often called bush tomatoes, they can be planted closer together and do well in a container.\n",
-        "An indeterminate tomato plant will keep on growing and producing fruit until it is killed by frost. These plants get quite large and will need some kind of support. Whether you use a trellis, stakes, or cages is up to you, but supporting them is necessary to keep the plants from sprawling on the ground.\n"],
+    "special": ["Tomatoes need warmth; plant in late spring and early summer for most breeds. Recommend burying two-thirds of the stem when planting. Note method of deep planting only works with tomatoes.",
+        "Tomato plants need 1 to 2 inches of water per week. Uneven watering can set the stage for blossom-end rot and may also cause fruits to crack open.",
+        "Tomatoes have two types of growth: determinate and indeterminate. Determinate tomato plants stop growing at a certain size. They tend to set and produce all their fruit at once over a 2 to 3 week period. Often called bush tomatoes, they can be planted closer together and do well in a container.",
+        "An indeterminate tomato plant will keep on growing and producing fruit until it is killed by frost. These plants get quite large and will need some kind of support. Whether you use a trellis, stakes, or cages is up to you, but supporting them is necessary to keep the plants from sprawling on the ground."],
     "parentLevel": true,
     "parentCat": null,
-    "iscat": false
+    "isCat": false
 }, {
     "title": "Broccoli",
-    "imageURL": "https://www.cookforyourlife.org/wp-content/uploads/2015/08/shutterstock_294838064-min.jpg",
+    "imageURL": "http://www.harvesttotable.com/wp-content/uploads/2009/01/Broccoli-in-Garden-1.jpg",
     "climate": "cool",
     "sunlight": "6 - 10 Hours",
     "spacing": "16 - 24 Inches",
@@ -31,7 +33,7 @@ db.plants.insertMany([
     "isCat": false
 }, {
     "title": 'Radishes',
-    "imageURL": "http://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/24171905/ING-radish-thumb1x1.jpg",
+    "imageURL": "https://cropgenebank.sgrp.cgiar.org/images/radish/RadishRootsCGN_resized.jpg",
     "climate": 'cool',
     "sunlight": "6 - 10 Hours",
     "spacing": '12 - 16 Inches',
@@ -62,7 +64,7 @@ db.plants.insertMany([
     "isCat": false
 }, {
     "title": "B. Sprouts",
-    "imageURL": "http://www.well-beingsecrets.com/wp-content/uploads/Brussels-Sprouts-and-Manganese.jpg",
+    "imageURL": "http://www.thatbloomingarden.com/wp-content/uploads/2012/09/pb060060.x56516.jpg",
     "climate": "cool",
     "sunlight": "6 - 10 Hours",
     "spacing": "18 - 24 Inches",
@@ -77,7 +79,7 @@ db.plants.insertMany([
     "isCat": false
 }, {
     "title": "Beets",
-    "imageURL": "https://cdn1.medicalnewstoday.com/content/images/articles/311/311343/one-whole-beet-and-one-halved-beet.jpg",
+    "imageURL": "https://www.vegetable-garden-guide.com/images/beetroot-800x532.jpg",
     "climate": "cool",
     "sunlight": "6 - 8 Hours",
     "spacing": "2 - 4 Inches",
@@ -91,7 +93,7 @@ db.plants.insertMany([
     "isCat": false
 }, {
     "title": "Carrots",
-    "imageURL": "https://www.organicfacts.net/wp-content/uploads/2013/05/Carrot1.jpg",
+    "imageURL": "http://www.theorangegroveclinic.co.uk/wp-content/uploads/2014/11/carrots.jpg",
     "climate": "cool",
     "sunlight": "6 - 8 Hours",
     "spacing": "1 - 3 Inches",
@@ -167,7 +169,7 @@ db.plants.insertMany([
     "childplants": [
         {
             "title": "Bell Peppers",
-            "imageURL": "https://img.buzzfeed.com/buzzfeed-static/static/2017-05/4/12/asset/buzzfeed-prod-fastlane-01/sub-buzz-20636-1493915918-9.jpg?downsize=715:*&output-format=auto&output-quality=auto",
+            "imageURL": "http://www.dietoflife.com/wp-content/uploads/2017/01/papers.jpg",
             "climate": "Peppers need at least 70°F for germination, and 65°F for successful transplanting.",
             "sunlight": "6 - 8 Hours",
             "spacing": "18 - 24 Inches",

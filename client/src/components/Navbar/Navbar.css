@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     margin: auto;
-    background: #49dd57;
+    background: linear-gradient(to bottom right, #7dd179, #2d8c28);
     overflow: hidden;
     height: 64px;
     font-family: 'Source Serif Pro', serif;

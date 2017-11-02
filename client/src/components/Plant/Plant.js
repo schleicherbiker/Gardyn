@@ -14,21 +14,21 @@ const Plant = (props) => {
 	// Styling for plant climage
 	var warmDivStyle, coolDivStyle;
 	if (props.climate === "warm") {
-		warmDivStyle = { backgroundColor: "rgba(126, 252, 147, 0.6)" }
-		coolDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
+		warmDivStyle = { backgroundColor: "rgba(255, 134, 35, 0.7)" }
+		coolDivStyle = { backgroundColor: "rgba(0, 0, 0, 0.3)" }
 	} else {
-		warmDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
-		coolDivStyle = { backgroundColor: "rgba(126, 252, 147, 0.6)" }
+		warmDivStyle = { backgroundColor: "rgba(0, 0, 0, 0.3)" }
+		coolDivStyle = { backgroundColor: "rgba(50, 204, 255, 0.7)" }
 	}
 
 	// Styling for plant support
 	var yesDivStyle, noDivStyle;
 	if (props.support) {
-		yesDivStyle = { backgroundColor: "rgba(126, 252, 147, 0.6)" }
-		noDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
+		yesDivStyle = { backgroundColor: "rgba(98, 216, 93, 1)" }
+		noDivStyle = { backgroundColor: "rgba(0, 0, 0, 0.3)" }
 	} else {
-		yesDivStyle = { backgroundColor: "rgba(126, 252, 147, 0)" }
-		noDivStyle = { backgroundColor: "rgba(126, 252, 147, 0.6)" }
+		yesDivStyle = { backgroundColor: "rgba(0, 0, 0, 0.3)" }
+		noDivStyle = { backgroundColor: "rgba(239, 62, 31, 0.7)" }
 	}
 
 	// Styling for plant difficulty
@@ -75,11 +75,11 @@ const Plant = (props) => {
 							<div className="infoDiv" id="info1">
 								<h4 className="textLeft">Climate: </h4>
 								<div className="infoDivOptions">
-									<div className="infoDivOptionsDiv" style={yesDivStyle}>
+									<div className="infoDivOptionsDiv" style={warmDivStyle}>
 										<img className="infoDivOptionsImage" src="https://www.shareicon.net/download/2015/09/02/94489_flame.svg"></img>
 									</div>
 									<div id="divider"/>
-									<div className="infoDivOptionsDiv" style={noDivStyle}>
+									<div className="infoDivOptionsDiv" style={coolDivStyle}>
 										<img className="infoDivOptionsImage" src="https://image.flaticon.com/icons/svg/63/63341.svg"></img>
 									</div>	
 								</div>

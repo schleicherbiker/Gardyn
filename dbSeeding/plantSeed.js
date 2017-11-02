@@ -160,7 +160,7 @@ db.plants.insertMany([
     "description": "Peppers mothafukka!",
     "imageURL": "https://bonnieplants.com/wp-content/uploads/pimiento-pepper.jpg",
     "difficulty": "Intermediate",
-    "childplants": [
+    "childPlants": [
         {
             "title": "Bell Peppers",
             "imageURL": "http://www.dietoflife.com/wp-content/uploads/2017/01/papers.jpg",
@@ -198,7 +198,7 @@ db.plants.insertMany([
             "parentLevel": false,
             "parentCat": "Berries",
             "iscat": false,
-            "growingPeriod": "30 - 50 Post-Bloom"
+            "growingPeriod": "50 - 80 Days"
         }, {
             "title": "Blueberries",
             "imageURL": "https://www.starkbros.com/images/dynamic/1700.jpg",

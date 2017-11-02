@@ -16,10 +16,10 @@ class Home extends Component {
 					<div id="contentDiv">
 						<h1 id="homeTitle">
 							<img id="logo" alt="" src="../assets/leaf.png"></img>
-						gardyn
+						Gardyn
 						</h1>
-						<a href="/plants" className="titleButton" id="allPlantsButton">plants</a>
-						<a href="/guides" className="titleButton" id="allGuidesButton">guides</a>
+						<a href="/plants" className="titleButton" id="allPlantsButton">Plants</a>
+						<a href="/guides" className="titleButton" id="allGuidesButton">Guides</a>
 						
 					</div>
 				</div>

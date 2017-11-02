@@ -3,18 +3,16 @@
 	color: white;
 	font-family: 'Source Serif Pro', serif;
 	text-align: center;
-	margin-bottom: 64px;
+	margin-bottom: 20px;
 	animation: fadeinTitle 2s;
 	user-select: none;
-	margin:;
-	
 }
 
 #homeTitle {
 	cursor: default;
 }
 
-/* #titleCenterDiv {
+#titleCenterDiv {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -23,7 +21,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-} */
+	z-index: -1;
+
+}
 
 #allPlantsButton {
 	float: left;
@@ -32,7 +32,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
+	margin-right: 3px;
 }
 
 #allGuidesButton {
@@ -42,6 +42,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-left: 3px;
 }
 
 .titleButton {
@@ -51,11 +52,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid white;
+	border: 3px solid green;
 	font-family: 'Source Serif Pro', serif;
 	border-radius: 12px;
 	color: white;
 	user-select: none;
+	margin: 0 5px 10px 10px;
+	padding: 50px;
 }
 
 .titleButton:hover {
@@ -72,14 +75,17 @@
 	color: white;
 	text-decoration: none;
 }
+
 .titleButton:visited {
 	color: white;
 	text-decoration: none;
 }
+
 .titleButton:hover {
 	text-decoration: none;
 	color: black;
 }
+
 .titleButton:active {
 	color: black;
 	text-decoration: none;

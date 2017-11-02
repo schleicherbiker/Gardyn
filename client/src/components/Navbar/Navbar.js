@@ -6,7 +6,7 @@ const Navbar = () => (
     	<a href="/" className="flat-link">
         <div className="flex">
             <img id="icon" alt="" src="../assets/leaf.png"></img>
-            <h1 id="navbarTitle">gardyn</h1>
+            <h1 id="navbarTitle">Gardyn</h1>
         </div>
       </a>
       <h4 className="nav-elemnt-link">User: <span id="navbar-user">Some Name</span></h4>

@@ -1,14 +1,11 @@
 #loginButton {
-	/* position: absolute;
-	right: 0;
-	top: 0; */
 	float: right;
 	display: inline-block;
 	color: white;
 	font-size: 20px;
 	padding: 2px 6px 2px 6px;
 	margin: 1.5vh;
-	border: 1px solid white;
+	border: 2px solid green;
 	border-radius: 6px;
 }
 
@@ -20,6 +17,8 @@
 	cursor: pointer;
 	text-decoration:  none;
 	border: none;
+	margin: 1.5vh;
+
 }
 
 #loginButton:link {
@@ -34,6 +33,7 @@
 	text-decoration: none;
 	color: black;
 }
+
 #loginButton:active {
 	color: black;
 	text-decoration: none;
@@ -41,15 +41,12 @@
 
 #logoutButton {
 	float:right;
-	/* position: absolute;
-	right: 0;
-	top: 0; */
 	display: inline-block;
 	color: white;
 	font-size: 20px;
 	padding: 2px 6px 2px 6px;
 	margin: 1.5vh;
-	border: 1px solid white;
+	border: 2px solid green;
 	border-radius: 6px;
 }
 
@@ -61,4 +58,6 @@
 	cursor: pointer;
 	text-decoration:  none;
 	border: none;
+	margin: 1.5vh;
+
 }

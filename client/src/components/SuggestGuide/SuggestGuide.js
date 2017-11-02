@@ -103,13 +103,3 @@ class SuggestGuide extends Component {
 }
 
 export default SuggestGuide;
-
-/*
-					<div className="inputForm">
-						<input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange} />
-						<input type="text" name="photoLink" placeholder="Photo URL" value={this.state.photoLink} onChange={this.handleChange} />
-						<textarea rows="4" cols="50" placeholder="Write your guide here..." name="body" onChange={this.handleChange}></textarea>
-						<p id="errorDisplay">{this.state.submitErrorMessage}</p>
-						<button type="button" onClick={this.handleSubmit}>Submit</button>
-					</div>
-*/

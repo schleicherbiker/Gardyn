@@ -27,7 +27,7 @@ class AllGuides extends Component {
 
 	componentWillMount() {
 	    this.retrieveGuides();
-	    document.title = "Guides -- Gardyn.org";
+	    document.title = "Guides | Gardyn.org";
 	}
 
 	render() {

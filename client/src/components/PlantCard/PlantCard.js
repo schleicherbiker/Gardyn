@@ -10,24 +10,28 @@ function sluggify(string){
     }
 }
 
-const PlantCard = (props) => {
+    let easyDif = "easyDifficulty";
+    let medDif = "mediumDifficulty hidden";
+    let hardDif = "hardDifficulty hidden";
 
-    var plantCardBackground = {
+const PlantCard = (props) => {  
+
+    const plantCardBackground = {
         backgroundImage: `url(${props.item.imageURL})`
     }
 
     if (props.item.difficulty === "beginner") { 
-        var easyDif = "easyDifficulty";
-        var medDif = "mediumDifficulty hidden";
-        var hardDif = "hardDifficulty hidden";
+        easyDif = "easyDifficulty";
+        medDif = "mediumDifficulty hidden";
+        hardDif = "hardDifficulty hidden";
     } else if (props.item.difficulty === "expert") { 
-        var easyDif = "easyDifficulty hidden";
-        var medDif = "mediumDifficulty hidden";
-        var hardDif = "hardDifficulty";
+        easyDif = "easyDifficulty hidden";
+        medDif = "mediumDifficulty hidden";
+        hardDif = "hardDifficulty";
     } else {
-        var easyDif = "easyDifficulty hidden";
-        var medDif = "mediumDifficulty";
-        var hardDif = "hardDifficulty hidden";
+        easyDif = "easyDifficulty hidden";
+        medDif = "mediumDifficulty";
+        hardDif = "hardDifficulty hidden";
     }
 
     return (  

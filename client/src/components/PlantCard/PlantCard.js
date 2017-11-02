@@ -4,7 +4,7 @@ import "./PlantCard.css";
 
 function sluggify(string){
     if (string) {
-      return string.replace(" ", "_").toLowerCase();  
+      return string.replace(/ /g, "_").toLowerCase();  
     } else {
         return null;
     }

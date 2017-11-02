@@ -28,6 +28,61 @@ class AllPlants extends Component {
 	      });
 	}
 
+	sort = (e) => {
+		console.log(e.target.value);
+		if (e.target.value === "Alphabetically")
+			this.sortAlphabetically(this.state.plantData);
+		else if (e.target.value === "Beginner First")
+			this.sortDifficultyAsc(this.state.plantData);
+		else
+			this.sortDifficultyDes(this.state.plantData);	
+	}
+
+	sortAlphabetically = (data) => {
+		data.sort(function(a, b) {
+			var textA = a.title.toUpperCase();
+			var textB = b.title.toUpperCase();
+			return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+		});
+		this.setState(
+			{plantData: data}
+		);
+	}
+
+	sortDifficultyAsc = (data) => {
+		data.sort(function(a, b) {
+			var textA = a.difficulty;
+			var textB = b.difficulty;
+			if (textA === "beginner") {
+				return (textB === "beginner") ? 0 : -1;
+			} else if (textA === "intermediate") {
+				return (textB === "intermediate") ? 0 : (textB === "expert") ? -1 : 1;
+			} else {
+				return (textB === "expert") ? 0 : 1;
+			}
+		});
+		this.setState(
+			{plantData: data}
+		);
+	}
+
+	sortDifficultyDes = (data) => {
+		data.sort(function(a, b) {
+			var textA = a.difficulty;
+			var textB = b.difficulty;
+			if (textA === "beginner") {
+				return (textB === "beginner") ? 0 : 1;
+			} else if (textA === "intermediate") {
+				return (textB === "intermediate") ? 0 : (textB === "expert") ? 1 : -1;
+			} else {
+				return (textB === "expert") ? 0 : -1;
+			}
+		});
+		this.setState(
+			{plantData: data}
+		);
+	}
+
 	// Before the component can load the retrieveCrops function is executed in order to retrieve data from the backend. 
 	componentWillMount() {
 		document.title = "Plants -- Gardyn.org";
@@ -37,28 +92,20 @@ class AllPlants extends Component {
 	// state.cropData stores an array of objects, each representing a crop to be displayed. 
 	// This code then maps that data to CropCard elements. 
 	render() {
-		console.log(this.state.plantData);
 	  return (
 			<Wrapper>
 				<Navbar/>
 				<div id="allPlants">
 					<div id="allPlantsHeader">
-						<h1 id="allPlantsHeaderTitle">All Plants</h1>
+						<h1 id="allPlantsHeaderTitle">All Plants
+							<select class="form-control" id="sortList" onChange={this.sort}>
+								<option>Alphabetically</option>
+								<option>Beginner First</option>
+								<option>Expert First</option>
+							</select>
+							<h2 id="sortBy">Sort:</h2>
+						</h1>
 					</div>
-					{
-						this.state.plantData.map(item => (
-							<PlantCard
-								item = {item}
-							/>
-						))
-					}
-					{
-						this.state.plantData.map(item => (
-							<PlantCard
-								item = {item}
-							/>
-						))
-					}
 					{
 						this.state.plantData.map(item => (
 							<PlantCard

@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Navbar from "../Navbar";
-import Wrapper from "../Wrapper";
 import LoginButton from "../LoginButton";
 import "./Home.css";
 

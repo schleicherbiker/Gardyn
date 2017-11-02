@@ -75,22 +75,22 @@ const Plant = (props) => {
 								<h4 className="textLeft">Climate: </h4>
 								<div className="infoDivOptions">
 									<div className="infoDivOptionsDiv" style={warmDivStyle}>
-										<img className="infoDivOptionsImage" src="https://www.shareicon.net/download/2015/09/02/94489_flame.svg"></img>
+										<img alt="flame" className="infoDivOptionsImage" src="https://www.shareicon.net/download/2015/09/02/94489_flame.svg"></img>
 									</div>
 									<div id="divider"/>
 									<div className="infoDivOptionsDiv" style={coolDivStyle}>
-										<img className="infoDivOptionsImage" src="https://image.flaticon.com/icons/svg/63/63341.svg"></img>
+										<img alt="icons/svg/63/63341" className="infoDivOptionsImage" src="https://image.flaticon.com/icons/svg/63/63341.svg"></img>
 									</div>	
 								</div>
 							</div>
 
 							<div className="infoDiv" id="info2">
-								<img src="http://www.iconarchive.com/download/i89293/icons8/ios7/Weather-Sun.ico" id="sunlightDivIcon"></img>
+								<img alt="ios7/Weather-Sun.ico" src="http://www.iconarchive.com/download/i89293/icons8/ios7/Weather-Sun.ico" id="sunlightDivIcon"></img>
 								<h4 className="textRight">{props.sunlight}</h4>
 							</div>
 
 							<div className="infoDiv" id="info3">
-								<img src="http://downloadicons.net/sites/default/files/left-right-double-arrow-symbols-icons-68674.png" id="sunlightDivIcon"></img>
+								<img alt="double-arrow-symbols-icons" src="http://downloadicons.net/sites/default/files/left-right-double-arrow-symbols-icons-68674.png" id="sunlightDivIcon"></img>
 								<h4 className="textRight">{props.spacing}</h4>
 							</div>
 
@@ -98,17 +98,17 @@ const Plant = (props) => {
 								<h4 className="textLeft">Support: </h4>
 								<div className="infoDivOptions">
 									<div className="infoDivOptionsDiv" style={yesDivStyle}>
-										<img className="infoDivOptionsImage" src="http://icons.iconarchive.com/icons/icons8/android/512/Very-Basic-Checkmark-icon.png"></img>
+										<img alt="Very-Basic-Checkmark-icon" className="infoDivOptionsImage" src="http://icons.iconarchive.com/icons/icons8/android/512/Very-Basic-Checkmark-icon.png"></img>
 									</div>
 									<div id="divider"/>
 									<div className="infoDivOptionsDiv" style={noDivStyle}>
-										<img className="infoDivOptionsImage" src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png"></img>
+										<img alt="geomicons/32/672366-x-128" className="infoDivOptionsImage" src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png"></img>
 									</div>	
 								</div>
 							</div>
 
 							<div className="infoDiv" id="info5">
-								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Ic_schedule_48px.svg/2000px-Ic_schedule_48px.svg.png" id="sunlightDivIcon"></img>
+								<img alt="sunlightDivIcon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Ic_schedule_48px.svg/2000px-Ic_schedule_48px.svg.png" id="sunlightDivIcon"></img>
 								<h4 className="textRight">{props.growingPeriod}</h4>
 							</div>
 

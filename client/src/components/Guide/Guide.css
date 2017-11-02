@@ -37,11 +37,14 @@
 }
 
 .guideBody {
+    text-align: left;
+    font-size: 16px;
+    text-indent: 40px;
     width: 80%;
     margin-top: 0px;
     display: block;
     margin: auto;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .guideBody:last-child {

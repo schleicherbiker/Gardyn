@@ -1,3 +1,5 @@
+use gardynbase
+db.guides.remove({})
 db.guides.insertMany([
 {
     title: "Soil",

@@ -15,7 +15,8 @@ db.plants.insertMany([
         "An indeterminate tomato plant will keep on growing and producing fruit until it is killed by frost. These plants get quite large and will need some kind of support. Whether you use a trellis, stakes, or cages is up to you, but supporting them is necessary to keep the plants from sprawling on the ground."],
     "parentLevel": true,
     "parentCat": null,
-    "isCat": false
+    "isCat": false,
+    "growingPeriod": "60 - 100 Days"
 }, {
     "title": "Broccoli",
     "imageURL": "http://www.harvesttotable.com/wp-content/uploads/2009/01/Broccoli-in-Garden-1.jpg",
@@ -30,7 +31,8 @@ db.plants.insertMany([
         "Harvest broccoli when the buds of the head are firm and tight before the heads flower. If you do see yellow petals, harvest immediately. For best taste, harvest in the morning before the soil heats up. Cut heads from the plant. taking at least 6 inches of stem."],
     "parentLevel": true,
     "parentCat": null,
-    "isCat": false
+    "isCat": false,
+    "growingPeriod": "50 - 100 Days"
 }, {
     "title": 'Radishes',
     "imageURL": "https://cropgenebank.sgrp.cgiar.org/images/radish/RadishRootsCGN_resized.jpg",
@@ -61,23 +63,10 @@ db.plants.insertMany([
         "Beans are picked at an immature stage, when the seeds inside have not yet fully developed. Look for firm, sizable pods and snap or cut off the plant. Do not tear the plant. Fresh beans should snap easily when broken."],
     "parentLevel": true,
     "parentCat": null,
-    "isCat": false
-}, {
-    "title": "B. Sprouts",
-    "imageURL": "http://www.thatbloomingarden.com/wp-content/uploads/2012/09/pb060060.x56516.jpg",
-    "climate": "cool",
-    "sunlight": "6 - 10 Hours",
-    "spacing": "18 - 24 Inches",
-    "support": false,
-    "difficulty": "intermediate",
-    "special": ["Growing Brussels sprouts requires cool weather. The ideal climate is the “fog belt” of the Pacific Northwest, but they will grow in just about any part of the country. Start seeds indoors 6–8 weeks before last spring frost. While starting seeds indoors is recommended, you may also direct sow seeds 4 months before the first fall frost. You may also have luck finding seedlings at a nursery.",
-        "Raised beds are especially recommended for cold season vegetables, especially when seasons are changing and temps are not consistent. Work fertilizer into soil a few days before planting or transplanting. Plant transplanted seedlings 12–24 inches apart.",
-        "Fertilize three weeks after transplanting. Mulch to retain moisture and keep the soil temperature cool. Do not cultivate, roots are shallow and susceptible to damage.",
-        "Brussels sprouts also need more boron than most other vegetables. If your brussels sprouts develop hollow stems and small buds, you can add boron to the soil by dissolving 1 level tablespoon of borax in 5 quarts of water and sprinkling it evenly over 50 square feet of bed. DO NOT be tempted to mix more, and do not apply unless your plants have shown the deficiency symptoms we just mentioned."],
-    "parentLevel": true,
-    "parentCat": null,
-    "isCat": false
-}, {
+    "isCat": false,
+    "growingPeriod": "30 - 70 Days"
+},
+{
     "title": "Beets",
     "imageURL": "https://www.vegetable-garden-guide.com/images/beetroot-800x532.jpg",
     "climate": "cool",
@@ -90,7 +79,8 @@ db.plants.insertMany([
         "Thinning is necessary, as you may get more than one seedling out of each seed. Thin when they reach about 2 inches high by pinching them off. Pulling them out of the ground may disturb the roots of nearby seedlings. Established plants should be thinned to 3–4 inches between plants. Mulch and water well. Beets need to maintain plenty of moisture."],
     "parentLevel": true,
     "parentCat": null,
-    "isCat": false
+    "isCat": false,
+    "growingPeriod": "45 - 65 Days"
 }, {
     "title": "Carrots",
     "imageURL": "http://www.theorangegroveclinic.co.uk/wp-content/uploads/2014/11/carrots.jpg",
@@ -105,7 +95,8 @@ db.plants.insertMany([
         "To produce the best crop possible, double-dig your planting area or build up a raised bed. Carrots are mature at around 2 ½ months and ½ inch in diameter. You may harvest whenever desired maturity is reached. You may leave mature carrots in the soil for storage if the ground will not freeze."],
     "parentLevel": true,
     "parentCat": null,
-    "isCat": false
+    "isCat": false,
+    "growingPeriod": "70 - 80 Days"
 }, {
     "title": 'Melons',
     "description": "My melons bring all the boys to the yard.",
@@ -125,7 +116,8 @@ db.plants.insertMany([
                 "While harvesting, if the watermelon sounds hollow it’s ripe. Look at the color on the top. The watermelon is ripe when there is little contrast between the stripes. Look at the color on the bottom. A green watermelon will have a white bottom; a ripe melon will have a cream- or yellow-colored bottom. Check the tendril. If it’s green, wait. If it’s half-dead, the watermelon is nearly ripe or ripe. If the tendril is fully dead, it’s ripe or overripe. Stems should be cut with a sharp knife close to the fruit."],
             "parentLevel": false,
             "parentCat": "Melons",
-            "iscat": false
+            "iscat": false,
+            "growingPeriod": "80 - 120 Days"
         }, {
             "title": "Cantaloupe",
             "imageURL": "https://maxpull-tlu7l6lqiu.stackpathdns.com/wp-content/uploads/2011/03/cantaloupe.jpg",
@@ -140,7 +132,8 @@ db.plants.insertMany([
                 "When rinds begin to change from green to tan or yellow, the melon is probably ripe, but be careful not to pick too early. Look for a crack in the stem where it attaches to the fruit. This is a sign of ripeness as well. The fruit should be easy to separate from the vine, but if they fall off by themselves they are usually overripe. Harvest melon when vines are dry, and be careful not to damage them. They will soften after harvesting, but will not continue to sweeten off the vine."],
             "parentLevel": false,
             "parentCat": "Melons",
-            "iscat": false
+            "iscat": false,
+            "growingPeriod": "100 - 140 Days"
         }, {
             "title": "Honeydew",
             "imageURL": "https://i.pinimg.com/originals/43/9b/e9/439be9c75db63fcf47be981d7e71051d.jpg",
@@ -155,7 +148,8 @@ db.plants.insertMany([
                 "When rinds begin to change from green to tan or yellow, the melon is probably ripe, but be careful not to pick too early. Look for a crack in the stem where it attaches to the fruit. This is a sign of ripeness as well. The fruit should be easy to separate from the vine, but if they fall off by themselves they are usually overripe. Harvest melon when vines are dry, and be careful not to damage them. They will soften after harvesting, but will not continue to sweeten off the vine."],
             "parentLevel": false,
             "parentCat": "Melons",
-            "iscat": false
+            "iscat": false,
+            "growingPeriod": "80 - 120 Days"
         }
     ],
     "parentLevel": true,
@@ -178,7 +172,8 @@ db.plants.insertMany([
             "special": ["Start pepper seeds three to a pot, and thin out the weakest seedling. Let the remaining two pepper plants spend their entire lives together as one plant. The leaves of two plants help protect peppers against sunscald and the yield is often twice as good as two segregated plants."],
             "parentLevel": false,
             "parentCat": "Peppers",
-            "iscat": false
+            "iscat": false,
+            "growingPeriod": "70 - 90 Days"
         }
     ],
     "parentLevel": true,
@@ -202,7 +197,8 @@ db.plants.insertMany([
                 "Although you will have to wait until the year after planting for fruit harvesting, it will be worth the wait. Tolerant of different soil types, but prefers loam. Prepare aged manure or compost several months before planting. Planting site must be well-drained so raised beds are a good option for strawberry plants. In the first year, pick off blossoms to discourage strawberry plants from bearing fruit. Instead they will develope healthier roots."],
             "parentLevel": false,
             "parentCat": "Berries",
-            "iscat": false
+            "iscat": false,
+            "growingPeriod": "30 - 50 Post-Bloom"
         }, {
             "title": "Blueberries",
             "imageURL": "https://www.starkbros.com/images/dynamic/1700.jpg",
@@ -216,7 +212,8 @@ db.plants.insertMany([
                 "If you plant two-year-old blueberry plants, they should start to bear within a year or two. Pick off any flowers that form the first year or two after planting, to allow the bush to growfirst. Full production is reached after 6 years."],
             "parentLevel": false,
             "parentCat": "Berries",
-            "iscat": false
+            "iscat": false,
+            "growingPeriod": "2 - 3 Years"
         }, {
             "title": "Blackberries",
             "imageURL": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cultivated_Blackberry%2C_Rubus_fruticosus_-_geograph.org.uk_-_1426305.jpg",
@@ -231,7 +228,8 @@ db.plants.insertMany([
                 "If you have semi-erect blackberries, they are easier to manage on a Double T Trellis. Install four-foot cross arms at the top of a six-foot post. Install a three-foot cross arm about two feet below the top line. Semi-erect berries need to be pruned in the summer. When the primocanes are five feet tall, remove the top two inches to encourage branching. Several pruning sessions will be required as canes reach the appropriate height."],
             "parentLevel": false,
             "parentCat": "Berries",
-            "iscat": false
+            "iscat": false,
+            "growingPeriod": "2 - 3 Years"
         }, {
             "title": "Raspberries",
             "imageURL": "https://www.noursefarms.com/uploaded/thumbnails/tula%20magic_582_1000x1000.jpg",
@@ -247,7 +245,8 @@ db.plants.insertMany([
                 "All varieties will begin to produce fruit in their second season. In some cases, ever-bearers may bear small berries in their first autumn. In early summer, berries will ripen over a time of about 2 weeks. You will need to pick berries every couple of days. Try to harvest berries on a sunny day, when they are dry. Don’t tug too hard on your raspberries when picking. A ripe raspberry will leave the vine willingly."],
             "parentLevel": false,
             "parentCat": "Berries",
-            "iscat": false
+            "iscat": false,
+            "growingPeriod": "2 - 3 Years"
         }
     ],
     "parentLevel": true,

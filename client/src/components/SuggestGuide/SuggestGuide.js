@@ -69,14 +69,14 @@ class SuggestGuide extends Component {
 							<div className="form-group">
 						      <label className="col-lg-2 control-label" for="guideTitleInput">Title</label>
 						      <div className="col-lg-10">
-						        <input className="form-control" type="text" id="guideTitleInput" placeholder="Guide Title"
+						        <input className="form-control" type="text" id="guideTitleInput" placeholder='E.g. "Pest Control"'
 						        name="title" value={this.state.title} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
 						      <label className="col-lg-2 control-label" for="photolinkInput">Photo URL</label>
 						      <div className="col-lg-10">
-						        <input className="form-control" type="text" id="photolinkInput" placeholder="E.g. http://via.placeholder.com/300" 
+						        <input className="form-control" type="text" id="photolinkInput" placeholder='E.g. "http://via.placeholder.com/500"' 
 						        name="photoLink" value={this.state.photoLink} onChange={this.handleChange} />
 						      </div>
 						    </div>

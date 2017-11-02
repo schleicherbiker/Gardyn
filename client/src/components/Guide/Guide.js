@@ -7,6 +7,8 @@ const Guide = (props) => {
   
   props = props.location.state.props.item;
 
+  document.title = props.title + " -- Gardyn.org";
+
   return (
     <Wrapper>
       <Navbar/>

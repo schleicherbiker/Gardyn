@@ -30,6 +30,7 @@ class AllPlants extends Component {
 
 	// Before the component can load the retrieveCrops function is executed in order to retrieve data from the backend. 
 	componentWillMount() {
+		document.title = "Plants -- Gardyn.org";
 	    this.retrievePlants();
 	}
 

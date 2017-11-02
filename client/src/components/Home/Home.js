@@ -6,6 +6,10 @@ import "./Home.css";
 
 class Home extends Component {
 
+	componentWillMount() {
+		document.title = "Home -- Gardyn.org";
+	}
+
 	render() {
 		return (
 			<div>

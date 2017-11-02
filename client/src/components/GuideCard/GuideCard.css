@@ -10,6 +10,8 @@
     border: 2px solid black;
     border-radius: 8px;
     background-image: url("http://earth-lite.com/wp-content/uploads/2014/07/DIRT2.jpg");
+    background-size: cover;
+    background-position: center;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.2s ease-in-out;
 }

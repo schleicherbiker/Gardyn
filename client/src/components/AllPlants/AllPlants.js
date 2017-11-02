@@ -19,13 +19,18 @@ class AllPlants extends Component {
 		const parentObj = this;
 		axios.get('/api/plants')
 	      .then(function (response) {
+					parentObj.sortAlphabetically(response.data);
 	        parentObj.setState({
 	          plantData: response.data
-	        })
+					})
 	      })
 	      .catch(function (error) {
 	        console.log(error);
 	      });
+	}
+
+	test = () => {
+		console.log("DSfsdfds");
 	}
 
 	sort = (e) => {
@@ -44,6 +49,7 @@ class AllPlants extends Component {
 			var textB = b.title.toUpperCase();
 			return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
 		});
+		console.log(data);
 		this.setState(
 			{plantData: data}
 		);
@@ -86,11 +92,12 @@ class AllPlants extends Component {
 	// Before the component can load the retrieveCrops function is executed in order to retrieve data from the backend. 
 	componentWillMount() {
 		document.title = "Plants | Gardyn.org";
-	    this.retrievePlants();
+		this.retrievePlants();
 	}
 
 	// state.cropData stores an array of objects, each representing a crop to be displayed. 
 	// This code then maps that data to CropCard elements. 
+
 	render() {
 	  return (
 			<Wrapper>

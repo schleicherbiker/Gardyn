@@ -52,13 +52,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 3px solid green;
+	border: 2px solid white;
 	font-family: 'Source Serif Pro', serif;
 	border-radius: 12px;
 	color: white;
 	user-select: none;
 	margin: 0 5px 10px 10px;
-	padding: 50px;
 }
 
 .titleButton:hover {

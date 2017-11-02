@@ -12,8 +12,12 @@ function sluggify(string){
 
 const GuideCard = (props) => { 
 
+	var image = {
+		backgroundImage: `url("${props.item.photoLink}")`
+	}
+
 	return (
-		<Link className="guideCard" to={{
+		<Link className="guideCard" style={image} to={{
 	        pathname: `/guide/${ sluggify(props.item.title) }`,
 	        state: {props}
 	    }}>   

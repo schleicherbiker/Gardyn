@@ -18,9 +18,9 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://gardyn_admin:richsoil@ds237855.mlab.com:37855/heroku_htkwql1k"); // For production version use: mongodb://gardyn_admin:richsoil@ds237855.mlab.com:37855/heroku_htkwql1k      For development use: mongodb://localhost/gardynbase
+mongoose.connect("mongodb://localhost/gardynbase"); // For production version use: mongodb://gardyn_admin:richsoil@ds237855.mlab.com:37855/heroku_htkwql1k      For development use: mongodb://localhost/gardynbase
 const db = mongoose.connection;
-
+//"mongodb://gardyn_admin:richsoil@ds237855.mlab.com:37855/heroku_htkwql1k"
 // Show any mongoose errors
 db.on("error", function(error) {
   console.log("Mongoose Error: ", error);

@@ -398,19 +398,6 @@ db.plants.insertMany([
     "isCat": false,
     "growingPeriod": "45 - 65 Days"
 }, {
-    "title": "Bananas",
-    "imageURL": "https://cmeimg-a.akamaihd.net/640/photos.demandstudios.com/getty/article/188/208/154135061.jpg",
-    "climate": "warm",
-    "sunlight": "6 - 8 Hours",
-    "spacing": "2 - 4 Inches",
-    "support": false,
-    "difficulty": "expert",
-    "special": ["TBA"],
-    "parentLevel": true,
-    "parentCat": null,
-    "isCat": false,
-    "growingPeriod": "45 - 65 Days"
-}, {
     "title": 'Citrus',
     "description": "Citrus are sour!",
     "imageURL": "http://gardencenternaples.com/images/pages/citrustree/TANGELO-citrus-trees-for-sale-3.jpg",

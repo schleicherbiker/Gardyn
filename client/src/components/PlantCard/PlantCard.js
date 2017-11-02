@@ -2,6 +2,10 @@ import React from "react";
 import {Link} from "react-router-dom";
 import "./PlantCard.css";
 
+function sluggify(string){
+    return "hard_coded";
+};
+
 const PlantCard = (props) => {
 
     var plantCardBackground = {
@@ -24,7 +28,7 @@ const PlantCard = (props) => {
 
     return (  
         <Link to={{
-            pathname: `/plants/${props.item.title}`,
+            pathname: `/plants/${ "Hard coded" }`,
             state: {props}
         }}>
             <div className="plantCard" style={plantCardBackground}>

@@ -6,6 +6,8 @@
 	margin-bottom: 64px;
 	animation: fadeinTitle 2s;
 	user-select: none;
+	margin:;
+	
 }
 
 #homeTitle {
@@ -25,14 +27,21 @@
 
 #allPlantsButton {
 	float: left;
-	margin-right: 48px;
+	margin: 0 auto;
 	animation: fadeinButton1 2.5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 }
 
 #allGuidesButton {
 	float: right;
-	margin-left: 48px;
+	margin: 0 auto;
 	animation: fadeinButton2 3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .titleButton {

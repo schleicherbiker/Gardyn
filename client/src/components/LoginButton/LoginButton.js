@@ -110,6 +110,7 @@ class LoginButton extends Component {
       window.FB.logout(function(response) {
   // user is now logged out
   //document.getElementById('loginButton').innerHTML = "Login";
+  window.localStorage.clear();
 });
     }
 

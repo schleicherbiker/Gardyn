@@ -116,7 +116,13 @@ const Plant = (props) => {
 						</div>
 					</div>
 					<div className = "row plantSectionSeparate">
-						<p className = "plantGuideDescription">{props.special}</p>
+						<div className = "plantGuideDescription">
+						{
+					        props.special.map(item => (
+					          <p>{item}</p>
+					        ))
+					    }
+					    </div>
 					</div>
 				</div>
 				:

@@ -161,7 +161,7 @@ db.plants.insertMany([
     "difficulty": "Intermediate",
     "childPlants": [
     {
-        "title": "Bell Peppers",
+        "title": "Bell",
         "imageURL": "http://www.dietoflife.com/wp-content/uploads/2017/01/papers.jpg",
         "climate": "warm", 
         "sunlight": "6 - 8 Hours",
@@ -175,7 +175,7 @@ db.plants.insertMany([
         "iscat": false,
         "growingPeriod": "70 - 90 Days"
     }, {
-        "title": "Cayenne Peppers",
+        "title": "Cayenne",
         "imageURL": "http://demandware.edgesuite.net/sits_pod32/dw/image/v2/BBBW_PRD/on/demandware.static/-/Sites-jss-master/default/dw11d0dcd3/images/products/vegetables/03025g_01_redflamehorz.jpg?sw=1120",
         "climate": "warm", 
         "sunlight": "6 - 8 Hours",
@@ -203,7 +203,7 @@ db.plants.insertMany([
         "iscat": false,
         "growingPeriod": "70 - 90 Days"
     }, {
-        "title": "Ghost Peppers",
+        "title": "Ghost",
         "imageURL": "http://growhotpeppers.com/wp-content/uploads/2017/03/hottest-pepper-bhut-jolokias.jpg",
         "climate": "warm", 
         "sunlight": "6 - 8 Hours",
@@ -385,7 +385,7 @@ db.plants.insertMany([
     "parentCat": null,
     "isCat": true
 }, {
-    "title": "Tea Leaves",
+    "title": "Tea",
     "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Csinensis.jpg/1200px-Csinensis.jpg",
     "climate": "warm",
     "sunlight": "6 - 8 Hours",

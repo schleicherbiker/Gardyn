@@ -65,71 +65,64 @@ class SuggestPlant extends Component {
 						<fieldset>
 							<legend className="entry-legend">New Plant Entry</legend>
 							<div className="form-group">
-						      <label className="col-lg-2 control-label" htmlFor="titleInput">Title</label>
+						      <label className="col-lg-2 control-label" for="titleInput">Title</label>
 						      <div className="col-lg-10">
-						        <input className="form-control" type="text" id="titleInput" placeholder="Plant name"
+						        <input className="form-control" type="text" id="titleInput" placeholder='E.g. "Tomatoes"'
 						        name="title" value={this.state.titleInput} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" htmlFor="imageURLInput">Image URL</label>
+						      <label className="col-lg-2 control-label" for="imageURLInput">Image URL</label>
 						      <div className="col-lg-10">
-						        <input className="form-control" type="text" id="imageURLInput" placeholder="Image URL"
+						        <input className="form-control" type="text" id="imageURLInput" placeholder='E.g. "http://via.placeholder.com/500"'
 						        name="imageURL" value={this.state.imageURL} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" htmlFor="climateInput">Climate</label>
+						      <label className="col-lg-2 control-label" for="climateInput">Climate</label>
 						      <div className="col-lg-10">
-						        <input className="form-control" type="text" id="climateInput" placeholder="Recommended climate" 
-						        name="Climate" value={this.state.climateInput} onChange={this.handleChange} />
-						      </div>
-						    </div>
-						    <div className="form-group">
-						      <label className="col-lg-2 control-label" htmlFor="sunlightInput">Sunlight</label>
-						      <div className="col-lg-9">
-						        <input className="form-control" type="number" step="1" max="24" min="0" id="sunlightInput" placeholder="0"
-						        name="Sunlight" value={this.state.sunlightInput} onChange={this.handleChange} />
-						      </div>
-						      <div className="col-lg-1">Hours</div>
-						    </div>
-						    <div className="form-group">
-						      <label className="col-lg-2 control-label" htmlFor="supportInput">Support</label>
-						      <div className="col-lg-10">
-						        <select className="form-control" id="supportInput" name="Support" onChange={this.handleChange}>
+						        <select className="form-control" id="climateInput" name="Climate" onChange={this.handleChange}>
 						          <option value="">------</option>
-						          <option value="maybe">Maybe</option>
-						          <option value="yes">Yes (Cages, Stakes, Trellis)</option>
-						          <option value="no">No</option>
+						          <option value="warm">Warm</option>
+						          <option value="cool">Cool</option>
 						        </select>
 						      </div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" htmlFor="spacingInput">Spacing</label>
-						      <div className="col-lg-9">
-						        <input className="form-control" type="number" step="1" max="36" min="0" id="spacingInput" placeholder="0"
+						      <label className="col-lg-2 control-label" for="sunlightInput">Sunlight</label>
+						      <div className="col-lg-10">
+						        <input className="form-control" type="text" id="sunlightInput" placeholder='E.g. "8 - 10 Hours"'
+						        name="Sunlight" value={this.state.sunlightInput} onChange={this.handleChange} />
+						      </div>
+						    </div>
+						    <div className="form-group">
+						      <label className="col-lg-2 control-label" for="spacingInput">Spacing</label>
+						      <div className="col-lg-10">
+						        <input className="form-control" type="text" id="spacingInput" placeholder='E.g. "12 - 24 Inches" -or- "2 - 5 Feet"'
 						        name="Spacing" value={this.state.Spacing} onChange={this.handleChange} />
 						      </div>
-						      <div className="col-lg-1">Inches</div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" htmlFor="waterInput">Water</label>
+						      <label className="col-lg-2 control-label" for="supportInput">Support</label>
 						      <div className="col-lg-10">
-						        <textarea className="form-control" type="text" rows="3" id="waterInput" placeholder="Watering amount"
-						        name="Water" value={this.state.Water} onChange={this.handleChange} />
+						        <select className="form-control" id="supportInput" name="Support" onChange={this.handleChange}>
+						          <option value="">------</option>
+						          <option value="true">Yes (Cages, Stakes, Trellis)</option>
+						          <option value="false">No</option>
+						        </select>
 						      </div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" htmlFor="specialInput">Special</label>
+						      <label className="col-lg-2 control-label" for="specialInput">Guide</label>
 						      <div className="col-lg-10">
-						        <textarea className="form-control" type="text" rows="3" id="specialInput" placeholder="Special needs"
+						        <textarea className="form-control" type="text" rows="3" id="specialInput" placeholder="Write your guide here!"
 						        name="Special" value={this.state.Special} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
-						      <label className="col-lg-2 control-label" htmlFor="skillInput">Skill Level</label>
+						      <label className="col-lg-2 control-label" for="difficultyInput">Difficulty</label>
 						      <div className="col-lg-10">
-						        <select className="form-control" id="skillInput" name="skillLevel" onChange={this.handleChange}>
+						        <select className="form-control" id="difficultyInput" name="difficulty" onChange={this.handleChange}>
 						          <option value="">------</option>
 						          <option value="Beginner">Beginner</option>
 						          <option value="Intermediate">Intermediate</option>

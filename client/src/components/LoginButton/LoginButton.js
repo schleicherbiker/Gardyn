@@ -3,7 +3,6 @@ import "./LoginButton.css";
 
 class LoginButton extends Component {
     
-    
     constructor(props){
     super(props); 
     this.handleClick = this.handleClick.bind(this);
@@ -38,7 +37,6 @@ class LoginButton extends Component {
         window.FB.getLoginStatus(function(response) {
           this.statusChangeCallback(response);
           
-           /* const ID = response.authResponse.userID;*/
           }.bind(this));
         }.bind(this);
     
@@ -81,13 +79,10 @@ class LoginButton extends Component {
         this.testAPI();
       } else if (response.status === 'not_authorized') {
         // The person is logged into Facebook, but not your app.
-        document.getElementById('status').innerHTML = 'Please log ' +
-          'into this app.';
       } else {
         // The person is not logged into Facebook, so we're not sure if
         // they are logged into this app or not.
-       /* document.getElementById('').innerHTML = 'Please log ' +
-        'into Facebook.';*/
+       
       }
     }
     
@@ -101,17 +96,15 @@ class LoginButton extends Component {
     }
     
     handleClick() {
-    
-      console.log("Login Clicked");
       window.FB.login(this.checkLoginState());
     }
 
     fbLogOut() {
       window.FB.logout(function(response) {
-  // user is now logged out
-  //document.getElementById('loginButton').innerHTML = "Login";
-  window.localStorage.clear();
-});
+      // user is now logged out
+      console.log("logout successful!");
+      localStorage.clear();
+      });
     }
 
     render() {
@@ -119,14 +112,12 @@ class LoginButton extends Component {
     return (
         <div>
           <div>
-            <a href="/" id="logoutButton" onClick={this.fbLogOut}>Logout</a>
+            <a  id="logoutButton" onClick={this.fbLogOut}>Logout</a>
           </div>
           <div>
             <a  id="loginButton" onClick={this.handleClick}>Login</a>
           </div>
-          
-        </div>
-    );
+        </div>);
     }
 }
 

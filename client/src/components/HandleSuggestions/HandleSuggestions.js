@@ -72,7 +72,7 @@ class HandleSuggestions extends Component {
 			}
 		}
 
-		const allowed = ['title', 'imageURL', 'Climate', 'Sunlight', 'Support', 'Spacing', 'Water', 'Special', 'skillLevel', 'parentLevel'];
+		const allowed = ['title', 'imageURL', 'climate', 'sunlight', 'support', 'spacing', 'special', 'difficulty', 'parentLevel'];
 
 		// Filters out properties that are not handled by the new object
 		const filteredPlantObj = Object.keys(objToSend)
@@ -81,10 +81,10 @@ class HandleSuggestions extends Component {
 		    obj[key] = objToSend[key];
 		    return obj;
 		  }, {});
-
+			console.log(filteredPlantObj);
 		axios.post('/api/plant', filteredPlantObj)
 		  .then(function (response) {
-
+				console.log(response);
 		    // Once the suggested plant is saved to the plants collection, it is removed from the queue for consideration
 		    // This could be moved to seperate function to reduce duplicate code
 		    axios.delete('/api/pos_plant/' + clickedID)

@@ -33,7 +33,7 @@ const Plant = (props) => {
 	var difficultyDivStyle;
 	if (props.difficulty === "beginner") { 
 		difficultyDivStyle = { backgroundColor: "rgba(126, 252, 147, 1)" }
-	} else if (props.skillLevel === "intermediate") {
+	} else if (props.difficulty === "intermediate") {
 		difficultyDivStyle = { backgroundColor: "rgba(244, 223, 66, 1)" }
 	} else {
 		difficultyDivStyle = { backgroundColor: "rgba(255, 0, 0, 0.8)" }
@@ -70,7 +70,7 @@ const Plant = (props) => {
 				        </div>
 						<div className="col-md-6">
 
-							<div className="infoDiv">
+							<div className="infoDiv" id="info1">
 								<h4 className="textLeft">Climate: </h4>
 								<div className="infoDivOptions">
 									<div className="infoDivOptionsDiv" style={yesDivStyle}>
@@ -83,17 +83,17 @@ const Plant = (props) => {
 								</div>
 							</div>
 
-							<div className="infoDiv">
+							<div className="infoDiv" id="info2">
 								<img src="http://www.iconarchive.com/download/i89293/icons8/ios7/Weather-Sun.ico" id="sunlightDivIcon"></img>
 								<h4 className="textRight">{props.sunlight}</h4>
 							</div>
 
-							<div className="infoDiv">
+							<div className="infoDiv" id="info3">
 								<img src="http://downloadicons.net/sites/default/files/left-right-double-arrow-symbols-icons-68674.png" id="sunlightDivIcon"></img>
 								<h4 className="textRight">{props.spacing}</h4>
 							</div>
 
-							<div className="infoDiv">
+							<div className="infoDiv" id="info4">
 								<h4 className="textLeft">Support: </h4>
 								<div className="infoDivOptions">
 									<div className="infoDivOptionsDiv" style={yesDivStyle}>
@@ -106,7 +106,7 @@ const Plant = (props) => {
 								</div>
 							</div>
 
-							<div className="infoDiv">
+							<div className="infoDiv" id="info5">
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Ic_schedule_48px.svg/2000px-Ic_schedule_48px.svg.png" id="sunlightDivIcon"></img>
 								<h4 className="textRight">{props.growingPeriod}</h4>
 							</div>

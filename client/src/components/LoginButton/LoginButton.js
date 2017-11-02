@@ -38,7 +38,7 @@ class LoginButton extends Component {
         window.FB.getLoginStatus(function(response) {
           this.statusChangeCallback(response);
           
-            const ID = response.authResponse.userID;
+           /* const ID = response.authResponse.userID;*/
           }.bind(this));
         }.bind(this);
     
@@ -58,7 +58,10 @@ class LoginButton extends Component {
       console.log('Welcome!  Fetching your information.... ');
       window.FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      document.getElementById('loginButton').innerHTML = response.name;
+      const logButton = document.getElementById('loginButton')
+      console.log(logButton);
+      logButton.innerHTML = response.name;
+      console.log("Get Element By ID");
       document.createElement("BUTTON").innerHTML = "Logout";
       const USER = response.name;
       localStorage.setItem(`USER`, USER);
@@ -83,8 +86,8 @@ class LoginButton extends Component {
       } else {
         // The person is not logged into Facebook, so we're not sure if
         // they are logged into this app or not.
-        document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
+       /* document.getElementById('').innerHTML = 'Please log ' +
+        'into Facebook.';*/
       }
     }
     
@@ -98,11 +101,13 @@ class LoginButton extends Component {
     }
     
     handleClick() {
+    
+      console.log("Login Clicked");
       window.FB.login(this.checkLoginState());
     }
 
     fbLogOut() {
-      window.FB.logout((response)=> {
+      window.FB.logout(function(response) {
   // user is now logged out
   //document.getElementById('loginButton').innerHTML = "Login";
 });
@@ -116,7 +121,7 @@ class LoginButton extends Component {
             <a href="/" id="logoutButton" onClick={this.fbLogOut}>Logout</a>
           </div>
           <div>
-            <a href="/" id="loginButton" onClick={this.handleClick}>Login</a>
+            <a  id="loginButton" onClick={this.handleClick}>Login</a>
           </div>
           
         </div>

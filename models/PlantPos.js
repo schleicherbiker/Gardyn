@@ -46,7 +46,7 @@ var PlantPosSchema = new Schema({
   //skillLevel: {
   difficulty: {
     type: String,
-    enum: ["Easy", "Intermediate", "Difficult", "Beginner", "Expert"]
+    enum: ["intermediate", "beginner", "expert"]
   },
   parentLevel: {
     type: Boolean,

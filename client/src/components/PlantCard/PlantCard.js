@@ -2,6 +2,14 @@ import React from "react";
 import {Link} from "react-router-dom";
 import "./PlantCard.css";
 
+function sluggify(string){
+    if (string) {
+      return string.replace(/ /g, "_").toLowerCase();  
+    } else {
+        return null;
+    }
+}
+
 const PlantCard = (props) => {
 
     var plantCardBackground = {
@@ -24,7 +32,7 @@ const PlantCard = (props) => {
 
     return (  
         <Link to={{
-            pathname: `/plants/${props.item.title}`,
+            pathname: `/plants/${ sluggify(props.item.title) }`,
             state: {props}
         }}>
             <div className="plantCard" style={plantCardBackground}>

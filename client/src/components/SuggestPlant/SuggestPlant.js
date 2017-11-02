@@ -22,7 +22,7 @@ class SuggestPlant extends Component {
 		this.setState({submitErrorMessage: ""});
 
 		// Stores the values that are allowed to be passed to the backend
-		const allowed = ['title', 'imageURL', 'Climate', 'Sunlight', 'Support', 'Spacing', 'Water', 'Special', 'skillLevel', 'parentLevel'];
+		const allowed = ['title', 'imageURL', 'climate', 'sunlight', 'support', 'spacing', 'water', 'special', 'skillLevel', 'parentLevel'];
 
 		// Filters out state properties that are not listed in 'allowed'
 		const filteredState = Object.keys(this.state)
@@ -68,7 +68,7 @@ class SuggestPlant extends Component {
 						      <label className="col-lg-2 control-label" htmlFor="titleInput">Title</label>
 						      <div className="col-lg-10">
 						        <input className="form-control" type="text" id="titleInput" placeholder="Plant name"
-						        name="title" value={this.state.titleInput} onChange={this.handleChange} />
+						        name="title" value={this.state.title} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
@@ -82,21 +82,21 @@ class SuggestPlant extends Component {
 						      <label className="col-lg-2 control-label" htmlFor="climateInput">Climate</label>
 						      <div className="col-lg-10">
 						        <input className="form-control" type="text" id="climateInput" placeholder="Recommended climate" 
-						        name="Climate" value={this.state.climateInput} onChange={this.handleChange} />
+						        name="climate" value={this.state.climate} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
 						      <label className="col-lg-2 control-label" htmlFor="sunlightInput">Sunlight</label>
 						      <div className="col-lg-9">
 						        <input className="form-control" type="number" step="1" max="24" min="0" id="sunlightInput" placeholder="0"
-						        name="Sunlight" value={this.state.sunlightInput} onChange={this.handleChange} />
+						        name="sunlight" value={this.state.sunlight} onChange={this.handleChange} />
 						      </div>
 						      <div className="col-lg-1">Hours</div>
 						    </div>
 						    <div className="form-group">
 						      <label className="col-lg-2 control-label" htmlFor="supportInput">Support</label>
 						      <div className="col-lg-10">
-						        <select className="form-control" id="supportInput" name="Support" onChange={this.handleChange}>
+						        <select className="form-control" id="supportInput" name="support" onChange={this.handleChange}>
 						          <option value="">------</option>
 						          <option value="maybe">Maybe</option>
 						          <option value="yes">Yes (Cages, Stakes, Trellis)</option>
@@ -108,22 +108,15 @@ class SuggestPlant extends Component {
 						      <label className="col-lg-2 control-label" htmlFor="spacingInput">Spacing</label>
 						      <div className="col-lg-9">
 						        <input className="form-control" type="number" step="1" max="36" min="0" id="spacingInput" placeholder="0"
-						        name="Spacing" value={this.state.Spacing} onChange={this.handleChange} />
+						        name="spacing" value={this.state.spacing} onChange={this.handleChange} />
 						      </div>
 						      <div className="col-lg-1">Inches</div>
-						    </div>
-						    <div className="form-group">
-						      <label className="col-lg-2 control-label" htmlFor="waterInput">Water</label>
-						      <div className="col-lg-10">
-						        <textarea className="form-control" type="text" rows="3" id="waterInput" placeholder="Watering amount"
-						        name="Water" value={this.state.Water} onChange={this.handleChange} />
-						      </div>
 						    </div>
 						    <div className="form-group">
 						      <label className="col-lg-2 control-label" htmlFor="specialInput">Special</label>
 						      <div className="col-lg-10">
 						        <textarea className="form-control" type="text" rows="3" id="specialInput" placeholder="Special needs"
-						        name="Special" value={this.state.Special} onChange={this.handleChange} />
+						        name="special" value={this.state.special} onChange={this.handleChange} />
 						      </div>
 						    </div>
 						    <div className="form-group">
@@ -153,19 +146,3 @@ class SuggestPlant extends Component {
 }
 
 export default SuggestPlant;
-
-/*
-					<div className="inputForm">
-						<input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange} />
-						<input type="text" name="imageURL" placeholder="Image URL" value={this.state.imageURL} onChange={this.handleChange} />
-						<input type="text" name="Climate" placeholder="Climate" value={this.state.Climate} onChange={this.handleChange} />
-						<input type="text" name="Sunlight" placeholder="Sunlight" value={this.state.Sunlight} onChange={this.handleChange} />
-						<input type="text" name="Support" placeholder="Support" value={this.state.Support} onChange={this.handleChange} />
-						<input type="text" name="Spacing" placeholder="Spacing" value={this.state.Spacing} onChange={this.handleChange} />
-						<input type="text" name="Water" placeholder="Water" value={this.state.Water} onChange={this.handleChange} />
-						<input type="text" name="Special" placeholder="Special" value={this.state.Special} onChange={this.handleChange} />
-						<input type="text" name="skillLevel" placeholder="Skill level (Easy, Intermediate, Difficult)" value={this.state.skillLevel} onChange={this.handleChange} />
-						<p id="errorDisplay">{this.state.submitErrorMessage}</p>
-						<button type="button" onClick={this.handleSubmit}>Submit</button>
-					</div>
-*/

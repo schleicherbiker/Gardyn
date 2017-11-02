@@ -156,3 +156,34 @@
     width: 800px;
     border-radius: 0 0 8px 8px;
 }
+
+#info1 { animation: info1 1.5s }
+#info2 { animation: info2 2s }
+#info3 { animation: info3 2.5s }
+#info4 { animation: info4 3s }
+#info5 { animation: info5 3.5s }
+
+@keyframes info1 {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@keyframes info2 {
+    0% {opacity: 0}
+    12.5% {opacity: 0}
+    100% {opacity: 1}
+}
+@keyframes info3 {
+    0% {opacity: 0}
+    20% {opacity: 0}
+    100% {opacity: 1}
+}
+@keyframes info4 {
+    0% {opacity: 0}
+    25% {opacity: 0}
+    100% {opacity: 1}
+}
+@keyframes info5 {
+    0% {opacity: 0}
+    30% {opacity: 0}
+    100% {opacity: 1}
+}

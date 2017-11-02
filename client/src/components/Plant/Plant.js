@@ -50,7 +50,6 @@ const Plant = (props) => {
 		difficulty = props.difficulty.charAt(0).toUpperCase() + props.difficulty.slice(1);
 	}
 
-	console.log(`url(${props.imageURL})`);
 	  return (
 	  	<Wrapper>
 	  	  <Navbar/>

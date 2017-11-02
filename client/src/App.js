@@ -8,6 +8,7 @@ import Guide from "./components/Guide";
 import SuggestPlant from "./components/SuggestPlant";
 import SuggestGuide from "./components/SuggestGuide";
 import HandleSuggestions from "./components/HandleSuggestions";
+import Emoh from "./components/Emoh";
 import './App.css';
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
 			<Route path='/suggest_plant' component={SuggestPlant}/>
 			<Route path='/suggest_guide' component={SuggestGuide}/>
 			<Route path='/admin' component={HandleSuggestions}/>
+			<Route path='/logout' component={Emoh}/>
 	    </Switch>
     );
   }

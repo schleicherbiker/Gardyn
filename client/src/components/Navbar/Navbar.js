@@ -12,7 +12,7 @@ const Navbar = () => (
       <div className="flex">
           <h3 className="button"><a className="nav-element-link" href="/plants"><h4>Plants</h4></a></h3>
           <h3 className="button"><a className="nav-element-link" href="/guides"><h4>Guides</h4></a></h3>
-          <h3 className="button"><a className="nav-element-link" href="/"><h4>Logout</h4></a></h3>
+          <h3 className="button"><a className="nav-element-link" href="/logout"><h4>Logout</h4></a></h3>
       </div>
     </div>
 );

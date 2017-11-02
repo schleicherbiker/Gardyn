@@ -112,9 +112,6 @@ class LoginButton extends Component {
     return (
         <div>
           <div>
-            <a  id="logoutButton" onClick={this.fbLogOut}>Logout</a>
-          </div>
-          <div>
             <a  id="loginButton" onClick={this.handleClick}>Login</a>
           </div>
         </div>);
